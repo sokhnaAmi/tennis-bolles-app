@@ -28,12 +28,23 @@
 
   /* barre d’édition collante */
   .toolbar.row {
+    /*position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #fff;    /* même fond que la page */
+    /*padding: 8px 0;*/
+    margin-top: 8px;
+
+  }
+  .editor-sticky{
     position: sticky;
     top: 0;
     z-index: 20;
-    background: #f5f6fa;    /* même fond que la page */
-    padding: 8px 0;
+    background:#fff; /* couleur de fond du body pour que ça se fonde bien */
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
+
 
 
   /* surbrillance de la ligne ajoutée */
@@ -183,14 +194,16 @@
     <div class="panel">
 
       <!-- Ligne onglets / recherche / ajouter -->
-      <div class="row">
-        <div class="tabs">
-          <button data-kind="categories" class="active">Catégories</button>
-          <button data-kind="bris">Bris d’égalité</button>
+      <!-- BLOC COLLANT -->
+      <div class="editor-sticky">
+        <div class="row">
+          <div class="tabs">
+            <button data-kind="categories" class="active">Catégories</button>
+            <button data-kind="bris">Bris d’égalité</button>
+          </div>
+          <input id="search" type="search" placeholder="Rechercher (mot-clé ou n° exact)">
+          <button id="add" class="btn">+ Ajouter une carte</button>
         </div>
-        <input id="search" type="search" placeholder="Rechercher (mot-clé ou n° exact)">
-        <button id="add" class="btn">+ Ajouter une carte</button>
-      </div>
 
       <!-- Bloc changement de mot de passe (en haut, sous les onglets) -->
       <!--<div class="row" id="pwdRow" style="align-items:center">
@@ -201,13 +214,14 @@
         <span id="pwdMsg" class="muted"></span>
       </div> -->
 
-      <!-- barre de mise en forme -->
-      <div class="toolbar row">
-        <button data-cmd="bold" class="btn"><b>Gras</b></button>
-        <button data-cmd="italic" class="btn"><i>Italique</i></button>
-        <button id="sup" class="btn">Exposant</button>
-        <button id="save" class="btn primary" style="margin-left: 10px;">Enregistrer</button>
-        <div class="right muted" id="status">Aucune modification</div>
+        <!-- barre de mise en forme -->
+        <div class="toolbar row">
+          <button data-cmd="bold" class="btn"><b>Gras</b></button>
+          <button data-cmd="italic" class="btn"><i>Italique</i></button>
+          <button id="sup" class="btn">Exposant</button>
+          <button id="save" class="btn primary" style="margin-left: 10px;">Enregistrer</button>
+          <div class="right muted" id="status">Aucune modification</div>
+        </div>
       </div>
 
       <!-- tableau -->
