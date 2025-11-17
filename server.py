@@ -81,6 +81,15 @@ def change_password():
     return jsonify({"ok": True})
 
 # ---------- Lancement ----------
+@APP.route("/")
+def serve_index():
+    # page principale (cartes pour les joueurs)
+    return send_from_directory(".", "index.html")
+
+@APP.route("/admin")
+def serve_admin():
+    # interface d'administration
+    return send_from_directory(".", "admin.html")
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "8000"))
