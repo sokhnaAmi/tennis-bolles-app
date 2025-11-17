@@ -1,0 +1,5206 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "categorie": "Qui",
+      "question": "À qui doit-on l’invention du papyrus ?",
+      "reponse": "Aux Égyptiens."
+    },
+    {
+      "id": 2,
+      "categorie": "Qui",
+      "question": "Qui a écrit <i>Les Belles-Sœurs</i> ?",
+      "reponse": "Michel Tremblay."
+    },
+    {
+      "id": 3,
+      "categorie": "Qui",
+      "question": "De qui est la chanson <i>Dégénérations</i> ?",
+      "reponse": "Mes Aïeux."
+    },
+    {
+      "id": 4,
+      "categorie": "Qui",
+      "question": "Quel linguiste et égyptologue français a réussi à déchiffrer les hiéroglyphes égyptiens ?",
+      "reponse": "Jean-François <b>Champollion</b>."
+    },
+    {
+      "id": 5,
+      "categorie": "Qui",
+      "question": "Qui sont les trois « poètes maudits » les plus connus de la littérature française au XIX<sup>e</sup> siècle ?",
+      "reponse": "Baudelaire, Rimbaud et Verlaine."
+    },
+    {
+      "id": 6,
+      "categorie": "Qui",
+      "question": "Par qui a été inventé le moteur-roue ?",
+      "reponse": "Pierre Couture, ingénieur à Hydro-Québec."
+    },
+    {
+      "id": 7,
+      "categorie": "Qui",
+      "question": "Qui a écrit <i>Le Comte de Monte-Cristo </i>et <i>Les Trois Mousquetaires</i> ?",
+      "reponse": "Alexandre Dumas."
+    },
+    {
+      "id": 8,
+      "categorie": "Qui",
+      "question": "De qui est la chanson <i>Safety</i><i> Dance</i> ?",
+      "reponse": "<i>Men </i><i>Without</i><i> </i><i>Hats</i>."
+    },
+    {
+      "id": 9,
+      "categorie": "Qui",
+      "question": "Qui a fondé les premières caisses populaires du Québec (prénom et nom) ?",
+      "reponse": "Alphonse Desjardins."
+    },
+    {
+      "id": 10,
+      "categorie": "Qui",
+      "question": "Qui a sculpté <i>La Pietà</i> ?",
+      "reponse": "Michel-Ange."
+    },
+    {
+      "id": 11,
+      "categorie": "Qui",
+      "question": "Quel philosophe a partagé une grande partie de sa vie avec Simone de Beauvoir ?",
+      "reponse": "Jean-Paul Sartre."
+    },
+    {
+      "id": 12,
+      "categorie": "Qui",
+      "question": "Qui a composé quatre concertos connus sous le titre <i>Les Quatre Saisons </i>?",
+      "reponse": "Antonio Vivaldi."
+    },
+    {
+      "id": 13,
+      "categorie": "Qui",
+      "question": "Quel homme politique québécois a été surnommé « le père de l’étapisme » ?",
+      "reponse": "Claude <b>Morin</b>."
+    },
+    {
+      "id": 14,
+      "categorie": "Qui",
+      "question": "Qui a popularisé le <i>moon</i><i> </i><i>walk</i> ?",
+      "reponse": "Michael Jackson."
+    },
+    {
+      "id": 15,
+      "categorie": "Qui",
+      "question": "Qui a peint <i>Les Iris</i> et <i>Les tournesols</i><i> </i>?",
+      "reponse": "Vincent <b>Van Gogh</b>."
+    },
+    {
+      "id": 16,
+      "categorie": "Qui",
+      "question": "À quelle autrice doit-on la série des <i>Harry Potter</i> ?",
+      "reponse": "J. K. Rowling."
+    },
+    {
+      "id": 17,
+      "categorie": "Qui",
+      "question": "Quel auteur américain a écrit <i>Pour qui sonne le glas </i>et <i>Le vieil homme et la mer ?",
+      "reponse": "</i><i><br/></i>Ernest <b>Hemingway</b>."
+    },
+    {
+      "id": 18,
+      "categorie": "Qui",
+      "question": "Qui a composé <i>Moi mes souliers</i><i>, Le train du Nord, Pieds nus dans l’aube, </i>etc.<i> </i>?",
+      "reponse": "Félix Leclerc."
+    },
+    {
+      "id": 19,
+      "categorie": "Qui",
+      "question": "À qui doit-on la théorie du « complexe d’Œdipe » ?",
+      "reponse": "Sigmund Freud."
+    },
+    {
+      "id": 20,
+      "categorie": "Qui",
+      "question": "Qui a chanté dans l’espace <i>Space</i><i> </i><i>Oddity</i> de David Bowie ?",
+      "reponse": "L’astronaute canadien Chris Hadfield."
+    },
+    {
+      "id": 21,
+      "categorie": "Qui",
+      "question": "Qui a composé <i>Dark Side of th</i><i>e Moon</i> et <i>The </i><i>Wall</i> ?",
+      "reponse": "Pink Floyd."
+    },
+    {
+      "id": 22,
+      "categorie": "Qui",
+      "question": "Qui ont donné leur nom aux deux grandes autoroutes du Québec ?",
+      "reponse": "Jean Lesage (autoroute 20) et Félix Leclerc (autoroute 40)."
+    },
+    {
+      "id": 23,
+      "categorie": "Qui",
+      "question": "Quel chef du parti fasciste italien était surnommé le <i>duce</i> (prononcé <i>doutché</i>) ?",
+      "reponse": "Benito <b>Mussolini</b>."
+    },
+    {
+      "id": 24,
+      "categorie": "Qui",
+      "question": "Quel musicien allemand est souvent considéré comme le plus grand compositeur de tous les temps ?",
+      "reponse": "Jean-Sébastien <b>Bach</b>."
+    },
+    {
+      "id": 25,
+      "categorie": "Qui",
+      "question": "De qui est la chanson <i>Here</i><i> </i><i>comes</i><i> the Rain </i><i>Again</i> et <i>Sweet Dreams</i> ?",
+      "reponse": "<i>Eurythmics</i> (Annie Lennox)."
+    },
+    {
+      "id": 26,
+      "categorie": "Qui",
+      "question": "Quel artiste s’est tranché l’oreille, en proie à la folie ?",
+      "reponse": "Vincent van Gogh."
+    },
+    {
+      "id": 27,
+      "categorie": "Qui",
+      "question": "Qui a laissé son nom à un télescope spatial ?",
+      "reponse": "Edwin <b>Hubble</b>."
+    },
+    {
+      "id": 28,
+      "categorie": "Qui",
+      "question": "Quel mathématicien, physicien, inventeur, philosophe et théologien français a écrit <i>Les Pensées</i> ?",
+      "reponse": "Blaise <b>Pascal</b>."
+    },
+    {
+      "id": 29,
+      "categorie": "Qui",
+      "question": "Qui a composé <i>La 9</i><i><sup>e</sup></i><i>Symphonie</i><i> </i>?",
+      "reponse": "Ludwig van <b>Beethoven</b>."
+    },
+    {
+      "id": 30,
+      "categorie": "Qui",
+      "question": "À qui doit-on la théorie de la relativité restreinte ?",
+      "reponse": "Albert Einstein."
+    },
+    {
+      "id": 31,
+      "categorie": "Qui",
+      "question": "Quel compositeur français a écrit la musique de <i>Les parapluies de Cherbourg, Les demoiselles de Rochefort, Les moulins de mon cœur </i>?",
+      "reponse": "Michel <b>Legrand</b>."
+    },
+    {
+      "id": 32,
+      "categorie": "Qui",
+      "question": "Quel peintre, sculpteur et écrivain espagnol est considéré comme l’un des principaux représentants du surréalisme et des plus célèbres peintres du XX<sup>e</sup> s?",
+      "reponse": "Salvador <b>Dalì</b>."
+    },
+    {
+      "id": 33,
+      "categorie": "Qui",
+      "question": "De qui sont les œuvres suivantes : <i>Émile ou de l’éducation, Les Rêveries du promeneur solitaire</i> ?",
+      "reponse": "Jean-Jacques <b>Rousseau</b>."
+    },
+    {
+      "id": 34,
+      "categorie": "Qui",
+      "question": "Quelles chanteuses populaires sont considérées comme les plus belles voix du Québec ?",
+      "reponse": "(2) Céline Dion, Ginette Reno et Diane Dufresne."
+    },
+    {
+      "id": 35,
+      "categorie": "Qui",
+      "question": "Quel chanteur compositeur et pianiste français était surnommé « Monsieur 100 000 volts » en raison de sa fougue sur scène ?",
+      "reponse": "Gilbert Bécaud."
+    },
+    {
+      "id": 36,
+      "categorie": "Qui",
+      "question": "Qui sont Jean-François Pauzé, Marie-Annick Lépine et Jérôme Dupras ?",
+      "reponse": "Les membres du groupe <i>Les cowboys fringants.</i>"
+    },
+    {
+      "id": 37,
+      "categorie": "Qui",
+      "question": "À qui doit-on les chansons <i>Dégénérations, La corrida de la Corriveau, Le déni de l’évidence ?",
+      "reponse": "Au groupe <i>Mes Aïeux</i>."
+    },
+    {
+      "id": 38,
+      "categorie": "Qui",
+      "question": "Par qui a été composée la chanson <i>Le blues du businessman</i> ?",
+      "reponse": "Luc <b>Plamondon</b> et Michel <b>Berger</b> (un ou l’autre)."
+    },
+    {
+      "id": 39,
+      "categorie": "Qui",
+      "question": "Qui a composé la chanson <i>Mon pays </i>?",
+      "reponse": "Gilles Vigneault"
+    },
+    {
+      "id": 40,
+      "categorie": "Qui",
+      "question": "À qui doit-on la création du Cirque du Soleil ?",
+      "reponse": "Guy Laliberté."
+    },
+    {
+      "id": 41,
+      "categorie": "Qui",
+      "question": "De qui est le roman <i>Bonheur d'occasion</i> ?",
+      "reponse": "Gabrielle Roy."
+    },
+    {
+      "id": 42,
+      "categorie": "Qui",
+      "question": "Par qui a été fondé le journal <i>Le Devoir</i> ?",
+      "reponse": "Henri Bourassa."
+    },
+    {
+      "id": 43,
+      "categorie": "Qui",
+      "question": "Quel peintre est considéré comme le chantre de la vie quotidienne des gens de son Arthabaska natal ?",
+      "reponse": "Marc-Aurèle de Foy <b>Suzor</b><b>-Côté</b>."
+    },
+    {
+      "id": 44,
+      "categorie": "Qui",
+      "question": "À qui doit-on la chanson <i>Lindberg</i> ?",
+      "reponse": "Robert Charlebois."
+    },
+    {
+      "id": 45,
+      "categorie": "Qui",
+      "question": "De quel auteur classique français sont les pièces de théâtre <i>Le Cid, Œdipe </i>et <i>La mort de Pompée</i> ?",
+      "reponse": "Pierre <b>Corneille</b>."
+    },
+    {
+      "id": 46,
+      "categorie": "Qui",
+      "question": "Qui sont les premiers chefs de file du mouvement souverainiste du Québec ?",
+      "reponse": "(3) André d’Allemagne, Marcel Chaput, Pierre Bourgault, Andrée Ferretti, René Lévesque et Jacques Parizeau."
+    },
+    {
+      "id": 47,
+      "categorie": "Qui",
+      "question": "Qui était Mary Travers ?",
+      "reponse": "Mary Travers, dite <b><i>La Bolduc</i></b>, est considérée comme la première auteure-compositrice-interprète du Québec."
+    },
+    {
+      "id": 48,
+      "categorie": "Qui",
+      "question": "À qui doit-on les albums <i>Inoxydable </i>et <i>Dangereuse attraction </i>?",
+      "reponse": "Marie-Mai."
+    },
+    {
+      "id": 49,
+      "categorie": "Qui",
+      "question": "Quelle grande écrivaine et poétesse québécoise a écrit <i>Les Fous de </i><i>Bassan</i><i>, Les chambres de bois </i>et<i> Kamouraska</i> ?",
+      "reponse": "Anne Hébert."
+    },
+    {
+      "id": 50,
+      "categorie": "Qui",
+      "question": "Par qui a été composée la musique du film <i>C.R.A.Z.Y ?",
+      "reponse": "</i><br/>Pierre Lapointe."
+    },
+    {
+      "id": 51,
+      "categorie": "Qui",
+      "question": "Qui était le chef des Patriotes de 1838 ?",
+      "reponse": "Louis-Joseph Papineau"
+    },
+    {
+      "id": 52,
+      "categorie": "Qui",
+      "question": "À quel groupe doit-on la chanson <i>23 décembre</i> ?",
+      "reponse": "Beau Dommage."
+    },
+    {
+      "id": 53,
+      "categorie": "Qui",
+      "question": "De qui est le roman <i>Salut Galarneau !</i> ?",
+      "reponse": "Jacques <b>Godbout</b>."
+    },
+    {
+      "id": 54,
+      "categorie": "Qui",
+      "question": "Par qui a été fondé le groupe Les Cowboys Fringants ?",
+      "reponse": "Jean-François Pauzé."
+    },
+    {
+      "id": 55,
+      "categorie": "Qui",
+      "question": "Qui a écrit <i>La Sagouine</i> ?",
+      "reponse": "Antonine Maillet."
+    },
+    {
+      "id": 56,
+      "categorie": "Qui",
+      "question": "De qui est la chanson <i>Sèche tes pleurs</i> ?",
+      "reponse": "Daniel Bélanger."
+    },
+    {
+      "id": 57,
+      "categorie": "Qui",
+      "question": "Par qui a été fondé le groupe <i>Harmonium</i> ?",
+      "reponse": "Serge Fiori."
+    },
+    {
+      "id": 58,
+      "categorie": "Qui",
+      "question": "Qui a peint <i>Hommage à Rosa Luxembourg</i> ?",
+      "reponse": "Jean Paul Riopelle."
+    },
+    {
+      "id": 59,
+      "categorie": "Qui",
+      "question": "À qui doit-on la chanson <i>La danse à St-</i><i>Dilon</i> ?",
+      "reponse": "Gilles Vigneault."
+    },
+    {
+      "id": 60,
+      "categorie": "Qui",
+      "question": "De qui est le roman <i>La Guerre, Yes Sir!</i> et le célèbre conte <i>Le chandail de hockey</i>?",
+      "reponse": "Roch Carrier."
+    },
+    {
+      "id": 61,
+      "categorie": "Qui",
+      "question": "Par qui a été fondé le <i>Festival Juste pour rire</i> ?",
+      "reponse": "Gilbert Rozon."
+    },
+    {
+      "id": 62,
+      "categorie": "Qui",
+      "question": "Qui étaient les principaux membres de la cellule Chénier du FLQ qui ont assassiné le ministre Pierre Laporte ?",
+      "reponse": "(1) Paul Rose, Jacques Rose, Francis Simard et Bernard Lortie."
+    },
+    {
+      "id": 63,
+      "categorie": "Qui",
+      "question": "Qui a écrit <i>Les Filles de Caleb</i> ?",
+      "reponse": "Arlette Cousture."
+    },
+    {
+      "id": 64,
+      "categorie": "Qui",
+      "question": "À qui doit-on la création du groupe <i>La Bottine Souriante</i> ?",
+      "reponse": "Yves Lambert."
+    },
+    {
+      "id": 65,
+      "categorie": "Qui",
+      "question": "De qui sont les albums <i>Aquanaute, Le cœur dans la tête</i> et <i>Tous les sens</i> ?",
+      "reponse": "Ariane Moffatt."
+    },
+    {
+      "id": 66,
+      "categorie": "Qui",
+      "question": "Qui a pour pseudonyme <i>Cœur de pirate</i> ?",
+      "reponse": "Béatrice Martin."
+    },
+    {
+      "id": 67,
+      "categorie": "Qui",
+      "question": "Qui étaient les deux comédiennes de la série <i>Moi et l’autre ?",
+      "reponse": "</i><i><br/></i>Dominique Michel et Denise Filiatrault."
+    },
+    {
+      "id": 68,
+      "categorie": "Qui",
+      "question": "Qui a peint <i>Québec, Vue de l’Île d’Orléans, Filets de pêche à Port-au-Persil, Les Ursulines, Saint</i><i>e</i><i>-Adèle en hiver</i> ?",
+      "reponse": "Jean-Paul Lemieux."
+    },
+    {
+      "id": 69,
+      "categorie": "Qui",
+      "question": "À qui doit-on les albums <i>Sur mon canapé, Motel Capri</i> et <i>La grand-messe</i> ?",
+      "reponse": "Les Cowboys Fringants."
+    },
+    {
+      "id": 70,
+      "categorie": "Qui",
+      "question": "Qui est le premier auteur-compositeur québécois francophone masculin à avoir vendu plus d’un million de disques au Québec ?",
+      "reponse": "Éric Lapointe."
+    },
+    {
+      "id": 71,
+      "categorie": "Qui",
+      "question": "De qui sont les romans <i>L'énigme du retour</i><i>, l’odeur du café </i>et <i>Pays sans chapeau</i> ?",
+      "reponse": "Dany Laferrière."
+    },
+    {
+      "id": 72,
+      "categorie": "Qui",
+      "question": "Qui a illustré et réalisé les films d’animation <i>Crac!</i> et <i>L’homme qui plantait des arbres,</i> qui lui ont valu deux Oscar ?",
+      "reponse": "Frédéric Back."
+    },
+    {
+      "id": 73,
+      "categorie": "Qui",
+      "question": "Quel groupe de pop punk montréalais jouit d’une renommée internationale avec des concerts à Paris, Rio de Janeiro et Tel Aviv ?",
+      "reponse": "<i>Simple Plan</i>."
+    },
+    {
+      "id": 74,
+      "categorie": "Qui",
+      "question": "Qui est la scénariste ou productrice des séries <i>Les </i><i>Bougon</i><i>, 30 Vies, </i><i>Unité 9, </i><i>Fortier, </i><i>Stat, </i>etc. ?",
+      "reponse": "Fabienne Larouche."
+    },
+    {
+      "id": 75,
+      "categorie": "Qui",
+      "question": "Qui a fait des tournées québécoises avec <i>Aimer les montres, Marée haute et À mains nues</i> ?",
+      "reponse": "Émile Proulx-Cloutier."
+    },
+    {
+      "id": 76,
+      "categorie": "Qui",
+      "question": "Qui était Simon Bolívar ?",
+      "reponse": "Un <b>général et homme d’État</b> vénézuélien qui a fortement contribué à <b>l’indépendance des pays de l’Amérique du Sud</b>."
+    },
+    {
+      "id": 77,
+      "categorie": "Qui",
+      "question": "À qui doit-on les albums <i>Le treizième étage, </i><i>L</i><i>es grandes artères et Le ciel est au plancher</i> ?",
+      "reponse": "Louis-Jean Cormier."
+    },
+    {
+      "id": 78,
+      "categorie": "Qui",
+      "question": "Quelle journaliste et animatrice de télévision née en Haïti est devenue la troisième femme gouverneure générale du Canada ?",
+      "reponse": "Michaëlle Jean."
+    },
+    {
+      "id": 79,
+      "categorie": "Qui",
+      "question": "Qui était le leader et principal chanteur du groupe <i>Les Colocs</i> ?",
+      "reponse": "André « Dédé » Fortin."
+    },
+    {
+      "id": 80,
+      "categorie": "Qui",
+      "question": "Quel peintre montréalais internationalement reconnu a installé son atelier à Brooklyn et composé plusieurs romans, poèmes, films, etc. ?",
+      "reponse": "Marc <b>Séguin</b>."
+    },
+    {
+      "id": 81,
+      "categorie": "Qui",
+      "question": "Qui est à l’origine du Festival de la poésie de Trois-Rivières ?",
+      "reponse": "Gaston Bellemare."
+    },
+    {
+      "id": 82,
+      "categorie": "Qui",
+      "question": "Quel sculpteur québécois est connu pour ses œuvres monumentales, dont la très controversée <i>L’arbre de la rue Durocher</i> ?",
+      "reponse": "Armand <b>Vaillancourt</b>."
+    },
+    {
+      "id": 83,
+      "categorie": "Qui",
+      "question": "De qui sont les albums <i>Passive agressive</i> et <i>Phoenix</i> ?",
+      "reponse": "Charlotte Cardin."
+    },
+    {
+      "id": 84,
+      "categorie": "Qui",
+      "question": "Qui est l’auteur de la chanson <i>Sunglasses</i><i> at night</i> ?",
+      "reponse": "Corey Hart."
+    },
+    {
+      "id": 85,
+      "categorie": "Qui",
+      "question": "Qui a fondé la maison d’édition de poésie <i>Écrits des Forges</i> et a donné son nom à la principale bibliothèque de Trois-Rivières ?",
+      "reponse": "Gatien Lapointe."
+    },
+    {
+      "id": 86,
+      "categorie": "Qui",
+      "question": "À qui doit-on les chansons <i>La mauvaise réputation, Le gorille</i><i> </i>et<i> Les copains d’abord</i> ?",
+      "reponse": "Georges Brassens."
+    },
+    {
+      "id": 87,
+      "categorie": "Qui",
+      "question": "Qui a composé les albums <i>Grand champion international de course, Dans mon corps </i>et<i> </i><i>J</i><i>’aime ta grand-mère ?",
+      "reponse": "</i><i><br/></i>Les Trois Accords."
+    },
+    {
+      "id": 88,
+      "categorie": "Qui",
+      "question": "Quel rappeur québécois a publié un premier album intitulé <i>Les racines dans le béton </i>?",
+      "reponse": "Koriass."
+    },
+    {
+      "id": 89,
+      "categorie": "Qui",
+      "question": "Quelle femme peintre née à Louiseville a été membre des automatistes avec Paul-Émile Borduas ?",
+      "reponse": "Marcelle <b>Ferron</b>."
+    },
+    {
+      "id": 90,
+      "categorie": "Qui",
+      "question": "Quel auteur-compositeur a écrit, entre autres, <i>Tu m’aimes-</i><i>tu?,</i><i> </i><i>Elsie</i> et <i>Jenny </i>?",
+      "reponse": "Richard Desjardins."
+    },
+    {
+      "id": 91,
+      "categorie": "Qui",
+      "question": "Quels grands pianistes de jazz sont nés à Montréal ?",
+      "reponse": "(1) Oscar Peterson et Oliver Jones."
+    },
+    {
+      "id": 92,
+      "categorie": "Qui",
+      "question": "De qui sont les pièces <i>Albertine, en cinq temps</i> et <i>Les belles-sœurs</i> ?",
+      "reponse": "Michel Tremblay."
+    },
+    {
+      "id": 93,
+      "categorie": "Qui",
+      "question": "De qui sont les chansons <i>Suzanne</i><i> </i>et <i>Hallelujah</i> ?",
+      "reponse": "Leonard Cohen."
+    },
+    {
+      "id": 94,
+      "categorie": "Qui",
+      "question": "Quelle popstar américaine a un impact si considérable qu’elle est la première artiste nommée « personnalité de l’année » par le <i>Time</i> en 2023 ?",
+      "reponse": "Taylor Swift."
+    },
+    {
+      "id": 95,
+      "categorie": "Qui",
+      "question": "De qui est la chanson <i>Le Tour de l'île</i> ?",
+      "reponse": "Félix Leclerc."
+    },
+    {
+      "id": 96,
+      "categorie": "Qui",
+      "question": "Qui a composé <i>Câline de blues</i><i> </i>et l’album <i>Les rendez-vous doux</i> ?",
+      "reponse": "Gerry Boulet."
+    },
+    {
+      "id": 97,
+      "categorie": "Qui",
+      "question": "Quelle chanteuse est devenue l’une des plus grandes stars grâce à des chansons comme <i>Like </i><i>a</i><i> Virgin, La </i><i>isla</i><i> </i><i>bonita</i><i>, Like a </i><i>Prayer</i>, etc.<i> ?",
+      "reponse": "</i><i><br/></i>Madonna."
+    },
+    {
+      "id": 98,
+      "categorie": "Qui",
+      "question": "Qui est considéré comme le père des monologuistes québécois ?",
+      "reponse": "Yvon Deschamps."
+    },
+    {
+      "id": 99,
+      "categorie": "Qui",
+      "question": "Quel acteur et humoriste a donné son nom à un parc de Montréal et à un gala annuel ?",
+      "reponse": "Olivier Guimond."
+    },
+    {
+      "id": 100,
+      "categorie": "Qui",
+      "question": "Qui a écrit <i>Othello</i> et <i>Macbeth</i> ?",
+      "reponse": "William Shakespeare."
+    },
+    {
+      "id": 101,
+      "categorie": "Quoi",
+      "question": "Quelle est la signification du sigle international « OMS » ?",
+      "reponse": "Organisation mondiale de la santé."
+    },
+    {
+      "id": 102,
+      "categorie": "Quoi",
+      "question": "Quelle est la signification du sigle international « FMI » ?",
+      "reponse": "Fonds monétaire international."
+    },
+    {
+      "id": 103,
+      "categorie": "Quoi",
+      "question": "Quels sont les cinq pays membres permanents du Conseil de sécurité de l’ONU ?",
+      "reponse": "Les États-Unis, la Chine, la France, le Royaume-Uni et la Russie."
+    },
+    {
+      "id": 104,
+      "categorie": "Quoi",
+      "question": "Quelles étaient les sept merveilles de <b>l’Antiquité</b> ?",
+      "reponse": "(3) La pyramide de Khéops, les jardins suspendus de Babylone, la statue de Zeus, le temple d’Artémis, le tombeau de Mausole à Halicarnasse, le colosse de Rhodes, le phare d’Alexandrie."
+    },
+    {
+      "id": 105,
+      "categorie": "Quoi",
+      "question": "Parmi les disciplines fondatrices des Jeux olympiques, quelle est celle qui regroupe le plus grand nombre d’épreuves distinctes aujourd’hui ?",
+      "reponse": "L’athlétisme."
+    },
+    {
+      "id": 106,
+      "categorie": "Quoi",
+      "question": "Que représente la fleur de lys sur le drapeau québécois ?",
+      "reponse": "Un symbole de la présence française, car les rois de France en avaient fait leur emblème."
+    },
+    {
+      "id": 107,
+      "categorie": "Quoi",
+      "question": "Que représentent les deux valeurs données lors de la mesure de la tension artérielle ?",
+      "reponse": "La pression systolique et la pression diastolique."
+    },
+    {
+      "id": 108,
+      "categorie": "Quoi",
+      "question": "Quelle phrase contenue dans le Rapport Durham est devenue célèbre au Québec ?",
+      "reponse": "« Les Canadiens français sont <b>un peuple sans histoire</b> et sans littérature »."
+    },
+    {
+      "id": 109,
+      "categorie": "Quoi",
+      "question": "De quoi parle la légende de la Chasse-galerie ?",
+      "reponse": "D’un groupe de <b>bûcherons</b> qui font un <b>pacte avec le diable</b> pour voyager rapidement en <b>canot volant</b> pour retourner en ville voir leurs bien-aimées."
+    },
+    {
+      "id": 110,
+      "categorie": "Quoi",
+      "question": "Quel est le sens premier du mot « Québec » ?",
+      "reponse": "Il vient de l’algonquin et signifie <b>« passage étroit » </b>ou<b> « détroit ».</b>"
+    },
+    {
+      "id": 111,
+      "categorie": "Quoi",
+      "question": "Quelle est l’origine du Cirque du Soleil ?",
+      "reponse": "Une compagnie <b>fondée</b> à Baie-Saint-Paul <b>par deux anciens artistes de rue</b> : Guy Laliberté et Daniel Gauthier."
+    },
+    {
+      "id": 112,
+      "categorie": "Quoi",
+      "question": "Quelles sont les quatre épreuves de patinage artistique en Coupe du monde ?",
+      "reponse": "(3) Individuel hommes, individuel femmes, couples et danse sur glace."
+    },
+    {
+      "id": 113,
+      "categorie": "Quoi",
+      "question": "Quel terme est utilisé au curling pour le lancer de la dernière pierre ?",
+      "reponse": "Avoir le marteau."
+    },
+    {
+      "id": 114,
+      "categorie": "Quoi",
+      "question": "Quelle ville est la capitale de l’Union européenne ?",
+      "reponse": "Bruxelles."
+    },
+    {
+      "id": 115,
+      "categorie": "Quoi",
+      "question": "Quel animal est l’emblème du Québec?",
+      "reponse": "Le harfang des neiges."
+    },
+    {
+      "id": 116,
+      "categorie": "Quoi",
+      "question": "Que signifie l’expression « Manger les pissenlits par la racine » ?",
+      "reponse": "Être mort."
+    },
+    {
+      "id": 117,
+      "categorie": "Quoi",
+      "question": "Quel est l’emblème floral du Québec ?",
+      "reponse": "L’iris versicolore."
+    },
+    {
+      "id": 118,
+      "categorie": "Quoi",
+      "question": "Quelle a été la première université francophone en Amérique du Nord ?",
+      "reponse": "L’Université Laval."
+    },
+    {
+      "id": 119,
+      "categorie": "Quoi",
+      "question": "Quelles comédies musicales ont propulsé Luc Plamondon sur la scène internationale ?",
+      "reponse": "(2)&nbsp;<i>Starmania</i><i>, La légende de Jimmy, Notre-Dame de Paris, Cindy.</i>"
+    },
+    {
+      "id": 120,
+      "categorie": "Quoi",
+      "question": "Quelle est la signification du sigle international « URSS » ?",
+      "reponse": "Union des républiques socialistes soviétiques."
+    },
+    {
+      "id": 121,
+      "categorie": "Quoi",
+      "question": "Quels sont les deux principaux organismes québécois dédiés à la protection de l’environnement ?",
+      "reponse": "Équiterre et Greenpeace Québec."
+    },
+    {
+      "id": 122,
+      "categorie": "Quoi",
+      "question": "Quel était le surnom de Guy Lafleur ?",
+      "reponse": "Le démon blond."
+    },
+    {
+      "id": 123,
+      "categorie": "Quoi",
+      "question": "Quelle est l’origine du nom « Montréal » ?",
+      "reponse": "De la montagne appelée <b><i>mont Royal</i></b> par Jacques Cartier située au cœur de la ville."
+    },
+    {
+      "id": 124,
+      "categorie": "Quoi",
+      "question": "Quelle est l’origine du mot « joual » ?",
+      "reponse": "Il renvoie à la prononciation ancienne du mot « cheval », héritée des parlers de France."
+    },
+    {
+      "id": 125,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce qu’une <i>symphonie</i> musicale ?",
+      "reponse": "Une composition musicale complexe, comportant <b>plusieurs mouvements</b> et faisant appel aux ressources de <b>tout un orchestre symphonique</b>."
+    },
+    {
+      "id": 126,
+      "categorie": "Quoi",
+      "question": "Quelle est la signification du sigle international « ONG » ?",
+      "reponse": "Organisation non gouvernementale."
+    },
+    {
+      "id": 127,
+      "categorie": "Quoi",
+      "question": "Quelle fut la première station de radio québécoise francophone ?",
+      "reponse": "CKAC."
+    },
+    {
+      "id": 128,
+      "categorie": "Quoi",
+      "question": "Quelle est la plus ancienne banque du Canada ?",
+      "reponse": "La Banque de Montréal (BMO)."
+    },
+    {
+      "id": 129,
+      "categorie": "Quoi",
+      "question": "De quoi est composé le pouding chômeur ?",
+      "reponse": "Un dessert à base de gâteau et de sirop d’érable."
+    },
+    {
+      "id": 130,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce qu’être « histrionique » ?",
+      "reponse": "(2) C’est avoir une émotivité excessive, besoin exagéré d’être au centre de l’attention des autres et être dépourvu d’autonomie."
+    },
+    {
+      "id": 131,
+      "categorie": "Quoi",
+      "question": "Que signifie le mot « concupiscence » ?",
+      "reponse": "Le penchant aux plaisirs sensuels, à la luxure et à la lubricité"
+    },
+    {
+      "id": 132,
+      "categorie": "Quoi",
+      "question": "Quel est l’équivalent français du terme <i>birdie</i> au golf ?",
+      "reponse": "Un oiselet."
+    },
+    {
+      "id": 133,
+      "categorie": "Quoi",
+      "question": "Quelle émission de télévision est considérée comme « mythique » au Québec et est devenue incontournable au réveillon du Nouvel An ?",
+      "reponse": "Le <i>Bye </i><i>bye</i>."
+    },
+    {
+      "id": 134,
+      "categorie": "Quoi",
+      "question": "Quel est l’équivalent français du terme <i>putter</i> au golf ?",
+      "reponse": "Un fer droit."
+    },
+    {
+      "id": 135,
+      "categorie": "Quoi",
+      "question": "Quel est l’équivalent français du terme <i>swing</i> au golf ?",
+      "reponse": "Un élan."
+    },
+    {
+      "id": 136,
+      "categorie": "Quoi",
+      "question": "Quelle comédie musicale française fut adaptée en anglais et détient à Londres le record de présentations continues depuis 1985 ?",
+      "reponse": "<i>Les Misérables</i>."
+    },
+    {
+      "id": 137,
+      "categorie": "Quoi",
+      "question": "Que signifie « Carpe Diem » ?",
+      "reponse": "« Carpe Diem » signifie « Cueille le jour » en latin et invite à <b>profiter du moment présent.</b>"
+    },
+    {
+      "id": 138,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce que la <i>charia</i> ?",
+      "reponse": "<b>La loi islamique</b>, qui contient les normes et règles doctrinales, sociales, culturelles et relationnelles qui régissent les musulmans."
+    },
+    {
+      "id": 139,
+      "categorie": "Quoi",
+      "question": "Quel livre de Gabrielle Roy traite de la vie difficile d’une famille ouvrière St-Henri pendant la Seconde Guerre mondiale ?",
+      "reponse": "<i>Bonheur d’occasion.</i>"
+    },
+    {
+      "id": 140,
+      "categorie": "Quoi",
+      "question": "Que signifie la locution latine « ad nauseam » ?",
+      "reponse": "Jusqu’à plus soif, jusqu’à en avoir la nausée."
+    },
+    {
+      "id": 141,
+      "categorie": "Quoi",
+      "question": "Quelle était le nom de la première équipe de la Ligue majeure de baseball à s’établir hors des États-Unis, et ce à Montréal ?",
+      "reponse": "<i>Les Expos de Montréal</i>."
+    },
+    {
+      "id": 142,
+      "categorie": "Quoi",
+      "question": "Que signifie l'expression « Changer quatre trente sous pour une piastre » ?",
+      "reponse": "Faire du pareil au même, changer pour revenir au même résultat."
+    },
+    {
+      "id": 143,
+      "categorie": "Quoi",
+      "question": "Quelle fut la contribution de la Commission Parent (et de son rapport) dans les années 1960 ?",
+      "reponse": "Elle a été à l’origine de la <b>refonte complète du système éducatif québécois</b> (fin des collèges classiques, création du ministère de l’Éducation, des cégeps et des Universités du Québec)."
+    },
+    {
+      "id": 144,
+      "categorie": "Quoi",
+      "question": "Quels sont les principaux thèmes de l’œuvre de Félix Leclerc ?",
+      "reponse": "(2) Le respect de la nature, du territoire, l’amour de la patrie, la solidarité, l’indépendance du Québec."
+    },
+    {
+      "id": 145,
+      "categorie": "Quoi",
+      "question": "Que désigne le terme « État providence » ?",
+      "reponse": "Ce terme désigne un gouvernement qui intervient pour assurer la protection sociale des citoyens."
+    },
+    {
+      "id": 146,
+      "categorie": "Quoi",
+      "question": "À quoi associe-t-on la période de « la grande noirceur » au Québec ?",
+      "reponse": "(1) La Grande Noirceur (1944-1959) fut une période marquée par la <b>domination cléricale</b> et le <b>conservatisme politique</b>."
+    },
+    {
+      "id": 147,
+      "categorie": "Quoi",
+      "question": "De quoi parle la série télévisée « Les Pays d’en haut » ?",
+      "reponse": "De la vie rurale au temps de la colonisation du Nord du Québec au XIX<sup>e</sup> siècle."
+    },
+    {
+      "id": 148,
+      "categorie": "Quoi",
+      "question": "Quel drapeau le fleurdelisé a-t-il remplacé au sommet de l'hôtel du Parlement en 1948 ?",
+      "reponse": "Le drapeau <b>britannique</b> <i>Red </i><i>Ensign</i>."
+    },
+    {
+      "id": 149,
+      "categorie": "Quoi",
+      "question": "Quels films de Denis Arcand lui ont acquis une reconnaissance internationale ?",
+      "reponse": "(1)&nbsp;<i>Le déclin de l’empire américain </i>(1986) et <i>Les invasions barbares</i> (2003)."
+    },
+    {
+      "id": 150,
+      "categorie": "Quoi",
+      "question": "Quel quartier de Montréal attire le plus de touristes ?",
+      "reponse": "Le Vieux-Montréal."
+    },
+    {
+      "id": 151,
+      "categorie": "Quoi",
+      "question": "Quelle chanson de Vigneault est à l’origine du refrain que l’on chante au Québec à l’anniversaire de quelqu’un ?",
+      "reponse": "<i>Gens du pays</i>."
+    },
+    {
+      "id": 152,
+      "categorie": "Quoi",
+      "question": "Quelle équipe canadienne fait encore partie de la Ligue majeure de baseball (MLB) ?",
+      "reponse": "Les <i>Blue Jays </i>de Toronto<i>.</i>"
+    },
+    {
+      "id": 153,
+      "categorie": "Quoi",
+      "question": "Quel film de Xavier Dolan a récolté les meilleures recettes au niveau mondial ?",
+      "reponse": "Le film <i>Mommy</i><i>.</i>"
+    },
+    {
+      "id": 154,
+      "categorie": "Quoi",
+      "question": "Quelle ville de la région du Bas-Saint-Laurent a donné son nom à un grand roman d’Anne Hébert et à un film ?",
+      "reponse": "<i>Kamouraska.</i>"
+    },
+    {
+      "id": 155,
+      "categorie": "Quoi",
+      "question": "Que signifie l’expression « Virer sa veste » ?",
+      "reponse": "Changer de camp politique ou d’opinion <b>par intérêt</b> et non en vertu de principes moraux."
+    },
+    {
+      "id": 156,
+      "categorie": "Quoi",
+      "question": "Dans quelle grande série télévisée (2012 à 2019) Guylaine Tremblay s’est-elle distinguée dans un rôle de prisonnière ?",
+      "reponse": "<i>Unité 9.</i>"
+    },
+    {
+      "id": 157,
+      "categorie": "Quoi",
+      "question": "Quel parc national constitue l’une des aires centrales de la Réserve mondiale de la biosphère de Charlevoix ?",
+      "reponse": "Le parc national des <b>Hautes-Gorges</b>-de-la-Rivière-Malbaie (224,9 km<sup>2</sup>)."
+    },
+    {
+      "id": 158,
+      "categorie": "Quoi",
+      "question": "Quel est l’autre nom donné au portrait de la Joconde de Léonard de Vinci ?",
+      "reponse": "La <i>Monna</i><i> Lisa.</i>"
+    },
+    {
+      "id": 159,
+      "categorie": "Quoi",
+      "question": "De quelle maladie neurologique rare souffre Céline Dion ?",
+      "reponse": "Du syndrome de la personne raide."
+    },
+    {
+      "id": 160,
+      "categorie": "Quoi",
+      "question": "De quel coin du pays Richard Desjardins chante-t-il les beautés et les difficultés ?",
+      "reponse": "L’Abitibi."
+    },
+    {
+      "id": 161,
+      "categorie": "Quoi",
+      "question": "À quoi reconnaît-on un poème en prose ?",
+      "reponse": "L’auteur exprime des idées poétiques sans recourir aux vers."
+    },
+    {
+      "id": 162,
+      "categorie": "Quoi",
+      "question": "De quoi traite <i>1984</i> de George Orwell ?",
+      "reponse": "(1) D’une société écrasée par le <b>totalitarisme</b>, la <b>surveillance</b> de masse et l’enrégimentement <b>répressif</b> des personnes."
+    },
+    {
+      "id": 163,
+      "categorie": "Quoi",
+      "question": "De quel courant artistique Claude Monet est-il l’un des fondateurs avec Manet, Cézanne et Renoir ?",
+      "reponse": "De l’impressionnisme."
+    },
+    {
+      "id": 164,
+      "categorie": "Quoi",
+      "question": "Quelles étaient les six équipes originales de la Ligue nationale de hockey ?",
+      "reponse": "(4) Les Canadiens de Montréal, les Maple Leafs de Toronto, les Bruins de Boston, les Red Wings de Détroit, les Rangers de New York et les Black Hawks de Chicago."
+    },
+    {
+      "id": 165,
+      "categorie": "Quoi",
+      "question": "Quels sont les principaux sauts en patinage artistique ?",
+      "reponse": "(3) Le salchow, le boucle piqué, le boucle, le flip, le lutz, l’axel, le pas de géant, le saut de lapin, le saut de valse, etc."
+    },
+    {
+      "id": 166,
+      "categorie": "Quoi",
+      "question": "Que représente le tableau <i>Guernica</i> de Picasso ?",
+      "reponse": "Une dénonciation du bombardement de la ville de Guernica lors de la guerre d’Espagne."
+    },
+    {
+      "id": 167,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce qu’un roman épistolaire ?",
+      "reponse": "Un roman qui raconte une histoire à travers des <b>lettres échangées </b>entre les personnages."
+    },
+    {
+      "id": 168,
+      "categorie": "Quoi",
+      "question": "Quel est l’ouvrage le plus traduit au monde après la <i>Bible</i> ?",
+      "reponse": "<i>Le Petit Prince</i> d’Antoine de Saint-Exupéry."
+    },
+    {
+      "id": 169,
+      "categorie": "Quoi",
+      "question": "Que signifie le terme « cubisme » en arts ?",
+      "reponse": "(1) Un style artistique qui représente des <b>objets décomposés</b> et réassemblés avec une récurrence des <b>formes géométriques</b>."
+    },
+    {
+      "id": 170,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce qu’un <i>haïku</i> ?",
+      "reponse": "Un <b>poème japonais très bref</b> (17 syllabes) qui célèbre l’instantanéité des choses et des sensations."
+    },
+    {
+      "id": 171,
+      "categorie": "Quoi",
+      "question": "Quelle est la principale caractéristique d’un concerto ?",
+      "reponse": "Il met en valeur un <b>instrument</b> <b>soliste</b><b> </b>dans l’orchestre."
+    },
+    {
+      "id": 172,
+      "categorie": "Quoi",
+      "question": "Quels sont les dix romans généralement considérés comme les meilleurs de tous les temps ?",
+      "reponse": "(3)&nbsp;<i>L’étranger</i> (Camus), <i>Voyage au bout de la nuit</i> (Céline), <i>Crime et châtiment</i> (Dostoïevski), <i>Les hauts de Hurlevent</i> (E. Brontë), <i>Madame Bovary</i> (Flaubert), <i>Guerre et paix</i> (Tolstoï), <i>Le Père Goriot </i>(Balzac), <i>Oliver Twist</i><i> </i>(Dickens), <i>Le procès </i>(Kafka), <i>Gatsby le Magnifique</i> (Fitzgerald)."
+    },
+    {
+      "id": 173,
+      "categorie": "Quoi",
+      "question": "Quel style artistique exprime l’exubérance, l’exagération du mouvement, la surcharge décorative ?",
+      "reponse": "Le style « baroque » ou « rococo »."
+    },
+    {
+      "id": 174,
+      "categorie": "Quoi",
+      "question": "Quel grand théâtre de Moscou est renommé pour ses pièces de théâtre, ses opéras et ses ballets ?",
+      "reponse": "Le théâtre <i>Bolchoï</i> (« BolchoÏ » veut dire « grand »)."
+    },
+    {
+      "id": 175,
+      "categorie": "Quoi",
+      "question": "De quels <b>ensembles d’instruments</b> est composé un orchestre symphonique ?",
+      "reponse": "(4) De cordes, vents, cuivres et percussions."
+    },
+    {
+      "id": 176,
+      "categorie": "Quoi",
+      "question": "Que représente « La Cène » de Léonard de Vinci ?",
+      "reponse": "Le dernier repas de Jésus entouré de ses 12 apôtres."
+    },
+    {
+      "id": 177,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce qu’un polar ?",
+      "reponse": "Une œuvre littéraire ou cinématographique relevant <b>du genre policier.</b>"
+    },
+    {
+      "id": 178,
+      "categorie": "Quoi",
+      "question": "De quoi parle « L’Odyssée » d’Homère ?",
+      "reponse": "Du long voyage de retour d’Ulysse (10 ans) vers son île d’Ithaque après la guerre de Troie."
+    },
+    {
+      "id": 179,
+      "categorie": "Quoi",
+      "question": "Quelles épreuves sont comprises dans le décathlon ?",
+      "reponse": "(6)&nbsp;<b>Dix</b> épreuves&nbsp;: 4 courses (100 m, 400 m, 110 m haies, 1500 m), 3 sauts (longueur, hauteur, perche) et 3 lancers (poids, disque, javelot)."
+    },
+    {
+      "id": 180,
+      "categorie": "Quoi",
+      "question": "À quoi sert un poème épique ?",
+      "reponse": "À raconter les exploits de grands héros."
+    },
+    {
+      "id": 181,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce qu’un « sextet » ?",
+      "reponse": "Un ensemble de <b>jazz</b> composé de <b>six</b> musiciens."
+    },
+    {
+      "id": 182,
+      "categorie": "Quoi",
+      "question": "Que sont les hiéroglyphes ?",
+      "reponse": "Les caractères, signes des plus anciennes écritures <b>égyptiennes</b>."
+    },
+    {
+      "id": 183,
+      "categorie": "Quoi",
+      "question": "Quels sont les principaux dieux et déesses égyptiens ?",
+      "reponse": "(3) Rê, Osiris, Isis, Horus, Seth, Sekhmet, Geb, Nout, Hathor, Amon, Râ, Anubis et Thot."
+    },
+    {
+      "id": 184,
+      "categorie": "Quoi",
+      "question": "Quel est le dieu suprême égyptien ?",
+      "reponse": "Le dieu Rê."
+    },
+    {
+      "id": 185,
+      "categorie": "Quoi",
+      "question": "Que représentent chacune des lettres de la formule E = mc<sup>2&nbsp;</sup>?",
+      "reponse": "<b>L’énergie</b> est égale à la <b>masse</b> multipliée par le carré de la <b>vitesse</b> de la lumière."
+    },
+    {
+      "id": 186,
+      "categorie": "Quoi",
+      "question": "Que signifient les lettres ADN ?",
+      "reponse": "Acide désoxyribonucléique."
+    },
+    {
+      "id": 187,
+      "categorie": "Quoi",
+      "question": "De quel pays Franco était-il le dictateur ?",
+      "reponse": "De l’Espagne."
+    },
+    {
+      "id": 188,
+      "categorie": "Quoi",
+      "question": "Qu'est-ce que le langage binaire en informatique ?",
+      "reponse": "Un système de numérotation à deux symboles « 0 » et « 1 »."
+    },
+    {
+      "id": 189,
+      "categorie": "Quoi",
+      "question": "Quel pays a rédigé le premier la Déclaration universelle des droits de l’homme ?",
+      "reponse": "La France en 1948."
+    },
+    {
+      "id": 190,
+      "categorie": "Quoi",
+      "question": "Quels étaient les buts du mouvement des suffragettes ?",
+      "reponse": "(1) Le mouvement des suffragettes visait à obtenir le droit de <b>vote des femmes</b> et à promouvoir <b>l’égalité des sexes</b>."
+    },
+    {
+      "id": 191,
+      "categorie": "Quoi",
+      "question": "Quelle planète est la plus proche du Soleil ?",
+      "reponse": "Mercure (à seulement 50 millions de km du Soleil)."
+    },
+    {
+      "id": 192,
+      "categorie": "Quoi",
+      "question": "Qu'est-ce que l'héliocentrisme ?",
+      "reponse": "L'héliocentrisme est une théorie affirmant que le Soleil est au centre du système solaire."
+    },
+    {
+      "id": 193,
+      "categorie": "Quoi",
+      "question": "Quelle <b>expression</b> décrit la compétition des espèces pour la survie ou la dominance ?",
+      "reponse": "La « survie du plus apte », écrite à l’origine par Spencer dans ses <i>Principles of </i><i>Biology</i>. En anglais : <i>Survival of the </i><i>fittest</i><i>.</i>"
+    },
+    {
+      "id": 194,
+      "categorie": "Quoi",
+      "question": "Quelles sont les principales œuvres de Molière ?",
+      "reponse": "(1)&nbsp;<i>Le Misanthrope</i><i>, Les Misérables</i> et <i>L’Avare</i>."
+    },
+    {
+      "id": 195,
+      "categorie": "Quoi",
+      "question": "Qu’est-ce que la lumière ?",
+      "reponse": "Une onde électromagnétique visible."
+    },
+    {
+      "id": 196,
+      "categorie": "Quoi",
+      "question": "Quel est le titre du grand classique de Charles Darwin ?",
+      "reponse": "<i>De l’origine des espèces</i>. En anglais : <i>On the Origin of </i><i>Species</i><i>.</i>"
+    },
+    {
+      "id": 197,
+      "categorie": "Quoi",
+      "question": "De quoi est composé le sang ?",
+      "reponse": "(2) De plasma, de globules rouges et blancs."
+    },
+    {
+      "id": 198,
+      "categorie": "Quoi",
+      "question": "Quels sont les symboles chimiques du fer, du mercure et de l’étain ?",
+      "reponse": "(2)&nbsp;<i>Fe</i> pour le fer, <i>Hg</i> pour le mercure et <i>Sn</i> pour l’étain."
+    },
+    {
+      "id": 199,
+      "categorie": "Quoi",
+      "question": "Quels sont les symboles chimiques du sodium, du potassium et de l’or ?",
+      "reponse": "(2)&nbsp;<i>Na</i> pour le sodium, <i>K</i> pour le potassium et <i>Au</i> pour l’or."
+    },
+    {
+      "id": 200,
+      "categorie": "Quoi",
+      "question": "De quoi est composé le cerveau ?",
+      "reponse": "(1) De neurones et de tissus nerveux."
+    },
+    {
+      "id": 201,
+      "categorie": "Ou",
+      "question": "Où est située la plus vieille université francophone d’Amérique ?",
+      "reponse": "À Québec (l’Université Laval)."
+    },
+    {
+      "id": 202,
+      "categorie": "Ou",
+      "question": "Dans quelle ville est née Céline Dion ?",
+      "reponse": "À <b>Charlemagne</b> dans Lanaudière."
+    },
+    {
+      "id": 203,
+      "categorie": "Ou",
+      "question": "Dans quelle région est situé le village de Val-Jalbert, site historique du Québec ?",
+      "reponse": "Près de Chambord au <b>Lac-Saint-Jean</b>."
+    },
+    {
+      "id": 204,
+      "categorie": "Ou",
+      "question": "Où peut-on admirer <i>La Pietà</i>, statue en marbre de Michel-Ange ?",
+      "reponse": "À la basilique Saint-Pierre du Vatican."
+    },
+    {
+      "id": 205,
+      "categorie": "Ou",
+      "question": "Dans quel parc se trouve le Biodôme à Montréal ?",
+      "reponse": "Au<b> </b>parc olympique."
+    },
+    {
+      "id": 206,
+      "categorie": "Ou",
+      "question": "Où est exposée le célèbre tableau de <i>La Joconde</i> ?",
+      "reponse": "Au musée du Louvre à Paris."
+    },
+    {
+      "id": 207,
+      "categorie": "Ou",
+      "question": "Où est situé le parc national du Bic, connu pour ses paysages côtiers ?",
+      "reponse": "<b>Près de Rimouski</b> dans le Bas-Saint-Laurent."
+    },
+    {
+      "id": 208,
+      "categorie": "Ou",
+      "question": "D’où vient le nom de la ville de Montréal ?",
+      "reponse": "<b>Du mont Royal</b><b>,</b> au centre de la ville."
+    },
+    {
+      "id": 209,
+      "categorie": "Ou",
+      "question": "D’où vient le nom du fleuve Saint-Laurent ?",
+      "reponse": "De <b>saint Laurent </b>de Rome, fêté le jour où Jacques Cartier l’a découvert."
+    },
+    {
+      "id": 210,
+      "categorie": "Ou",
+      "question": "D’où vient le nom de la ville de Québec ?",
+      "reponse": "<b>Du mot algonquin </b><b><i>kébec</i></b>, signifiant « là où le fleuve se rétrécit »."
+    },
+    {
+      "id": 211,
+      "categorie": "Ou",
+      "question": "Où Jacques Cartier a-t-il planté sa croix en arrivant au Canada ?",
+      "reponse": "À Gaspé."
+    },
+    {
+      "id": 212,
+      "categorie": "Ou",
+      "question": "Dans quelle ville se trouve le siège de l’Organisation des Nations Unies (ONU) ?",
+      "reponse": "À New York."
+    },
+    {
+      "id": 213,
+      "categorie": "Ou",
+      "question": "Dans quelle ville peut-on visiter le Musée van Gogh ?",
+      "reponse": "À Amsterdam."
+    },
+    {
+      "id": 214,
+      "categorie": "Ou",
+      "question": "Dans quelle région des États-Unis se trouve le siège social de Google ?",
+      "reponse": "Dans la <b>Silicon Valley</b> en Californie."
+    },
+    {
+      "id": 215,
+      "categorie": "Ou",
+      "question": "Dans quelle ville est situé le stade Maracanã, célèbre pour ses matchs de football ?",
+      "reponse": "<b>À Rio de Janeiro</b>, au Brésil."
+    },
+    {
+      "id": 216,
+      "categorie": "Ou",
+      "question": "Dans quelle ville peut-on voir les studios de Hollywood, berceau du cinéma américain ?",
+      "reponse": "À Los Angeles."
+    },
+    {
+      "id": 217,
+      "categorie": "Ou",
+      "question": "Dans quelle ville se trouve le siège de l’Union européenne ?",
+      "reponse": "À Bruxelles."
+    },
+    {
+      "id": 218,
+      "categorie": "Ou",
+      "question": "Dans quelle ville du Québec a lieu le <i>Festival musique du bout du monde</i> ?",
+      "reponse": "À Gaspé."
+    },
+    {
+      "id": 219,
+      "categorie": "Ou",
+      "question": "Dans quelle ville peut-on visiter le Musée d’Art Moderne (MoMA) ?",
+      "reponse": "À Manhattan, <b>New York</b>."
+    },
+    {
+      "id": 220,
+      "categorie": "Ou",
+      "question": "Dans quelle ville se trouve le siège de la NASA ?",
+      "reponse": "À <b>Houston</b>, Texas."
+    },
+    {
+      "id": 221,
+      "categorie": "Ou",
+      "question": "Où a lieu le Festival de la galette au Québec ?",
+      "reponse": "À Louiseville."
+    },
+    {
+      "id": 222,
+      "categorie": "Ou",
+      "question": "Où a lieu le Festival du cochon au Québec ?",
+      "reponse": "À Sainte-Perpétue."
+    },
+    {
+      "id": 223,
+      "categorie": "Ou",
+      "question": "Quelle ville est le siège de la BBC ?",
+      "reponse": "Londres."
+    },
+    {
+      "id": 224,
+      "categorie": "Ou",
+      "question": "Dans quelle ville se trouve le temple religieux <i>Sainte-Sophie</i>, tantôt basilique, tantôt mosquée et même musée ?",
+      "reponse": "À <b>Istanbul</b> en Turquie."
+    },
+    {
+      "id": 225,
+      "categorie": "Ou",
+      "question": "Dans quelle ville peut-on visiter le Musée d’Orsay, dédié à l’art du XIX<sup>e</sup> siècle ?",
+      "reponse": "À Paris, dans une ancienne gare."
+    },
+    {
+      "id": 226,
+      "categorie": "Ou",
+      "question": "Dans quelle municipalité a grandi René Lévesque ?",
+      "reponse": "<b>À New Carlisle</b>, dans la Baie-des-Chaleurs."
+    },
+    {
+      "id": 227,
+      "categorie": "Ou",
+      "question": "De quel pays origine la <i>burqa ?",
+      "reponse": "</i><br/>De l’Afghanistan."
+    },
+    {
+      "id": 228,
+      "categorie": "Ou",
+      "question": "Dans quelles villes ont lieu les plus grands festivals de cinéma ?",
+      "reponse": "(2) À Cannes, Venise et Berlin."
+    },
+    {
+      "id": 229,
+      "categorie": "Ou",
+      "question": "D’où vient le mot « poubelle » <i>?",
+      "reponse": "</i><i><br/></i>D’Eugène <b>Poubelle</b>, préfet de la Seine, qui a imposé ce récipient aux citoyens."
+    },
+    {
+      "id": 230,
+      "categorie": "Ou",
+      "question": "D’où vient le mot « sandwich » ?",
+      "reponse": "Du comte de <b>Sandwich</b> (le premier à se faire apporter un mets froid à la table de jeu pour continuer à jouer sans se lever ni se salir les mains)."
+    },
+    {
+      "id": 231,
+      "categorie": "Ou",
+      "question": "D’où vient le mot « pantalon »?",
+      "reponse": "D’un personnage type de la commedia dell’arte qui s’appelait <b>Pantalone</b>, vêtu d’une culotte longue."
+    },
+    {
+      "id": 232,
+      "categorie": "Ou",
+      "question": "Où a lieu le festival <i>Mondial des Cultures ?",
+      "reponse": "</i><i><br/></i>À Drummondville."
+    },
+    {
+      "id": 233,
+      "categorie": "Ou",
+      "question": "De quel pays vient la tradition des jeux vidéo compétitifs (<i>e-sports</i>) ?",
+      "reponse": "De la <b>Corée du Sud</b>, où les e-sports sont très populaires depuis les années 1990."
+    },
+    {
+      "id": 234,
+      "categorie": "Ou",
+      "question": "D’où vient la pratique du minimalisme, un mouvement de simplification de la vie ?",
+      "reponse": "Du <b>Japon</b>, avec des influences occidentales."
+    },
+    {
+      "id": 235,
+      "categorie": "Ou",
+      "question": "D’où vient la pratique du yoga moderne, popularisée en Occident ?",
+      "reponse": "De <b>l’Inde</b>, où le yoga est pratiqué depuis des millénaires."
+    },
+    {
+      "id": 236,
+      "categorie": "Ou",
+      "question": "Des pays de quelle culture proviennent les premières attestations de l’apparition des arbres de Noël ?",
+      "reponse": "Des pays de <b>culture germanique</b> (Alsace, Forêt-Noire)."
+    },
+    {
+      "id": 237,
+      "categorie": "Ou",
+      "question": "D’où vient le nom « marathon » ?",
+      "reponse": "De la légende du messager grec qui aurait parcouru la distance de la ville <b>de Marathon à Athènes</b> pour annoncer la victoire des Grecs contre les Perses en 490 av. J.-C."
+    },
+    {
+      "id": 238,
+      "categorie": "Ou",
+      "question": "D’où vient le mot « lapalissade » ?",
+      "reponse": "De monsieur <b>de La Palice</b>, célèbre pour avoir commis la première lapalissade : « Un quart d’heure avant sa mort, il était encore en vie »."
+    },
+    {
+      "id": 239,
+      "categorie": "Ou",
+      "question": "Où a eu lieu la bataille qui a marqué la fin de Napoléon Bonaparte ?",
+      "reponse": "À <b>Waterloo</b>, en Belgique."
+    },
+    {
+      "id": 240,
+      "categorie": "Ou",
+      "question": "Où a eu lieu la bataille de l’armée française dirigée par François de Lévis contre l’armée britannique de Murray en 1760 ?",
+      "reponse": "À Sainte-Foy."
+    },
+    {
+      "id": 241,
+      "categorie": "Ou",
+      "question": "Dans quelle ville soviétique eu lieu la longue bataille qui a marqué un tournant dans la Seconde Guerre mondiale ?",
+      "reponse": "À Stalingrad."
+    },
+    {
+      "id": 242,
+      "categorie": "Ou",
+      "question": "Où a été découverte la pierre de Rosette, clé pour déchiffrer les hiéroglyphes égyptiens ?",
+      "reponse": "À <b>Rosette</b>, en Égypte."
+    },
+    {
+      "id": 243,
+      "categorie": "Ou",
+      "question": "Où a été signé le traité mettant fin à la Première Guerre mondiale ?",
+      "reponse": "À Versailles."
+    },
+    {
+      "id": 244,
+      "categorie": "Ou",
+      "question": "Dans quelle ville a été signée la Déclaration d’indépendance des États-Unis en 1776 ?",
+      "reponse": "À <b>Philadelphie</b>, en Pennsylvanie."
+    },
+    {
+      "id": 245,
+      "categorie": "Ou",
+      "question": "Dans quelle ville a été construit le premier gratte-ciel moderne, le <i>Home </i><i>Insurance</i><i> Building </i>?",
+      "reponse": "À Chicago."
+    },
+    {
+      "id": 246,
+      "categorie": "Ou",
+      "question": "Dans quelle région de l’Égypte a été découvert le tombeau de Toutankhamon ?",
+      "reponse": "Dans la Vallée des Rois, près de Louxor (l’un ou l’autre)."
+    },
+    {
+      "id": 247,
+      "categorie": "Ou",
+      "question": "Dans quel pays a eu lieu la bataille de la Somme, l’une des plus meurtrières de la Première Guerre mondiale ?",
+      "reponse": "À Somme, <b>en France</b>."
+    },
+    {
+      "id": 248,
+      "categorie": "Ou",
+      "question": "Dans quel pays a été signé en 1494 le traité partageant le monde entre l’Espagne et le Portugal ?",
+      "reponse": "À Tordesillas, <b>en Espagne</b>."
+    },
+    {
+      "id": 249,
+      "categorie": "Ou",
+      "question": "Dans quel pays a été inventée l’imprimerie par Gutenberg ?",
+      "reponse": "À Mayence, <b>en Allemagne</b>."
+    },
+    {
+      "id": 250,
+      "categorie": "Ou",
+      "question": "Dans quel pays eut lieu la bataille de Trafalgar, où Nelson a vaincu la flotte franco-espagnole ?",
+      "reponse": "Au large du cap de Trafalgar, <b>en Espagne</b>."
+    },
+    {
+      "id": 251,
+      "categorie": "Ou",
+      "question": "D’où vient le nom « kalachnikov » ?",
+      "reponse": "De Mikhaïl <b>Kalachnikov</b>, qui inventa ce fusil en 1947."
+    },
+    {
+      "id": 252,
+      "categorie": "Ou",
+      "question": "De quelle ville vient la tradition des Jeux Olympiques ?",
+      "reponse": "<b>D’Olympie</b>, en Grèce, où les premiers Jeux ont eu lieu en 776 av. J.-C."
+    },
+    {
+      "id": 253,
+      "categorie": "Ou",
+      "question": "De quelle ville vient la pratique de la démocratie ?",
+      "reponse": "<b>D’Athènes</b>, au V<sup>e</sup> siècle av. J.-C."
+    },
+    {
+      "id": 254,
+      "categorie": "Ou",
+      "question": "De quelle ville vient la tradition des gladiateurs ?",
+      "reponse": "De <b>Rome</b>, où les combats de gladiateurs étaient organisés dans le Colisée."
+    },
+    {
+      "id": 255,
+      "categorie": "Ou",
+      "question": "Dans quels pays trouve-t-on des populations de plus d’un milliard d’habitants ?",
+      "reponse": "(2) En <b>Inde</b> et en <b>Chine</b>."
+    },
+    {
+      "id": 256,
+      "categorie": "Ou",
+      "question": "De quel pays vient la tradition des samouraïs ?",
+      "reponse": "Du <b>Japon</b> féodal, où les samouraïs étaient des guerriers nobles."
+    },
+    {
+      "id": 257,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la momification ?",
+      "reponse": "De <b>l’Égypte</b>, où elle était utilisée pour préserver les corps des pharaons."
+    },
+    {
+      "id": 258,
+      "categorie": "Ou",
+      "question": "De quels pays vient principalement la tradition des chevaliers, au Moyen Âge ?",
+      "reponse": "(2) De la France et de l’Angleterre."
+    },
+    {
+      "id": 259,
+      "categorie": "Ou",
+      "question": "D’où venaient les Vikings ?",
+      "reponse": "De la <b>Scandinavie</b> (Norvège, Suède, Danemark)."
+    },
+    {
+      "id": 260,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la culture du riz ?",
+      "reponse": "De la <b>Chine</b>, où elle a été domestiquée il y a près de 10 000 ans."
+    },
+    {
+      "id": 261,
+      "categorie": "Ou",
+      "question": "De quel pays vient la tradition des zoulous?",
+      "reponse": "De <b>l’Afrique du Sud</b>, où les Zoulous forment un peuple bantou."
+    },
+    {
+      "id": 262,
+      "categorie": "Ou",
+      "question": "D’où vient le nom « atlas » ?",
+      "reponse": "(1) Du géant de la mythologie grecque <b>Atlas</b><b>,</b> <b>censé porter le monde sur ses épaules.</b>"
+    },
+    {
+      "id": 263,
+      "categorie": "Ou",
+      "question": "Dans quelle région était situé l’empire Inca ?",
+      "reponse": "Dans les <b>Andes</b>, en Amérique du Sud."
+    },
+    {
+      "id": 264,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la culture du maïs ?",
+      "reponse": "Du <b>Mexique</b>, où le maïs a été domestiqué il y a plus de 9 000 ans."
+    },
+    {
+      "id": 265,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Pretoria ?",
+      "reponse": "En Afrique du Sud."
+    },
+    {
+      "id": 266,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Nassau ?",
+      "reponse": "Aux Bahamas."
+    },
+    {
+      "id": 267,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Le Caire ?",
+      "reponse": "En Égypte."
+    },
+    {
+      "id": 268,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Bogota ?",
+      "reponse": "En Colombie."
+    },
+    {
+      "id": 269,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville d’Abou Dabi ?",
+      "reponse": "Aux Émirats arabes unis."
+    },
+    {
+      "id": 270,
+      "categorie": "Ou",
+      "question": "Dans quelle région du monde a été découvert le premier fossile de mammouth ?",
+      "reponse": "En Sibérie."
+    },
+    {
+      "id": 271,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville d’Addis-Abeba ?",
+      "reponse": "En Éthiopie."
+    },
+    {
+      "id": 272,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Budapest ?",
+      "reponse": "En Hongrie."
+    },
+    {
+      "id": 273,
+      "categorie": "Ou",
+      "question": "Dans quelle province trouve-t-on les fossiles des dinosaures <i>Albertosaurus </i><i>sarcophagus</i><i> et Edmontosaurus </i><i>regalis</i><i> ?",
+      "reponse": "</i><br/>En Alberta."
+    },
+    {
+      "id": 274,
+      "categorie": "Ou",
+      "question": "Dans quels pays sont situées les plus importantes bourses du monde ?",
+      "reponse": "(3) Aux <b>États-Unis</b>&nbsp;: la Bourse de New York et le NASDAQ, en <b>Chine</b>&nbsp;: la Bourse de Shangai et celle de Shenzhen, à <b>Hong Kong</b>&nbsp;: la Bourse de Hong Kong, à <b>Tokyo</b>&nbsp;: la Bourse de Tokyo et au <b>Royaume-Uni</b>&nbsp;: la Bourse de Londres."
+    },
+    {
+      "id": 275,
+      "categorie": "Ou",
+      "question": "De quel pays partait l’explorateur Vasco de Gama ?",
+      "reponse": "Du Portugal."
+    },
+    {
+      "id": 276,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la fabrication de la porcelaine ?",
+      "reponse": "De la Chine, où les premières véritables porcelaines sont apparues vers 200 de notre ère."
+    },
+    {
+      "id": 277,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la culture du cacao ?",
+      "reponse": "Du Mexique, où les Mayas et les Aztèques le cultivaient."
+    },
+    {
+      "id": 278,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la fabrication des épées katana ?",
+      "reponse": "Du Japon, où les forgerons ont perfectionné cette technique au Moyen Âge."
+    },
+    {
+      "id": 279,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la culture du café ?",
+      "reponse": "De l’Éthiopie, où le café a été découvert il y a plus de 1 000 ans."
+    },
+    {
+      "id": 280,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Tel Aviv ?",
+      "reponse": "En Israël."
+    },
+    {
+      "id": 281,
+      "categorie": "Ou",
+      "question": "De quel pays vient la pratique de la fabrication des tapis persans ?",
+      "reponse": "De l’Iran, où cette tradition remonte à plus de 2 500 ans."
+    },
+    {
+      "id": 282,
+      "categorie": "Ou",
+      "question": "Dans quel pays se déroule l’action de l’opéra de Puccini <i>Madame Butterfly</i> ?",
+      "reponse": "Au Japon."
+    },
+    {
+      "id": 283,
+      "categorie": "Ou",
+      "question": "Dans quel pays est située la ville de Dublin ?",
+      "reponse": "En Irlande."
+    },
+    {
+      "id": 284,
+      "categorie": "Ou",
+      "question": "Dans quels pays trouve-t-on 90 % des terres rares du monde ?",
+      "reponse": "(2) En Chine, au Brésil, au Vietnam et en Russie."
+    },
+    {
+      "id": 285,
+      "categorie": "Ou",
+      "question": "De quels ports partaient les navires de la Compagnie des Cent-Associés pour atteindre la Nouvelle-France ?",
+      "reponse": "Des <b>ports français</b> comme La Rochelle et Dieppe."
+    },
+    {
+      "id": 286,
+      "categorie": "Ou",
+      "question": "De quel pays venaient les immigrants qui ont fui la Grande Famine pour s’installer au Québec ?",
+      "reponse": "De l’Irlande, en 1840."
+    },
+    {
+      "id": 287,
+      "categorie": "Ou",
+      "question": "De quel pays partaient les navires de Christophe Colomb lors de son voyage vers les Amériques ?",
+      "reponse": "De l’Espagne, du port de Palos de la Frontera."
+    },
+    {
+      "id": 288,
+      "categorie": "Ou",
+      "question": "De quel pays partaient les expéditions de Marco Polo pour atteindre la Chine ?",
+      "reponse": "De Venise en Italie."
+    },
+    {
+      "id": 289,
+      "categorie": "Ou",
+      "question": "D’où venaient les premiers habitants de l’île de Pâques, célèbre pour ses statues moaï ?",
+      "reponse": "De la Polynésie, probablement des îles Marquises."
+    },
+    {
+      "id": 290,
+      "categorie": "Ou",
+      "question": "De quel pays partaient les navires de la flotte de l’Invincible Armada en 1588 ?",
+      "reponse": "De l’Espagne."
+    },
+    {
+      "id": 291,
+      "categorie": "Ou",
+      "question": "D’où venaient les premiers colons français qui ont fondé la Louisiane au XVII<sup>e</sup> siècle ?",
+      "reponse": "De la Nouvelle-France, d’où sont partis Cavelier de La Salle, et Pierre Le Moyne d’Iberville."
+    },
+    {
+      "id": 292,
+      "categorie": "Ou",
+      "question": "De quelle ville le sieur de Laviolette est-il le fondateur ?",
+      "reponse": "De Trois-Rivières."
+    },
+    {
+      "id": 293,
+      "categorie": "Ou",
+      "question": "De quelles villes partaient les expéditions de Jean Nicolet pour explorer les Grands Lacs ?",
+      "reponse": "(1) De Québec et de Trois-Rivières, au Canada."
+    },
+    {
+      "id": 294,
+      "categorie": "Ou",
+      "question": "Dans quel pays est fabriquée la chartreuse, une liqueur à très haut degré d’alcool ?",
+      "reponse": "Dans le massif de la Chartreuse, en France."
+    },
+    {
+      "id": 295,
+      "categorie": "Ou",
+      "question": "De quelle ville Paul Chomedey de Maisonneuve est-il le fondateur ?",
+      "reponse": "De Montréal."
+    },
+    {
+      "id": 296,
+      "categorie": "Ou",
+      "question": "Dans quelle région administrative du Québec se situe Acton Vale ?",
+      "reponse": "En Montérégie."
+    },
+    {
+      "id": 297,
+      "categorie": "Ou",
+      "question": "Dans quelle région administrative du Québec se situe Amqui ?",
+      "reponse": "Au Bas-Saint-Laurent."
+    },
+    {
+      "id": 298,
+      "categorie": "Ou",
+      "question": "Dans quelle région administrative du Québec se situe Berthierville ?",
+      "reponse": "Dans les Laurentides."
+    },
+    {
+      "id": 299,
+      "categorie": "Ou",
+      "question": "Dans quelle région administrative du Québec se situe Chambly ?",
+      "reponse": "En Montérégie."
+    },
+    {
+      "id": 300,
+      "categorie": "Ou",
+      "question": "Dans quelle région administrative du Québec se situe Deux-Montagnes ?",
+      "reponse": "Dans les Laurentides."
+    },
+    {
+      "id": 301,
+      "categorie": "Quand",
+      "question": "À quand remonte la fondation de Trois-Rivières ?",
+      "reponse": "À 1634."
+    },
+    {
+      "id": 302,
+      "categorie": "Quand",
+      "question": "Depuis quelle année le Carnaval de Québec existe-t-il ?",
+      "reponse": "(±&nbsp;5) Depuis 1955."
+    },
+    {
+      "id": 303,
+      "categorie": "Quand",
+      "question": "Quand a été créé le <i>Cirque du Soleil</i> ?",
+      "reponse": "(±&nbsp;5) En 1984."
+    },
+    {
+      "id": 304,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition du <i>Festival de jazz de Montréal</i><i> ?",
+      "reponse": " (±&nbsp;5) À 1980."
+    },
+    {
+      "id": 305,
+      "categorie": "Quand",
+      "question": "Quand le Québec est-il entré dans la fédération canadienne ?",
+      "reponse": "En 1867."
+    },
+    {
+      "id": 306,
+      "categorie": "Quand",
+      "question": "Quand peut-on idéalement faire castrer un chat ?",
+      "reponse": "Entre 6 et 8 mois."
+    },
+    {
+      "id": 307,
+      "categorie": "Quand",
+      "question": "À quand remonte la création du journal <i>Le Devoir</i> ?",
+      "reponse": "(±&nbsp;10) À 1910."
+    },
+    {
+      "id": 308,
+      "categorie": "Quand",
+      "question": "Depuis quand le français est-il la langue officielle du Québec ?",
+      "reponse": "(±&nbsp;5) Depuis 1974."
+    },
+    {
+      "id": 309,
+      "categorie": "Quand",
+      "question": "Vers quelles heures la mort survient-elle le plus fréquemment ?",
+      "reponse": "Entre 5 et 6 heures du matin."
+    },
+    {
+      "id": 310,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition du <i>Festival Juste pour rire</i> ?",
+      "reponse": "(±&nbsp;5) À 1983."
+    },
+    {
+      "id": 311,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre drapeau ?",
+      "reponse": "(±&nbsp;10) Depuis 1948."
+    },
+    {
+      "id": 312,
+      "categorie": "Quand",
+      "question": "Quand a été créé le groupe <i>Les Cowboys Fringants</i> ?",
+      "reponse": "(±&nbsp;3) En 1995."
+    },
+    {
+      "id": 313,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition de l’émission <i>Bye bye</i> de fin d’année?",
+      "reponse": "(±&nbsp;5) À 1968."
+    },
+    {
+      "id": 314,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre système de santé ?",
+      "reponse": "(±&nbsp;5) Depuis 1961."
+    },
+    {
+      "id": 315,
+      "categorie": "Quand",
+      "question": "Quand a été fondé le groupe <i>Harmonium</i> ?",
+      "reponse": "(±&nbsp;5) En 1972."
+    },
+    {
+      "id": 316,
+      "categorie": "Quand",
+      "question": "Quand doit-on administrer une dose d’épinéphrine ?",
+      "reponse": "Lorsqu’une réaction allergique grave est constatée."
+    },
+    {
+      "id": 317,
+      "categorie": "Quand",
+      "question": "Quand a été créé le groupe <i>Beau Dommage</i> ?",
+      "reponse": "(±&nbsp;5) En 1972."
+    },
+    {
+      "id": 318,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition du <i>Grand Prix de Montréal</i> ?",
+      "reponse": "(±&nbsp;5) À 1978."
+    },
+    {
+      "id": 319,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre <i>ministère de l'Éducation</i> ?",
+      "reponse": "(±&nbsp;5) Depuis 1964."
+    },
+    {
+      "id": 320,
+      "categorie": "Quand",
+      "question": "Quand a été fondé le groupe <i>La Bottine Souriante</i> ?",
+      "reponse": "(±&nbsp;5) En 1976."
+    },
+    {
+      "id": 321,
+      "categorie": "Quand",
+      "question": "À quand remonte la création de la <i>Caisse de dépôt et placement du Québec</i> ?",
+      "reponse": "(±&nbsp;5) À 1965, sous Jean Lesage."
+    },
+    {
+      "id": 322,
+      "categorie": "Quand",
+      "question": "En quelle année Janette Bertrand a-t-elle fêté ses 100 ans ?",
+      "reponse": "En 2025."
+    },
+    {
+      "id": 323,
+      "categorie": "Quand",
+      "question": "Quand a été créé le groupe <i>Les Trois Accords</i> ?",
+      "reponse": "(±&nbsp;3) En 1997."
+    },
+    {
+      "id": 324,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition du <i>Festival d'été de Québec</i><i> ?",
+      "reponse": " (±&nbsp;5) À 1968."
+    },
+    {
+      "id": 325,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre système de garderies subventionnées ?",
+      "reponse": "(±&nbsp;5) Depuis 1997."
+    },
+    {
+      "id": 326,
+      "categorie": "Quand",
+      "question": "Quand a été fondé le groupe <i>Les Colocs</i> ?",
+      "reponse": "(±&nbsp;5) En 1990."
+    },
+    {
+      "id": 327,
+      "categorie": "Quand",
+      "question": "À quand remonte la création du programme CELI (compte d’épargne libre d’impôt) ?",
+      "reponse": "(±&nbsp;3) À 2009."
+    },
+    {
+      "id": 328,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre programme d'assurance médicaments ?",
+      "reponse": "(±&nbsp;5) Depuis 1997."
+    },
+    {
+      "id": 329,
+      "categorie": "Quand",
+      "question": "À quand remonte le rituel de changement d’heure au Québec<i> ?",
+      "reponse": " (±&nbsp;10) À 1918 (deux ans après l’Allemagne et le Royaume-Uni pour économiser les ressources énergétiques)."
+    },
+    {
+      "id": 330,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre système de prêts et bourses ?",
+      "reponse": "(±&nbsp;5) Depuis 1964."
+    },
+    {
+      "id": 331,
+      "categorie": "Quand",
+      "question": "Pendant quel mois a lieu le Carnaval de Québec chaque année ?",
+      "reponse": "En février."
+    },
+    {
+      "id": 332,
+      "categorie": "Quand",
+      "question": "À quand remonte la fondation de la <i>CAQ</i> ?",
+      "reponse": "(±&nbsp;3) À 2011."
+    },
+    {
+      "id": 333,
+      "categorie": "Quand",
+      "question": "Quand François Legault est-il devenu Premier ministre du Québec pour la première fois ?",
+      "reponse": "(±&nbsp;1) En 2018."
+    },
+    {
+      "id": 334,
+      "categorie": "Quand",
+      "question": "À quand remonte la dernière édition du <i>Festival Juste pour rire</i> ?",
+      "reponse": "(±&nbsp;2) À 2023."
+    },
+    {
+      "id": 335,
+      "categorie": "Quand",
+      "question": "Quand Eleanor Harvey a-t-elle remporté le bronze en escrime aux Jeux Olympiques ?",
+      "reponse": "(±&nbsp;2) En 2024."
+    },
+    {
+      "id": 336,
+      "categorie": "Quand",
+      "question": "À quand remonte la mort de Dédé Fortin ?",
+      "reponse": "(±&nbsp;5) À 2000."
+    },
+    {
+      "id": 337,
+      "categorie": "Quand",
+      "question": "Depuis quand le Québec a-t-il son propre système de tarification du carbone ?",
+      "reponse": "(±&nbsp;5) Depuis 2013."
+    },
+    {
+      "id": 338,
+      "categorie": "Quand",
+      "question": "Quand a été formé le groupe <i>Men Without Hats </i>?",
+      "reponse": "<i> </i>(±&nbsp;5) En 1977."
+    },
+    {
+      "id": 339,
+      "categorie": "Quand",
+      "question": "Quand l’équipe canadienne féminine a-t-elle remporté l’argent en rugby à 7 aux Jeux Olympiques ?",
+      "reponse": "(±&nbsp;3) En 2024."
+    },
+    {
+      "id": 340,
+      "categorie": "Quand",
+      "question": "Quand le Circuit Île-Notre-Dame a-t-il été dénommé <i>Circuit Gilles-Villeneuve</i><i> </i>?",
+      "reponse": "(±&nbsp;5) En 1978."
+    },
+    {
+      "id": 341,
+      "categorie": "Quand",
+      "question": "Quand Joannie Rochette a-t-elle remporté une médaille de bronze en patinage artistique aux Jeux Olympiques ?",
+      "reponse": "(±&nbsp;5) En 2010."
+    },
+    {
+      "id": 342,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition du <i>Festival international de la poésie de Trois-Rivières</i> ?",
+      "reponse": "(±&nbsp;5) À 1985."
+    },
+    {
+      "id": 343,
+      "categorie": "Quand",
+      "question": "Quand a eu lieu la Révolution française ?",
+      "reponse": "En 1789."
+    },
+    {
+      "id": 344,
+      "categorie": "Quand",
+      "question": "À quand remonte la découverte de l'Amérique par Christophe Colomb ?",
+      "reponse": "À 1492."
+    },
+    {
+      "id": 345,
+      "categorie": "Quand",
+      "question": "Depuis quand la Tour Eiffel existe-t-elle ?",
+      "reponse": "(±&nbsp;8) Depuis 1889."
+    },
+    {
+      "id": 346,
+      "categorie": "Quand",
+      "question": "Quand a été fondée <i>l'Organisation des Nations Unies</i> <i>(ONU</i>) ?",
+      "reponse": "(±&nbsp;5) En 1945."
+    },
+    {
+      "id": 347,
+      "categorie": "Quand",
+      "question": "À quand remonte la construction du monastère des Ursulines de Trois-Rivières ?",
+      "reponse": "(±&nbsp;50) À 1699."
+    },
+    {
+      "id": 348,
+      "categorie": "Quand",
+      "question": "Depuis quand la <i>Statue de la Liberté</i> existe-t-elle ?",
+      "reponse": "(±&nbsp;50) Depuis 1886. Pour célébrer le centenaire de l’indépendance des États-Unis."
+    },
+    {
+      "id": 349,
+      "categorie": "Quand",
+      "question": "Quand a été inventée l'imprimerie ?",
+      "reponse": "(±&nbsp;100) En 1453."
+    },
+    {
+      "id": 350,
+      "categorie": "Quand",
+      "question": "À quand remonte la chute du mur de Berlin ?",
+      "reponse": "(±&nbsp;5) À 1989."
+    },
+    {
+      "id": 351,
+      "categorie": "Quand",
+      "question": "Depuis quand la <i>Mo</i><i>n</i><i>na Lisa</i> est-elle exposée au Louvre ?",
+      "reponse": "(±&nbsp;100) Depuis 1797."
+    },
+    {
+      "id": 352,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la <i>NASA</i> ?",
+      "reponse": "(±&nbsp;10) En 1958."
+    },
+    {
+      "id": 353,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition des Jeux Olympiques modernes ?",
+      "reponse": "(±&nbsp;30) À 1896."
+    },
+    {
+      "id": 354,
+      "categorie": "Quand",
+      "question": "Quand a été inventé le téléphone ?",
+      "reponse": "(±&nbsp;20) En 1876."
+    },
+    {
+      "id": 355,
+      "categorie": "Quand",
+      "question": "À quand remonte la première guerre nucléaire ?",
+      "reponse": "Jamais."
+    },
+    {
+      "id": 356,
+      "categorie": "Quand",
+      "question": "Depuis quand la <i>Grande Muraille de Chine</i> existe-t-elle ?",
+      "reponse": "(±1&nbsp;siècle) Depuis le VII<sup>e</sup> siècle av. J.-C."
+    },
+    {
+      "id": 357,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Apple</i> ?",
+      "reponse": "(±&nbsp;5) En 1976."
+    },
+    {
+      "id": 358,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition de la <i>Coupe du Monde de football</i><i> </i>?",
+      "reponse": "(±&nbsp;10) À 1930."
+    },
+    {
+      "id": 359,
+      "categorie": "Quand",
+      "question": "Quand a été inventé l'avion ?",
+      "reponse": "(±&nbsp;10) En 1903."
+    },
+    {
+      "id": 360,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition du <i>Tour de France</i> ?",
+      "reponse": "(±&nbsp;10) À 1903."
+    },
+    {
+      "id": 361,
+      "categorie": "Quand",
+      "question": "Quand considère-t-on que se produit une « stagflation » économique ?",
+      "reponse": "En présence d’une croissance économique faible ou nulle (<b>stag</b>nation) et d’une forte in<b>flation</b>."
+    },
+    {
+      "id": 362,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Microsoft</i> ?",
+      "reponse": "(±&nbsp;5) En 1975."
+    },
+    {
+      "id": 363,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition des <i>Oscars</i> ?",
+      "reponse": "(±&nbsp;10) À 1929."
+    },
+    {
+      "id": 364,
+      "categorie": "Quand",
+      "question": "Quand a été inventé l'ordinateur ?",
+      "reponse": "(±&nbsp;8) En 1931."
+    },
+    {
+      "id": 365,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Google</i> ?",
+      "reponse": "(±&nbsp;3) En 1998."
+    },
+    {
+      "id": 366,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition des <i>Jeux Olympiques d'hiver</i> ?",
+      "reponse": "(±&nbsp;10) À 1924."
+    },
+    {
+      "id": 367,
+      "categorie": "Quand",
+      "question": "À quand remonte l’annonce publique du <i>World Wide Web</i> par Tim Berners-Lee ?",
+      "reponse": "(±&nbsp;3) À 1991."
+    },
+    {
+      "id": 368,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Amazon</i> ?",
+      "reponse": "(±&nbsp;3) En 1994."
+    },
+    {
+      "id": 369,
+      "categorie": "Quand",
+      "question": "À quand remonte la première édition des <i>Jeux Olympiques paralympiques</i> ?",
+      "reponse": "(±&nbsp;5) À 1960."
+    },
+    {
+      "id": 370,
+      "categorie": "Quand",
+      "question": "Quand a été conçu le premier téléphone intelligent ?",
+      "reponse": "(±&nbsp;3) En 1992."
+    },
+    {
+      "id": 371,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Facebook</i> ?",
+      "reponse": "(±&nbsp;3) En 2004."
+    },
+    {
+      "id": 372,
+      "categorie": "Quand",
+      "question": "Quand a été inventé le <i>GPS</i> ?",
+      "reponse": "(±&nbsp;5) En 1973."
+    },
+    {
+      "id": 373,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Tesla</i> ?",
+      "reponse": "(±&nbsp;3) En 2003."
+    },
+    {
+      "id": 374,
+      "categorie": "Quand",
+      "question": "Quand a été inventé le drone ?",
+      "reponse": "(±&nbsp;5) En 1917."
+    },
+    {
+      "id": 375,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Netflix</i> ?",
+      "reponse": "(±&nbsp;3) En 1997."
+    },
+    {
+      "id": 376,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Spotify</i> ?",
+      "reponse": "(±&nbsp;3) En 2006."
+    },
+    {
+      "id": 377,
+      "categorie": "Quand",
+      "question": "Quand a été créé le premier processeur quantique ?",
+      "reponse": "(±&nbsp;3) En 2009 à l’université Yale."
+    },
+    {
+      "id": 378,
+      "categorie": "Quand",
+      "question": "Quand a été fondée la compagnie <i>Airbnb</i> ?",
+      "reponse": "(±&nbsp;3) En 2008."
+    },
+    {
+      "id": 379,
+      "categorie": "Quand",
+      "question": "Depuis quand Elon Musk est-il propriétaire de <i>Twitter</i> ?",
+      "reponse": "(±&nbsp;2) Depuis 2022."
+    },
+    {
+      "id": 380,
+      "categorie": "Quand",
+      "question": "Quand a été lancé le premier <i>i</i><i>Phone</i><i> </i>?",
+      "reponse": "(±&nbsp;3) En 2007."
+    },
+    {
+      "id": 381,
+      "categorie": "Quand",
+      "question": "En quelle année la guerre russo-ukrainienne a-t-elle commencé en Crimée et au Donbass ?",
+      "reponse": "(±&nbsp;2) En 2014."
+    },
+    {
+      "id": 382,
+      "categorie": "Quand",
+      "question": "Quand a été lancée la série de films <i>Avatar</i><i> ?",
+      "reponse": " (±&nbsp;3) En 2009."
+    },
+    {
+      "id": 383,
+      "categorie": "Quand",
+      "question": "Quand se produit le solstice d’été dans l’hémisphère Nord ?",
+      "reponse": "Dans les environs du 21 juin."
+    },
+    {
+      "id": 384,
+      "categorie": "Quand",
+      "question": "En quelle année la reine Elizabeth II est-elle décédée ?",
+      "reponse": "(±&nbsp;2) En 2022."
+    },
+    {
+      "id": 385,
+      "categorie": "Quand",
+      "question": "Quand le dollar canadien (huard) est-il entré en circulation ?",
+      "reponse": "(±&nbsp;5) En 1987."
+    },
+    {
+      "id": 386,
+      "categorie": "Quand",
+      "question": "Quand le cent (sou noir) a-t-il été aboli ?",
+      "reponse": "(±&nbsp;3) En 2013."
+    },
+    {
+      "id": 387,
+      "categorie": "Quand",
+      "question": "Depuis quand l'euro est-il en circulation ?",
+      "reponse": "(±&nbsp;5) Depuis 2002."
+    },
+    {
+      "id": 388,
+      "categorie": "Quand",
+      "question": "Quand a été lancé le premier film <i>Batman</i> ?",
+      "reponse": "(±&nbsp;5) En 1989."
+    },
+    {
+      "id": 389,
+      "categorie": "Quand",
+      "question": "Quand le premier film <i>Dune</i> de Denis Villeneuve a-t-il été lancé ?",
+      "reponse": "(±&nbsp;1) En 2021."
+    },
+    {
+      "id": 390,
+      "categorie": "Quand",
+      "question": "Quand ont eu lieu les <i>Jeux Olympiques de Montréal</i> ?",
+      "reponse": "(±&nbsp;2) En 1976."
+    },
+    {
+      "id": 391,
+      "categorie": "Quand",
+      "question": "Quand la ville de Québec a-t-elle été fondée ?",
+      "reponse": "En 1608."
+    },
+    {
+      "id": 392,
+      "categorie": "Quand",
+      "question": "Quand la devise du Québec « Je me souviens » a-t-elle été créée ?",
+      "reponse": "(±&nbsp;30) En 1883."
+    },
+    {
+      "id": 393,
+      "categorie": "Quand",
+      "question": "En quelle année la loi 101 est-elle entrée en vigueur au Québec ?",
+      "reponse": "(±&nbsp;5) En 1977."
+    },
+    {
+      "id": 394,
+      "categorie": "Quand",
+      "question": "Quand se produit le solstice d’hiver dans l’hémisphère Nord ?",
+      "reponse": "Dans les environs du 21 décembre."
+    },
+    {
+      "id": 395,
+      "categorie": "Quand",
+      "question": "En quelle année la crise d’Octobre a-t-elle eu lieu au Québec ?",
+      "reponse": "En 1970."
+    },
+    {
+      "id": 396,
+      "categorie": "Quand",
+      "question": "En quelle année le métro de Montréal a-t-il été construit ?",
+      "reponse": "(±&nbsp;5) En 1966."
+    },
+    {
+      "id": 397,
+      "categorie": "Quand",
+      "question": "Quand le pont Jacques-Cartier a-t-il été inauguré ?",
+      "reponse": "(±&nbsp;10) En 1930."
+    },
+    {
+      "id": 398,
+      "categorie": "Quand",
+      "question": "Quand la première femme a-t-elle été élue première ministre du Québec ?",
+      "reponse": "(±&nbsp;3) En 2012."
+    },
+    {
+      "id": 399,
+      "categorie": "Quand",
+      "question": "Quand a eu lieu le premier référendum sur la souveraineté du Québec ?",
+      "reponse": "En 1980."
+    },
+    {
+      "id": 400,
+      "categorie": "Quand",
+      "question": "Depuis quand les Canadiens de Montréal existent-ils ?",
+      "reponse": "(±&nbsp;10) Depuis 1909."
+    },
+    {
+      "id": 401,
+      "categorie": "Comment",
+      "question": "Comment appelle-t-on le genre de roman qui dépeint une société imaginaire soumise à l’autorité de dirigeants qui exercent un contrôle total ?",
+      "reponse": "Une dystopie."
+    },
+    {
+      "id": 402,
+      "categorie": "Comment",
+      "question": "Comment dit-on « merci » en espagnol ?",
+      "reponse": "<i>Gracias</i>."
+    },
+    {
+      "id": 403,
+      "categorie": "Comment",
+      "question": "Comment s’appelait l’avion supersonique conçu par la France et l’Angleterre, qui reliait Paris à New York en 3 h 30 ?",
+      "reponse": "Le Concorde."
+    },
+    {
+      "id": 404,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe&nbsp;: «&nbsp;Aux grands maux… ?<br>",
+      "reponse": "…les grands remèdes »."
+    },
+    {
+      "id": 405,
+      "categorie": "Comment",
+      "question": "Comment mesure-t-on la vitesse d’un avion supersonique ?",
+      "reponse": "En <b>Mach</b>. (EX : Mach 1 = une fois la vitesse du son)."
+    },
+    {
+      "id": 406,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Chercher midi… ?<br>",
+      "reponse": "…à quatorze heures »."
+    },
+    {
+      "id": 407,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe&nbsp;: «&nbsp;Chose promise… ?<br>",
+      "reponse": "…chose due »."
+    },
+    {
+      "id": 408,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe&nbsp;: «&nbsp;Comparaison… ?<br>",
+      "reponse": "…n’est pas raison »."
+    },
+    {
+      "id": 409,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe&nbsp;: «&nbsp;Dans le doute… ?<br>",
+      "reponse": "… abstiens-toi »."
+    },
+    {
+      "id": 410,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe&nbsp;: «&nbsp;Des goûts et des couleurs… ?<br>",
+      "reponse": "… on ne discute pas »."
+    },
+    {
+      "id": 411,
+      "categorie": "Comment",
+      "question": "Comment appelle-t-on plus communément le chlorure de sodium ?",
+      "reponse": "Le sel (de table ou de cuisine)."
+    },
+    {
+      "id": 412,
+      "categorie": "Comment",
+      "question": "Comment s’appelle le réseau social de Donald Trump ?",
+      "reponse": "<i>Truth Social</i>."
+    },
+    {
+      "id": 413,
+      "categorie": "Comment",
+      "question": "Comment s’appelle le match final de la série éliminatoire de la Ligue nationale de football américain ?",
+      "reponse": "Le <i>Superbowl.</i>"
+    },
+    {
+      "id": 414,
+      "categorie": "Comment",
+      "question": "Comment appelle-t-on les athlètes qui jouent au tennis de table ?",
+      "reponse": "Des pongistes."
+    },
+    {
+      "id": 415,
+      "categorie": "Comment",
+      "question": "Comment s’appelle le plus grand océan du monde ?",
+      "reponse": "L’océan Pacifique."
+    },
+    {
+      "id": 416,
+      "categorie": "Comment",
+      "question": "Comment appelle-t-on deux mots de sens identique mais de formes différentes ?",
+      "reponse": "Des synonymes."
+    },
+    {
+      "id": 417,
+      "categorie": "Comment",
+      "question": "Comment s’appelle la plus grande forêt tropicale du monde ?",
+      "reponse": "L’Amazonie."
+    },
+    {
+      "id": 418,
+      "categorie": "Comment",
+      "question": "Comment appelle-t-on les avions destinés à éteindre les incendies de forêt ?",
+      "reponse": "Des avions-citernes."
+    },
+    {
+      "id": 419,
+      "categorie": "Comment",
+      "question": "Comment s’appellent deux mots de forme identique mais de sens différents ?",
+      "reponse": "Des homonymes."
+    },
+    {
+      "id": 420,
+      "categorie": "Comment",
+      "question": "Comment détermine-t-on « l’empreinte carbone » d’une activité humaine ?",
+      "reponse": "En mesurant ses émissions de gaz à effet de serre."
+    },
+    {
+      "id": 421,
+      "categorie": "Comment",
+      "question": "Comment s’appellent deux mots de sens contraires ?",
+      "reponse": "Des antonymes."
+    },
+    {
+      "id": 422,
+      "categorie": "Comment",
+      "question": "Comment s’appelle l’itinéraire le plus populaire qui part de la France pour se terminer au tombeau de Saint Jacques le Majeur en Espagne ?",
+      "reponse": "Le Chemin de Compostelle (ou de Saint-Jacques-de-Compostelle)."
+    },
+    {
+      "id": 423,
+      "categorie": "Comment",
+      "question": "Comment obtient-on une anagramme ?",
+      "reponse": "En changeant l’ordre des lettres d’un autre mot (EX. : niche/chien)."
+    },
+    {
+      "id": 424,
+      "categorie": "Comment",
+      "question": "Comment parvient-on à créer des vaccins ?",
+      "reponse": "(2) En étudiant les <b>virus ou bactéries</b> et en développant des <b>anticorps</b>."
+    },
+    {
+      "id": 425,
+      "categorie": "Comment",
+      "question": "Comment se nomme le gîte ou refuge souterrain d’un lapin, renard ou autre animal ?",
+      "reponse": "Un terrier."
+    },
+    {
+      "id": 426,
+      "categorie": "Comment",
+      "question": "Comment s’appelait la France avant de prendre ce nom ?",
+      "reponse": "La Gaule."
+    },
+    {
+      "id": 427,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on l’organisme qui gère les vols spatiaux aux États-Unis ?",
+      "reponse": "La NASA."
+    },
+    {
+      "id": 428,
+      "categorie": "Comment",
+      "question": "Comment dit-on « soleil » en italien ?",
+      "reponse": "<i>Sole</i>."
+    },
+    {
+      "id": 429,
+      "categorie": "Comment",
+      "question": "Comment faisait-on pour traverser l’océan avant l’apparition des boussoles ?",
+      "reponse": "(1) En naviguant avec les <b>étoiles</b> et les <b>courants marins</b>."
+    },
+    {
+      "id": 430,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée dans l’Union européenne ?",
+      "reponse": "L’euro."
+    },
+    {
+      "id": 431,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée en Russie ?",
+      "reponse": "Le rouble."
+    },
+    {
+      "id": 432,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée au Japon ?",
+      "reponse": "Le yen."
+    },
+    {
+      "id": 433,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée en Inde ?",
+      "reponse": "Le roupie."
+    },
+    {
+      "id": 434,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée au Mexique ?",
+      "reponse": "Le peso."
+    },
+    {
+      "id": 435,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée en Martinique ?",
+      "reponse": "L’euro, car la Martinique appartient à la France."
+    },
+    {
+      "id": 436,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée au Brésil ?",
+      "reponse": "Le réal."
+    },
+    {
+      "id": 437,
+      "categorie": "Comment",
+      "question": "Comment désignait-on la monnaie utilisée en France avant la mise en circulation de l’euro ?",
+      "reponse": "Le franc français."
+    },
+    {
+      "id": 438,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée au Venezuela ?",
+      "reponse": "Le bolivar."
+    },
+    {
+      "id": 439,
+      "categorie": "Comment",
+      "question": "Comment s’appelle la plus grande île du monde ?",
+      "reponse": "Le Groenland."
+    },
+    {
+      "id": 440,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée en Suisse ?",
+      "reponse": "Le franc suisse."
+    },
+    {
+      "id": 441,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée au Royaume-Uni ?",
+      "reponse": "La livre sterling."
+    },
+    {
+      "id": 442,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la monnaie utilisée au Vatican ?",
+      "reponse": "L’euro."
+    },
+    {
+      "id": 443,
+      "categorie": "Comment",
+      "question": "Comment favoriser la production de la mélatonine (hormone du sommeil) (2) ?",
+      "reponse": "S’exposer à la lumière du jour, baisser l’intensité lumineuse le soir et couper les écrans à l’approche du coucher."
+    },
+    {
+      "id": 444,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant&nbsp;: «&nbsp;Déshabiller Pierre… ?<br>",
+      "reponse": "… pour habiller Paul »."
+    },
+    {
+      "id": 445,
+      "categorie": "Comment",
+      "question": "Comment parvient-on à protéger les forêts québécoises ?",
+      "reponse": "(1) En créant des <b>parcs nationaux</b> et en <b>réglementant</b> l’exploitation <b>forestière</b>."
+    },
+    {
+      "id": 446,
+      "categorie": "Comment",
+      "question": "Comment s’appelle le gala qui récompense les meilleurs artistes qui œuvrent dans l’industrie de la musique du Québec ?",
+      "reponse": "L’Adisq ou Gala des prix Félix."
+    },
+    {
+      "id": 447,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant : « Qui vole un œuf… ?",
+      "reponse": "… vole un bœuf »."
+    },
+    {
+      "id": 448,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on le système de concessions de terres utilisé en Nouvelle-France ?",
+      "reponse": "Le système seigneurial."
+    },
+    {
+      "id": 449,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant&nbsp;: «&nbsp;D’un âne on ne peut faire… ?<br>",
+      "reponse": "… un cheval de course »."
+    },
+    {
+      "id": 450,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on la loi qui a fait du français la langue officielle du Québec en 1977 ?",
+      "reponse": "La Charte de la langue française (Loi 101)."
+    },
+    {
+      "id": 451,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression suivante&nbsp;: «&nbsp;Mettre la charrue avant… ?<br>",
+      "reponse": "…les bœufs »."
+    },
+    {
+      "id": 452,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant&nbsp;: «&nbsp;En avril… ?<br>",
+      "reponse": "… ne te découvre pas d’un fil »."
+    },
+    {
+      "id": 453,
+      "categorie": "Comment",
+      "question": "Comment se nomme la période de quatre semaines précédant Noël dans la religion catholique ?",
+      "reponse": "L’Avent."
+    },
+    {
+      "id": 454,
+      "categorie": "Comment",
+      "question": "Comment nomme-t-on le vendredi précédant Pâques dans la religion catholique ?",
+      "reponse": "Le Vendredi Saint."
+    },
+    {
+      "id": 455,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on le drapeau du Québec ?",
+      "reponse": "Le fleurdelisé."
+    },
+    {
+      "id": 456,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on l’organisme qui administre le financement du système de santé du Québec ?",
+      "reponse": "La Régie de l’assurance maladie du Québec (RAMQ)."
+    },
+    {
+      "id": 457,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant&nbsp;: «&nbsp;Il y a loin de… ?<br>",
+      "reponse": "… la coupe aux lèvres »."
+    },
+    {
+      "id": 458,
+      "categorie": "Comment",
+      "question": "Comment dit-on « au revoir » en italien ?",
+      "reponse": "<i>Arrivederci.</i>"
+    },
+    {
+      "id": 459,
+      "categorie": "Comment",
+      "question": "Comment dit-on « Comment vas-tu » en espagnol ?",
+      "reponse": "<i>Como</i><i> </i><i>estas</i><i> ?</i><i> </i>ou<i> Que </i><i>tal</i><i> ?</i>"
+    },
+    {
+      "id": 460,
+      "categorie": "Comment",
+      "question": "Comment parvient-on à réduire le gaspillage alimentaire ?",
+      "reponse": "(2) En <b>planifiant</b> les repas, en <b>conservant</b> les aliments et en donnant les <b>surplus</b>."
+    },
+    {
+      "id": 461,
+      "categorie": "Comment",
+      "question": "Comment dit-on « bon appétit » en espagnol ?",
+      "reponse": "<i>Buen</i><i> </i><i>provecho</i><i> </i>ou<i> </i><i>buen</i><i> </i><i>apetito</i>."
+    },
+    {
+      "id": 462,
+      "categorie": "Comment",
+      "question": "Comment dit-on « je t’aime » en espagnol ?",
+      "reponse": "<i>Te </i><i>quiero</i><i> </i>ou<i> Te </i><i>amo</i><i> </i>ou<i> Me </i><i>gustas</i><i> </i><i>(</i><i>tu</i><i>)</i>."
+    },
+    {
+      "id": 463,
+      "categorie": "Comment",
+      "question": "Comment s’appelle la plus haute montagne du monde ?",
+      "reponse": "L’Everest."
+    },
+    {
+      "id": 464,
+      "categorie": "Comment",
+      "question": "Comment dit-on « bonne journée » en allemand ?",
+      "reponse": "<i>Guten</i><i> Tag</i>."
+    },
+    {
+      "id": 465,
+      "categorie": "Comment",
+      "question": "Comment dit-on « santé ! » en espagnol ?",
+      "reponse": "<i>Salud</i><i> </i><i>!</i>"
+    },
+    {
+      "id": 466,
+      "categorie": "Comment",
+      "question": "Comment parvient-on à créer des médicaments ?",
+      "reponse": "(2) En <b>étudiant</b> les molécules et en <b>testant</b> leurs effets sur les maladies."
+    },
+    {
+      "id": 467,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant&nbsp;: «&nbsp;Il ne faut pas mettre le doigt entre… ?<br>",
+      "reponse": "…l’arbre et l’écorce »."
+    },
+    {
+      "id": 468,
+      "categorie": "Comment",
+      "question": "Comment s'appelait le premier journal écrit en français au Québec ?",
+      "reponse": "<i>La Gazette de Québec</i>."
+    },
+    {
+      "id": 469,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe suivant&nbsp;: «&nbsp;Tout ce qui brille… ?<br>",
+      "reponse": "… n’est pas or »."
+    },
+    {
+      "id": 470,
+      "categorie": "Comment",
+      "question": "Comment écrit-on « donner » dans la phrase suivante : « Les fleurs qu’il m’a donner sont magnifiques » ?",
+      "reponse": "Données."
+    },
+    {
+      "id": 471,
+      "categorie": "Comment",
+      "question": "Comment dit-on « pape » en latin ?",
+      "reponse": "<i>Papa</i>."
+    },
+    {
+      "id": 472,
+      "categorie": "Comment",
+      "question": "Comment désigne-t-on le lieu, l’assemblée où sont réunis les cardinaux pour élire un nouveau pape ?",
+      "reponse": "Le conclave."
+    },
+    {
+      "id": 473,
+      "categorie": "Comment",
+      "question": "Comment dit-on « <i>an </i><i>upset</i> » en français ?",
+      "reponse": "Un revirement, une surprise."
+    },
+    {
+      "id": 474,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement « adresser un problème » en français ?",
+      "reponse": "Examiner un problème, tenter de résoudre un problème."
+    },
+    {
+      "id": 475,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement « <i>challenger</i> » en français ?",
+      "reponse": "Défier, mettre au défi."
+    },
+    {
+      "id": 476,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement « supporter un organisme » en français ?",
+      "reponse": "Soutenir, aider un organisme."
+    },
+    {
+      "id": 477,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement « <i>live streaming</i> » en français ?",
+      "reponse": "Diffusion en direct."
+    },
+    {
+      "id": 478,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement un « <i>hacker</i> » en français ?",
+      "reponse": "Un pirate informatique."
+    },
+    {
+      "id": 479,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement un « <i>sponsor</i> » en français ?",
+      "reponse": "Un commanditaire."
+    },
+    {
+      "id": 480,
+      "categorie": "Comment",
+      "question": "Comment dit-on correctement un « <i>déductible</i> » en français ?",
+      "reponse": "Une franchise."
+    },
+    {
+      "id": 481,
+      "categorie": "Comment",
+      "question": "Comment dit-on « bonjour » en espagnol ?",
+      "reponse": "<i>Hola</i>."
+    },
+    {
+      "id": 482,
+      "categorie": "Comment",
+      "question": "Comment appelle-t-on une phrase à caractère ludique caractérisée par sa difficulté de prononciation ou de compréhension orale ?",
+      "reponse": "Un virelangue (ou casse-langue ou fourchelangue)."
+    },
+    {
+      "id": 483,
+      "categorie": "Comment",
+      "question": "Comment dit-on « s'il vous plaît » en espagnol ?",
+      "reponse": "<i>Por</i><i> </i><i>favor</i>."
+    },
+    {
+      "id": 484,
+      "categorie": "Comment",
+      "question": "Comment dit-on « à bientôt » en espagnol ?",
+      "reponse": "<i>Hasta</i><i> </i><i>pronto</i><i>, </i><i>hasta</i><i> </i><i>luego</i>."
+    },
+    {
+      "id": 485,
+      "categorie": "Comment",
+      "question": "Comment dit-on « pardon » en espagnol ?",
+      "reponse": "<i>Perdón</i>."
+    },
+    {
+      "id": 486,
+      "categorie": "Comment",
+      "question": "Comment dit-on « bonne nuit » en espagnol ?",
+      "reponse": "<i>Buenas</i><i> </i><i>noches</i><i>.</i>"
+    },
+    {
+      "id": 487,
+      "categorie": "Comment",
+      "question": "Comment dit-on « à demain » en espagnol ?",
+      "reponse": "<i>Hasta</i><i> </i><i>mañana</i><i>.</i>"
+    },
+    {
+      "id": 488,
+      "categorie": "Comment",
+      "question": "Comment dit-on « merci » en russe ?",
+      "reponse": "Спасибо (Spasiba)."
+    },
+    {
+      "id": 489,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Prendre ses jambes… ?<br>",
+      "reponse": "… à son cou »."
+    },
+    {
+      "id": 490,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Dans la semaine… ?<br>",
+      "reponse": "… des quatre jeudis »."
+    },
+    {
+      "id": 491,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Avoir bon pied… ?<br>",
+      "reponse": "…bon œil »."
+    },
+    {
+      "id": 492,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Chercher une aiguille dans… ?<br>",
+      "reponse": "…une botte de foin »."
+    },
+    {
+      "id": 493,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Avoir le compas… ?<br>",
+      "reponse": "…dans l’œil »."
+    },
+    {
+      "id": 494,
+      "categorie": "Comment",
+      "question": "Comment se termine le proverbe&nbsp;: «&nbsp;Pierre qui roule… ?<br>",
+      "reponse": "…n’amasse pas mousse »."
+    },
+    {
+      "id": 495,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Boire comme une… ?<br>",
+      "reponse": "…éponge »."
+    },
+    {
+      "id": 496,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Être la cinquième roue… ?<br>",
+      "reponse": "…du carrosse »."
+    },
+    {
+      "id": 497,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Être né sous… ?<br>",
+      "reponse": "…une bonne étoile »."
+    },
+    {
+      "id": 498,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Faire chou… ?<br>",
+      "reponse": "…blanc. »"
+    },
+    {
+      "id": 499,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Jeter ses choux… ?<br>",
+      "reponse": "…gras »."
+    },
+    {
+      "id": 500,
+      "categorie": "Comment",
+      "question": "Comment se termine l’expression&nbsp;: «&nbsp;Ne pas y aller par… ?<br>",
+      "reponse": "…quatre chemins »."
+    },
+    {
+      "id": 501,
+      "categorie": "Combien",
+      "question": "Combien de villes fondées en Nouvelle-France subsistent aujourd’hui ?",
+      "reponse": "Trois villes (Québec, Montréal, Trois-Rivières)."
+    },
+    {
+      "id": 502,
+      "categorie": "Combien",
+      "question": "Combien de cases y a-t-il dans un jeu d’échecs ?",
+      "reponse": "64 cases."
+    },
+    {
+      "id": 503,
+      "categorie": "Combien",
+      "question": "Combien de merveilles du monde antique connaît-on traditionnellement ?",
+      "reponse": "Sept merveilles."
+    },
+    {
+      "id": 504,
+      "categorie": "Combien",
+      "question": "Combien de dieux composaient le panthéon olympien dans la mythologie grecque ?",
+      "reponse": "(±&nbsp;2) 12 dieux."
+    },
+    {
+      "id": 505,
+      "categorie": "Combien",
+      "question": "Combien d’épopées majeures sont attribuées à la Grèce antique ?",
+      "reponse": "Deux épopées (<i>l’Iliade</i> et <i>l’Odyssée</i>)."
+    },
+    {
+      "id": 506,
+      "categorie": "Combien",
+      "question": "Combien de lettres comporte le mot « philosophie » en français ?",
+      "reponse": "11 lettres."
+    },
+    {
+      "id": 507,
+      "categorie": "Combien",
+      "question": "Combien y a-t-il de romans dans la série <i>Harry Potter</i> ?",
+      "reponse": "Sept."
+    },
+    {
+      "id": 508,
+      "categorie": "Combien",
+      "question": "Combien d’os possède le corps humain adulte ?",
+      "reponse": "(±&nbsp;10) 206 os."
+    },
+    {
+      "id": 509,
+      "categorie": "Combien",
+      "question": "Combien de minutes dure un match de basket-ball professionnel (NBA) ?",
+      "reponse": "(±&nbsp;3) 48 minutes."
+    },
+    {
+      "id": 510,
+      "categorie": "Combien",
+      "question": "Combien de touches y a-t-il sur un clavier d’ordinateur standard ?",
+      "reponse": "(±&nbsp;10) Environ 105 touches."
+    },
+    {
+      "id": 511,
+      "categorie": "Combien",
+      "question": "Combien de lettres comporte le mot « constitutionnel » en français ?",
+      "reponse": "15 lettres."
+    },
+    {
+      "id": 512,
+      "categorie": "Combien",
+      "question": "Combien y a-t-il de joueurs sur le terrain dans une équipe de basketball ?",
+      "reponse": "Cinq joueurs."
+    },
+    {
+      "id": 513,
+      "categorie": "Combien",
+      "question": "Combien de jours compte une année bissextile ?",
+      "reponse": "366 jours."
+    },
+    {
+      "id": 514,
+      "categorie": "Combien",
+      "question": "Combien de couleurs comporte un arc-en-ciel ?",
+      "reponse": "Sept couleurs."
+    },
+    {
+      "id": 515,
+      "categorie": "Combien",
+      "question": "Combien de continents y a-t-il sur Terre ?",
+      "reponse": "(±&nbsp;1) Sept continents (Europe, Asie, Afrique, Amérique du Nord, Amérique du Sud, Antarctique, Australie)"
+    },
+    {
+      "id": 516,
+      "categorie": "Combien",
+      "question": "Combien de zéros y a-t-il dans un milliard ?",
+      "reponse": "Neuf zéros."
+    },
+    {
+      "id": 517,
+      "categorie": "Combien",
+      "question": "Combien de langues officielles compte l’Organisation des Nations Unies ?",
+      "reponse": "(±&nbsp;1)&nbsp;<b>Six</b> langues officielles (anglais, arabe, chinois, espagnol, français et russe)."
+    },
+    {
+      "id": 518,
+      "categorie": "Combien",
+      "question": "Combien d’États membres composent le Conseil de sécurité des Nations Unies ?",
+      "reponse": "(±&nbsp;2) 15 pays."
+    },
+    {
+      "id": 519,
+      "categorie": "Combien",
+      "question": "Combien de provinces constituaient le Canada lors de sa Confédération en 1867 ?",
+      "reponse": "<b>Quatre</b> provinces (Québec, Ontario, Nouveau-Brunswick, Nouvelle-Écosse)."
+    },
+    {
+      "id": 520,
+      "categorie": "Combien",
+      "question": "Combien de fuseaux horaires traversent le territoire canadien ?",
+      "reponse": "(±&nbsp;1) Six fuseaux horaires."
+    },
+    {
+      "id": 521,
+      "categorie": "Combien",
+      "question": "Combien de secondes y a-t-il dans une heure ?",
+      "reponse": "3 600 secondes."
+    },
+    {
+      "id": 522,
+      "categorie": "Combien",
+      "question": "Combien de semaines complètes y a-t-il dans une année non bissextile ?",
+      "reponse": "52 semaines."
+    },
+    {
+      "id": 523,
+      "categorie": "Combien",
+      "question": "Combien de côtés possède un décagone ?",
+      "reponse": "10 côtés."
+    },
+    {
+      "id": 524,
+      "categorie": "Combien",
+      "question": "Combien de lettres n’apparaissent qu’une fois dans le mot « oiseau » ?",
+      "reponse": "Six."
+    },
+    {
+      "id": 525,
+      "categorie": "Combien",
+      "question": "Combien de pyramides principales se trouvent sur le plateau de Gizeh en Égypte ?",
+      "reponse": "Trois : Khéops, Khéphren et Mykérinos (celle-ci a trois petites pyramides satellites)."
+    },
+    {
+      "id": 526,
+      "categorie": "Combien",
+      "question": "Combien d’États comptent les États-Unis ?",
+      "reponse": "50 États."
+    },
+    {
+      "id": 527,
+      "categorie": "Combien",
+      "question": "Combien de temps a duré la Première Guerre mondiale ?",
+      "reponse": "Quatre ans (1914-1918)."
+    },
+    {
+      "id": 528,
+      "categorie": "Combien",
+      "question": "Combien de planètes composent notre système solaire ?",
+      "reponse": "<b>Huit</b> planètes confirmées (et cinq planètes naines)."
+    },
+    {
+      "id": 529,
+      "categorie": "Combien",
+      "question": "Combien de cases blanches y a-t-il dans un jeu d’échecs ?",
+      "reponse": "32."
+    },
+    {
+      "id": 530,
+      "categorie": "Combien",
+      "question": "Combien de centilitres y a-t-il dans un décilitre ?",
+      "reponse": "Dix."
+    },
+    {
+      "id": 531,
+      "categorie": "Combien",
+      "question": "Combien de pièces différentes, incluant les pions, y a-t-il dans un jeu d’échecs ?",
+      "reponse": "Six pièces différentes."
+    },
+    {
+      "id": 532,
+      "categorie": "Combien",
+      "question": "Combien de temps a duré la Révolution française ?",
+      "reponse": "(±&nbsp;2) Dix ans (1789-1799)."
+    },
+    {
+      "id": 533,
+      "categorie": "Combien",
+      "question": "Combien de pays ont participé à la Seconde Guerre mondiale ?",
+      "reponse": "(±&nbsp;10) Plus de 100."
+    },
+    {
+      "id": 534,
+      "categorie": "Combien",
+      "question": "Combien de temps a duré la guerre froide ?",
+      "reponse": "(±&nbsp;5) Environ 45 ans (1947-1991)."
+    },
+    {
+      "id": 535,
+      "categorie": "Combien",
+      "question": "Combien de siècles a duré l’Empire romain ?",
+      "reponse": "(±&nbsp;2) Environ cinq siècles (entre 27 av. J.-C. et 476 apr. J.-C.)."
+    },
+    {
+      "id": 536,
+      "categorie": "Combien",
+      "question": "Combien de langues sont parlées dans le monde aujourd’hui ?",
+      "reponse": "(±&nbsp;100) Environ 7&nbsp;000."
+    },
+    {
+      "id": 537,
+      "categorie": "Combien",
+      "question": "Combien de pays font partie de l’Union européenne aujourd’hui ?",
+      "reponse": "(±&nbsp;5) 27."
+    },
+    {
+      "id": 538,
+      "categorie": "Combien",
+      "question": "Combien de satellites naturels orbitent autour de la Terre ?",
+      "reponse": "Un (la Lune)."
+    },
+    {
+      "id": 539,
+      "categorie": "Combien",
+      "question": "Combien de lettres identiques y a-t-il dans le mot « voisinage » ?",
+      "reponse": "Deux « i »."
+    },
+    {
+      "id": 540,
+      "categorie": "Combien",
+      "question": "Combien de pays ont recours à l’énergie nucléaire comme source d’électricité ?",
+      "reponse": "(±&nbsp;5) Environ 30."
+    },
+    {
+      "id": 541,
+      "categorie": "Combien",
+      "question": "Combien de temps faut-il pour qu’un déchet plastique se décompose dans l’océan ?",
+      "reponse": "(±&nbsp;50) Jusqu’à 450 ans."
+    },
+    {
+      "id": 542,
+      "categorie": "Combien",
+      "question": "Combien de pays utilisent l’euro comme monnaie officielle ?",
+      "reponse": "(±&nbsp;3) 20."
+    },
+    {
+      "id": 543,
+      "categorie": "Combien",
+      "question": "Combien de satellites artificiels orbitent autour de la Terre aujourd’hui ?",
+      "reponse": "(±&nbsp;100) Plus de 3&nbsp;000."
+    },
+    {
+      "id": 544,
+      "categorie": "Combien",
+      "question": "Combien de minutes faut-il pour que la lumière du Soleil atteigne la Terre ?",
+      "reponse": "(±&nbsp;2) Environ huit minutes."
+    },
+    {
+      "id": 545,
+      "categorie": "Combien",
+      "question": "Combien de pays ont des fusées capables d’envoyer des satellites dans l’espace ?",
+      "reponse": "(±&nbsp;2) Environ 10."
+    },
+    {
+      "id": 546,
+      "categorie": "Combien",
+      "question": "Combien de figures compte un jeu de cartes normal ?",
+      "reponse": "<b>1</b><b>2</b><b> figures</b> + les deux bonhommes (4 rois, 4 dames, 4 valets). L’as n’est généralement pas compté parmi les figures."
+    },
+    {
+      "id": 547,
+      "categorie": "Combien",
+      "question": "Combien de temps dure généralement une gastro-entérite virale ?",
+      "reponse": "(±&nbsp;1) Moins de trois jours."
+    },
+    {
+      "id": 548,
+      "categorie": "Combien",
+      "question": "Combien de cartes n’ont pas de figure dans un jeu de cartes ?",
+      "reponse": "40 (4 x 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)."
+    },
+    {
+      "id": 549,
+      "categorie": "Combien",
+      "question": "Combien de temps faut-il aux symptômes de la grippe pour apparaître après la contamination ?",
+      "reponse": "Entre 1 et 4 jours."
+    },
+    {
+      "id": 550,
+      "categorie": "Combien",
+      "question": "Combien de temps faut-il pour qu’une bouteille en verre se décompose dans la nature ?",
+      "reponse": "(±&nbsp;1000) Jusqu’à 4 000 ans."
+    },
+    {
+      "id": 551,
+      "categorie": "Combien",
+      "question": "Combien d’années faut-il conserver les pièces justificatives liées à la déclaration de revenus ?",
+      "reponse": "(±&nbsp;1) Six ans."
+    },
+    {
+      "id": 552,
+      "categorie": "Combien",
+      "question": "Combien de temps faut-il pour qu’un mégot de cigarette se décompose ?",
+      "reponse": "(±&nbsp;5) Jusqu’à 10 ans."
+    },
+    {
+      "id": 553,
+      "categorie": "Combien",
+      "question": "Combien d’années vit normalement un chat domestique ?",
+      "reponse": "(±&nbsp;2) De 13 à 20 ans."
+    },
+    {
+      "id": 554,
+      "categorie": "Combien",
+      "question": "Combien d’années peuvent espérer vivre les Québécois (hommes et femmes confondus) dans les années 2020 ?",
+      "reponse": "(±&nbsp;2) 82,5 ans."
+    },
+    {
+      "id": 555,
+      "categorie": "Combien",
+      "question": "Combien d’années peut vivre le requin du Groenland ?",
+      "reponse": "(±&nbsp;50) De 300 à 500 ans."
+    },
+    {
+      "id": 556,
+      "categorie": "Combien",
+      "question": "Combien de provinces et territoires composent le Canada ?",
+      "reponse": "(±&nbsp;1) Dix provinces et trois territoires (Nunavut, Territoires du Nord-Ouest, Yukon)."
+    },
+    {
+      "id": 557,
+      "categorie": "Combien",
+      "question": "Combien de temps a duré la Nouvelle-France ?",
+      "reponse": "(±&nbsp;20) Environ 150 ans (1534-1763)."
+    },
+    {
+      "id": 558,
+      "categorie": "Combien",
+      "question": "Combien de langues autochtones sont parlées au Québec aujourd’hui ?",
+      "reponse": "(±&nbsp;2) Environ 11."
+    },
+    {
+      "id": 559,
+      "categorie": "Combien",
+      "question": "Combien de régions administratives y a-t-il au Québec ?",
+      "reponse": "(±&nbsp;2) 17."
+    },
+    {
+      "id": 560,
+      "categorie": "Combien",
+      "question": "Combien de temps a duré la Révolution tranquille ?",
+      "reponse": "(±&nbsp;2) Environ 15 ans (1960-1975)."
+    },
+    {
+      "id": 561,
+      "categorie": "Combien",
+      "question": "Combien de villes comptent plus de 100 000 habitants au Québec ?",
+      "reponse": "(±&nbsp;2) Environ 10."
+    },
+    {
+      "id": 562,
+      "categorie": "Combien",
+      "question": "Combien le Québec compte-t-il de parcs nationaux excluant ceux du fédéral en 2024 ?",
+      "reponse": "(±&nbsp;5) 28."
+    },
+    {
+      "id": 563,
+      "categorie": "Combien",
+      "question": "Combien d’années peut espérer vivre une Québécoise en 2024 ?",
+      "reponse": "(±&nbsp;1) 84,3 ans"
+    },
+    {
+      "id": 564,
+      "categorie": "Combien",
+      "question": "Combien de festivals et événements majeurs ont lieu chaque année à Montréal ?",
+      "reponse": "(±&nbsp;10) Plus de 100."
+    },
+    {
+      "id": 565,
+      "categorie": "Combien",
+      "question": "Combien de ponts relient Montréal à la Rive-Sud ?",
+      "reponse": "(±&nbsp;1) Cinq."
+    },
+    {
+      "id": 566,
+      "categorie": "Combien",
+      "question": "Combien de temps dure le Carnaval de Québec ?",
+      "reponse": "Environ deux semaines."
+    },
+    {
+      "id": 567,
+      "categorie": "Combien",
+      "question": "Combien de lacs y a-t-il au Québec ?",
+      "reponse": "(±&nbsp;100) Plus de 500&nbsp;000."
+    },
+    {
+      "id": 568,
+      "categorie": "Combien",
+      "question": "Combien de semaines dure une grossesse normale ?",
+      "reponse": "(±&nbsp;2) 41 semaines."
+    },
+    {
+      "id": 569,
+      "categorie": "Combien",
+      "question": "Combien de parcs nationaux du Canada y a-t-il au Québec ?",
+      "reponse": "Trois (Réserve de parc national de l’Archipel-de-Mingan, Forillon et Mauricie)."
+    },
+    {
+      "id": 570,
+      "categorie": "Combien",
+      "question": "Combien de stations de ski y a-t-il au Québec ?",
+      "reponse": "(±&nbsp;5) Plus de 70."
+    },
+    {
+      "id": 571,
+      "categorie": "Combien",
+      "question": "Combien de lettres y a-t-il dans le mot « péripatéticienne » ?",
+      "reponse": "16."
+    },
+    {
+      "id": 572,
+      "categorie": "Combien",
+      "question": "Combien font 45 + 37 ?",
+      "reponse": "82."
+    },
+    {
+      "id": 573,
+      "categorie": "Combien",
+      "question": "Combien font 68 - 29 ?",
+      "reponse": "39."
+    },
+    {
+      "id": 574,
+      "categorie": "Combien",
+      "question": "Combien font 12 × 6 ?",
+      "reponse": "72."
+    },
+    {
+      "id": 575,
+      "categorie": "Combien",
+      "question": "Combien font 84 ÷ 7 ?",
+      "reponse": "12."
+    },
+    {
+      "id": 576,
+      "categorie": "Combien",
+      "question": "Combien font 15 × 8 ?",
+      "reponse": "120."
+    },
+    {
+      "id": 577,
+      "categorie": "Combien",
+      "question": "Combien font 144 ÷ 12 ?",
+      "reponse": "12."
+    },
+    {
+      "id": 578,
+      "categorie": "Combien",
+      "question": "Combien font 23 + 45 ?",
+      "reponse": "68."
+    },
+    {
+      "id": 579,
+      "categorie": "Combien",
+      "question": "Combien font 100 - 47 ?",
+      "reponse": "53."
+    },
+    {
+      "id": 580,
+      "categorie": "Combien",
+      "question": "Combien font 14 × 5 ?",
+      "reponse": "70."
+    },
+    {
+      "id": 581,
+      "categorie": "Combien",
+      "question": "Combien font 120 ÷ 10 ?",
+      "reponse": "12."
+    },
+    {
+      "id": 582,
+      "categorie": "Combien",
+      "question": "Combien font 56 + 34 ?",
+      "reponse": "90."
+    },
+    {
+      "id": 583,
+      "categorie": "Combien",
+      "question": "Combien font 200 - 75 ?",
+      "reponse": "125."
+    },
+    {
+      "id": 584,
+      "categorie": "Combien",
+      "question": "Combien font 16 × 4 ?",
+      "reponse": "64."
+    },
+    {
+      "id": 585,
+      "categorie": "Combien",
+      "question": "Combien font 180 ÷ 9 ?",
+      "reponse": "20."
+    },
+    {
+      "id": 586,
+      "categorie": "Combien",
+      "question": "Combien font 25 × 6 ?",
+      "reponse": "150."
+    },
+    {
+      "id": 587,
+      "categorie": "Combien",
+      "question": "Combien font 240 ÷ 12 ?",
+      "reponse": "20."
+    },
+    {
+      "id": 588,
+      "categorie": "Combien",
+      "question": "Combien font 18 × 5 ?",
+      "reponse": "90."
+    },
+    {
+      "id": 589,
+      "categorie": "Combien",
+      "question": "Combien font 300 ÷ 15 ?",
+      "reponse": "20."
+    },
+    {
+      "id": 590,
+      "categorie": "Combien",
+      "question": "Combien font 22 + 33 ?",
+      "reponse": "55."
+    },
+    {
+      "id": 591,
+      "categorie": "Combien",
+      "question": "Combien font 150 - 75 ?",
+      "reponse": "75."
+    },
+    {
+      "id": 592,
+      "categorie": "Combien",
+      "question": "Combien y a-t-il de décilitres dans 2 litres ?",
+      "reponse": "20."
+    },
+    {
+      "id": 593,
+      "categorie": "Combien",
+      "question": "Combien y a-t-il de millilitres dans 5 litres ?",
+      "reponse": "5 000."
+    },
+    {
+      "id": 594,
+      "categorie": "Combien",
+      "question": "Combien y a-t-il de millilitres dans 2 centilitres ?",
+      "reponse": "20."
+    },
+    {
+      "id": 595,
+      "categorie": "Combien",
+      "question": "Combien de degrés y a-t-il dans un angle droit ?",
+      "reponse": "90°."
+    },
+    {
+      "id": 596,
+      "categorie": "Combien",
+      "question": "Combien de degrés y a-t-il dans un angle plat ?",
+      "reponse": "180°."
+    },
+    {
+      "id": 597,
+      "categorie": "Combien",
+      "question": "Combien de degrés y a-t-il dans un cercle complet ?",
+      "reponse": "360°."
+    },
+    {
+      "id": 598,
+      "categorie": "Combien",
+      "question": "Combien font 34 centilitres en millilitres ?",
+      "reponse": "340 millilitres."
+    },
+    {
+      "id": 599,
+      "categorie": "Combien",
+      "question": "Combien 80 centilitres représentent-ils de millilitres ?",
+      "reponse": "800."
+    },
+    {
+      "id": 600,
+      "categorie": "Combien",
+      "question": "Combien de côtés a un heptagone ?",
+      "reponse": "Sept."
+    },
+    {
+      "id": 601,
+      "categorie": "As",
+      "question": "À qui doit-on la théorie de l'héliocentrisme ?",
+      "reponse": "Nicolas <b>Copernic</b><i>.</i>"
+    },
+    {
+      "id": 602,
+      "categorie": "As",
+      "question": "Comment s’appelle l’école de sorcellerie dans les aventures de Harry Potter ?",
+      "reponse": "L’école de sorcellerie Poudlard."
+    },
+    {
+      "id": 603,
+      "categorie": "As",
+      "question": "Qu’est-ce qui a valu le surnom de « dame de fer » à la première ministre du Royaume-Uni, Margaret Thatcher?",
+      "reponse": "Elle a dirigé le Royaume-Uni de 1979 à 1990 avec un leadership conservateur ferme et sans compromis."
+    },
+    {
+      "id": 604,
+      "categorie": "As",
+      "question": "Pour quelle découverte le virologue français Luc Montagnier a-t-il remporté le prix Nobel de médecine (avec deux autres chercheurs) ?",
+      "reponse": "Pour la découverte du virus de responsable du sida."
+    },
+    {
+      "id": 605,
+      "categorie": "As",
+      "question": "Quel compositeur classique a composé un hymne destiné à devenir l’hymne national du Québec, hymne non joué avant 2024 ?",
+      "reponse": "André Mathieu"
+    },
+    {
+      "id": 606,
+      "categorie": "As",
+      "question": "Quel évènement a déclenché la guerre de Troie ?",
+      "reponse": "L’enlèvement de la belle Hélène, épouse de Ménélas, roi de Sparte, par Pâris, prince troyen."
+    },
+    {
+      "id": 607,
+      "categorie": "As",
+      "question": "Comment s’appelle l’instrument astronomique d’observation et de calcul des étoiles utilisé par les navigateurs avant l’apparition des GPS ?",
+      "reponse": "Un astrolabe."
+    },
+    {
+      "id": 608,
+      "categorie": "As",
+      "question": "Qu’est-ce que la « menorah » pour les Juifs ?",
+      "reponse": "C’est le chandelier à sept branches, le plus ancien et plus important symbole du judaïsme."
+    },
+    {
+      "id": 609,
+      "categorie": "As",
+      "question": "Comment s’appelle la première station spatiale placée en orbite ?",
+      "reponse": "<i>Saliout 1.</i>"
+    },
+    {
+      "id": 610,
+      "categorie": "As",
+      "question": "Quel célèbre jazzman américain a vu un astéroïde nommé en son hommage ?",
+      "reponse": "Miles Davis."
+    },
+    {
+      "id": 611,
+      "categorie": "As",
+      "question": "Porto Rico est-il un État des États-Unis ?",
+      "reponse": "Non, il est un État libre, mais associé aux États-Unis."
+    },
+    {
+      "id": 612,
+      "categorie": "As",
+      "question": "Comment désigne-t-on la monnaie utilisée en Israël ?",
+      "reponse": "Le shekel."
+    },
+    {
+      "id": 613,
+      "categorie": "As",
+      "question": "Comment s’appelaient les camps de concentration en URSS ?",
+      "reponse": "Les goulags."
+    },
+    {
+      "id": 614,
+      "categorie": "As",
+      "question": "La Martinique appartient-elle à la France ?",
+      "reponse": "Oui, elle en est une « collectivité territoriale unique »."
+    },
+    {
+      "id": 615,
+      "categorie": "As",
+      "question": "Comment s’appelle l’organisation paramilitaire clandestine créée à la suite de la défaite des Patriotes en 1837 ?",
+      "reponse": "Les Frères chasseurs."
+    },
+    {
+      "id": 616,
+      "categorie": "As",
+      "question": "Comment appelle-t-on les entités les plus lumineuses de l’Univers ?",
+      "reponse": "Les quasars."
+    },
+    {
+      "id": 617,
+      "categorie": "As",
+      "question": "Nommez trois des cinq arrondissements de la ville de New York.<br>",
+      "reponse": "Manhattan, Bronx, Queens, Brooklin et Staten Island."
+    },
+    {
+      "id": 618,
+      "categorie": "As",
+      "question": "Quelle est la devise du Canada, en <b>latin</b>, telle qu’elle apparaît sur les armoiries du pays ?",
+      "reponse": "<i>A mari </i><i>usque</i><i> ad mare.</i>"
+    },
+    {
+      "id": 619,
+      "categorie": "As",
+      "question": "Comment se nomme la bénédiction solennelle que le pape de l’Église catholique adresse au monde à l’occasion de grandes fêtes comme Pâques et Noël ?",
+      "reponse": "La bénédiction <i>Urbi et orbi</i><i> </i>(pour la ville de Rome et pour le monde entier)<i>.</i>"
+    },
+    {
+      "id": 620,
+      "categorie": "As",
+      "question": "En musique classique, quels sont les 12 principaux mouvements classés <b>selon leur tempo</b> ?",
+      "reponse": "(5)&nbsp;<i>Largo, larghetto, lento, adagio, andante, andantino, moderato, allegretto, allegro, vivace, presto et prestissimo.</i>"
+    },
+    {
+      "id": 621,
+      "categorie": "As",
+      "question": "Quel écrivain anglophone montréalais est l’auteur de <i>L’Apprentissage de </i><i>Duddy</i><i> Kravitz ?",
+      "reponse": "Mordecai Richler."
+    },
+    {
+      "id": 622,
+      "categorie": "As",
+      "question": "Nommez trois des 15 signataires du <i>Refus Global</i> de 1948.<br>",
+      "reponse": "Paul-Émile Borduas, Pierre et Claude Gauvreau, Madeleine Arbour, Jean-Paul et Françoise Riopelle, Marcelle Ferron, Françoise Sullivan, Fernand Leduc, etc."
+    },
+    {
+      "id": 623,
+      "categorie": "As",
+      "question": "Comment s’appelle la méthode de Socrate qui consistait à faire exprimer les connaissances d’une personne ?",
+      "reponse": "La <b>maïeutique</b> (ou l’art d’accoucher les esprits)."
+    },
+    {
+      "id": 624,
+      "categorie": "As",
+      "question": "Quel groupe de théâtre de la ville de Québec est célèbre pour ses spectacles immersifs comme <i>La Tempête</i> ?",
+      "reponse": "<i>Ex Machina</i> (dirigé par Robert Lepage)."
+    },
+    {
+      "id": 625,
+      "categorie": "As",
+      "question": "Qui dirigeait l’URSS lors du putsch de 1991 qui a porté Eltsine au pouvoir et mis fin au régime soviétique ?",
+      "reponse": "Mikhaïl <b>Gorbatchev</b>."
+    },
+    {
+      "id": 626,
+      "categorie": "As",
+      "question": "Qui est Yoshua Bengio ?",
+      "reponse": "Un chercheur québécois connu pour ses travaux en <b>intelligence artificielle</b> et en apprentissage profond."
+    },
+    {
+      "id": 627,
+      "categorie": "As",
+      "question": "Qui est Pierre-Joseph-Olivier Chauveau ?",
+      "reponse": "Le premier premier ministre du Québec."
+    },
+    {
+      "id": 628,
+      "categorie": "As",
+      "question": "Quel est le nom du parc scientifique situé à Québec, spécialisé en optique-photonique ?",
+      "reponse": "Le Parc technologique du Québec métropolitain."
+    },
+    {
+      "id": 629,
+      "categorie": "As",
+      "question": "Quel chercheur québécois est connu pour ses travaux sur les cellules souches ?",
+      "reponse": "Guy Sauvageau."
+    },
+    {
+      "id": 630,
+      "categorie": "As",
+      "question": "Que veut-on dire quand on qualifie une situation de « kafkaesque » ?",
+      "reponse": "La situation est <b>absurde</b> et <b>oppressive</b>."
+    },
+    {
+      "id": 631,
+      "categorie": "As",
+      "question": "Que veut-on dire quand on qualifie une situation de « ubuesque » ?",
+      "reponse": "La situation est totalement dénuée de sens<b>, caricaturale.</b>"
+    },
+    {
+      "id": 632,
+      "categorie": "As",
+      "question": "32.\tQuel est l’étymologie du mot « apnée » ?",
+      "reponse": "« a » veut dire absence, privation et « pnée » vient de <i>pnein</i>, respirer, aérer."
+    },
+    {
+      "id": 633,
+      "categorie": "As",
+      "question": "Nommez deux œuvres qui ont rendu célèbre l’historien israélien Yuval Noah Harari ?",
+      "reponse": "<i>Sapiens, Homo Deus</i><i>.</i>"
+    },
+    {
+      "id": 634,
+      "categorie": "As",
+      "question": "Quel film de Denys Arcand sorti en 2023 montre les travers de l’idéologie woke et de la rectitude politique ?",
+      "reponse": "<i>Le Testament</i>."
+    },
+    {
+      "id": 635,
+      "categorie": "As",
+      "question": "Dans quelle ville trouve-t-on la tombe de Pierre Elliott Trudeau ?",
+      "reponse": "Au cimetière de Saint-Rémi-de-Napierville, <b>à Saint-Rémi</b>."
+    },
+    {
+      "id": 636,
+      "categorie": "As",
+      "question": "Nommez <b>deux</b> films québécois qui abordent la crise d’Octobre 1970 ?",
+      "reponse": "<i>Les Ordres, Bingo, Nô, La Maison du pêcheur, </i><i>Corbo</i><i>, Les Rois mongols, Octobre.</i>"
+    },
+    {
+      "id": 637,
+      "categorie": "As",
+      "question": "Quel rôle jouait Raymond Bouchard dans le film <i>La Grande Séduction</i> ?",
+      "reponse": "Le rôle de maire du village."
+    },
+    {
+      "id": 638,
+      "categorie": "As",
+      "question": "Quel film québécois de Jean-Claude Lauzon a été désigné comme l’un des 100 meilleurs films de tous les temps ?",
+      "reponse": "<i>Léolo</i><i>.</i>"
+    },
+    {
+      "id": 639,
+      "categorie": "As",
+      "question": "Quel parti politique québécois a été fondé par Jean-Martin Aussant en 2011 ?",
+      "reponse": "L’Option nationale (fusionné avec Québec solidaire en 2018)."
+    },
+    {
+      "id": 640,
+      "categorie": "As",
+      "question": "Combien de députés autochtones ont siégé à l’Assemblée nationale du Québec jusqu’en 2023 ?",
+      "reponse": "Trois."
+    },
+    {
+      "id": 641,
+      "categorie": "As",
+      "question": "Pour la survie de quels types de cancers le Canada est-il le chef de file des pays développés ?",
+      "reponse": "(2) Les cancers du poumon et du côlon."
+    },
+    {
+      "id": 642,
+      "categorie": "As",
+      "question": "Qui étaient les deux premiers porte-parole du parti Québec solidaire ?",
+      "reponse": "Amir Khadir et Françoise David."
+    },
+    {
+      "id": 643,
+      "categorie": "As",
+      "question": "Comment appelle-t-on une courte citation placée au début d’un ouvrage ou d’un chapitre pour en indiquer l’esprit ?",
+      "reponse": "Une épigraphe ou un exergue."
+    },
+    {
+      "id": 644,
+      "categorie": "As",
+      "question": "Quelle écrivaine canadienne-anglaise a remporté le prix Nobel de littérature en 2013 ?",
+      "reponse": "Alice Munro."
+    },
+    {
+      "id": 645,
+      "categorie": "As",
+      "question": "Nommez quatre albums de Pink Floyd ?",
+      "reponse": "<i>The Piper at the Gates of Dawn</i><i>, A Saucerful of Secrets, Meddle, The Dark Side of the Moon, Wish You Were Here, Animals, The Wall, The Final Cut, A Momentary Lapse of Reason, The Division Bell</i>."
+    },
+    {
+      "id": 646,
+      "categorie": "As",
+      "question": "De quelle communauté religieuse provenaient les tout premiers missionnaires à s’installer en Nouvelle-France ?",
+      "reponse": "De l’ordre des <b>Récollets</b>."
+    },
+    {
+      "id": 647,
+      "categorie": "As",
+      "question": "Quel réalisateur a créé la trilogie <i>The </i><i>Dark</i><i> </i><i>Knight</i>  (<i>Le Chevalier noir</i>) avec Christian Bale dans le rôle de Batman ?",
+      "reponse": "Christopher Nolan."
+    },
+    {
+      "id": 648,
+      "categorie": "As",
+      "question": "Quel physicien théoricien est connu pour ses travaux sur les trous noirs et auteur d’<i>Une brève histoire du temps</i> ?",
+      "reponse": "Stephen Hawking."
+    },
+    {
+      "id": 649,
+      "categorie": "As",
+      "question": "Quel est le nom du premier vaccin ARN messager approuvé pour lutter contre la COVID-19 ?",
+      "reponse": "<b>Pfizer</b>-BioNTech."
+    },
+    {
+      "id": 650,
+      "categorie": "As",
+      "question": "Quel pays a lancé la sonde spatiale <i>Chang’e</i><i> 5</i> pour ramener des échantillons lunaires en 2020 ?",
+      "reponse": "La Chine."
+    },
+    {
+      "id": 651,
+      "categorie": "As",
+      "question": "Quel est le nom du télescope spatial lancé en 2021 pour succéder à Hubble ?",
+      "reponse": "<b>James Webb</b> Space Telescope (JWST)."
+    },
+    {
+      "id": 652,
+      "categorie": "As",
+      "question": "À qui doit-on la découverte des galaxies ?",
+      "reponse": "Edwin <b>Hubble</b>?"
+    },
+    {
+      "id": 653,
+      "categorie": "As",
+      "question": "Quel type d’ordinateur est le <i>IBM Q System One</i> ?",
+      "reponse": "Il s’agit du <b>premier ordinateur quantique</b> commercialisé par IBM en 2019"
+    },
+    {
+      "id": 654,
+      "categorie": "As",
+      "question": "Quel pays a été le premier à atterrir sur la face cachée de la Lune en 2019 ?",
+      "reponse": "La Chine."
+    },
+    {
+      "id": 655,
+      "categorie": "As",
+      "question": "À qui doit-on la création du Festival de jazz de Montréal ?",
+      "reponse": "Alain Simard."
+    },
+    {
+      "id": 656,
+      "categorie": "As",
+      "question": "Quel est le nom de la série dystopique basée sur un roman de Margaret Atwood ?",
+      "reponse": "<i>La servante écarlate. </i>(<i>The </i><i>Handmaid’s</i><i> Tale</i>)."
+    },
+    {
+      "id": 657,
+      "categorie": "As",
+      "question": "Quelle série télévisée a popularisé le personnage de <i>Jon Snow</i> ?",
+      "reponse": "<i>Game of Thrones.</i>"
+    },
+    {
+      "id": 658,
+      "categorie": "As",
+      "question": "À qui doit-on la découverte des ondes radio ?",
+      "reponse": "Heinrich <b>Hertz</b>."
+    },
+    {
+      "id": 659,
+      "categorie": "As",
+      "question": "Quel réalisateur a dirigé <i>Inception</i> et <i>Interstellar</i> ?",
+      "reponse": "Christopher Nolan."
+    },
+    {
+      "id": 660,
+      "categorie": "As",
+      "question": "De quelle trilogie cinématographique Peter Jackson est-il le réalisateur ?",
+      "reponse": "<i>Le Seigneur des Anneaux</i>."
+    },
+    {
+      "id": 661,
+      "categorie": "As",
+      "question": "Quel pays a été le premier à légaliser le mariage homosexuel en 2001 ?",
+      "reponse": "Les Pays-Bas."
+    },
+    {
+      "id": 662,
+      "categorie": "As",
+      "question": "Quel président américain a signé <i>l’Accord de Paris</i> sur le climat en 2016 ?",
+      "reponse": "Barack Obama."
+    },
+    {
+      "id": 663,
+      "categorie": "As",
+      "question": "Quel pays a été le premier à élire une femme présidente en 1980 ?",
+      "reponse": "L’Islande (Vigdís Finnbogadóttir)."
+    },
+    {
+      "id": 664,
+      "categorie": "As",
+      "question": "Quel président a été élu en 2017 sous la bannière d<i>’En Marche</i><i> </i><i>!</i> ?",
+      "reponse": "Emmanuel Macron."
+    },
+    {
+      "id": 665,
+      "categorie": "As",
+      "question": "Par quelle phrase le Vatican annonce-t-il qu’un nouveau pape a été élu ?",
+      "reponse": "<i>Habemus</i><i> </i><i>papam</i>."
+    },
+    {
+      "id": 666,
+      "categorie": "As",
+      "question": "Qui a lancé une grève scolaire en Suède sous le nom de <i>Fridays for Future</i> pour la sauvegarde de l’environnement et qui s’est propagée dans le monde ?",
+      "reponse": "Greta Thunberg<i>.</i>"
+    },
+    {
+      "id": 667,
+      "categorie": "As",
+      "question": "Quel pays a été le premier à légaliser l’euthanasie en 2002 ?",
+      "reponse": "La Belgique."
+    },
+    {
+      "id": 668,
+      "categorie": "As",
+      "question": "Quel est le nom du traité international visant à limiter le réchauffement climatique à 1,5 °C ?",
+      "reponse": "L’Accord de Paris."
+    },
+    {
+      "id": 669,
+      "categorie": "As",
+      "question": "Qu’est-ce qui distingue l’ingénieure québécoise Farah Alibay ?",
+      "reponse": "Elle est au cœur de la mission spatiale Mars 2020 de la NASA."
+    },
+    {
+      "id": 670,
+      "categorie": "As",
+      "question": "Quel était le nom donné par les Amérindiens au fleuve Saint-Laurent ?",
+      "reponse": "<b><i>Magtogoek</i></b>, qui veut dire « le chemin qui marche »."
+    },
+    {
+      "id": 671,
+      "categorie": "As",
+      "question": "Qu’est-ce que l’« aboulie » ?",
+      "reponse": "L’« aboulie » est un trouble neurologique marqué par un <b>affaiblissement de la </b><b>volonté</b> pouvant entraîner une inhibition de l’activité physique et intellectuelle."
+    },
+    {
+      "id": 672,
+      "categorie": "As",
+      "question": "Quel est le nom de la grande épopée sumérienne qui porte le nom d’un roi légendaire de la Mésopotamie antique ?",
+      "reponse": "<i>L’Épopée de Gilgamesh.</i>"
+    },
+    {
+      "id": 673,
+      "categorie": "As",
+      "question": "Quel était le nom de Taïwan jusqu’à la fin du XX<sup>e</sup> siècle ?",
+      "reponse": "Formose."
+    },
+    {
+      "id": 674,
+      "categorie": "As",
+      "question": "Complétez l’expression&nbsp;: «&nbsp;Comme on fait son lit… ?<br>",
+      "reponse": "…on se couche&nbsp;»."
+    },
+    {
+      "id": 675,
+      "categorie": "As",
+      "question": "D’où vient le nom d’Oscar attribué à la plus prestigieuse récompense du cinéma ?",
+      "reponse": "Selon une anecdote, un membre de l’Académie trouva que la statuette ressemblait à son oncle Oscar."
+    },
+    {
+      "id": 676,
+      "categorie": "As",
+      "question": "Quel sport pratiquait la première championne olympique dans un sport individuel en 1900 ?",
+      "reponse": "Le tennis. (Charlotte Cooper, une joueuse britannique)."
+    },
+    {
+      "id": 677,
+      "categorie": "As",
+      "question": "Qu’est-ce qui distingue Constantin Henriquez, joueur de rugby d’origine haïtienne ?",
+      "reponse": "Il a été le premier athlète noir à participer aux Jeux Olympiques de 1900, à remporter une médaille et à être champion olympique."
+    },
+    {
+      "id": 678,
+      "categorie": "As",
+      "question": "Dans quel État américain est situé le <i>Festival de Burning Man</i>, célèbre pour ses installations artistiques dans le désert ?",
+      "reponse": "Dans le désert de Black Rock, au <b>Nevada</b>"
+    },
+    {
+      "id": 679,
+      "categorie": "As",
+      "question": "Qui a été chancelière fédérale d’Allemagne de 2005 à 2021 ?",
+      "reponse": "Angela Merkel."
+    },
+    {
+      "id": 680,
+      "categorie": "As",
+      "question": "Dans quelle municipalité du Québec a grandi René Lévesque ?",
+      "reponse": "À <b>New Carlisle</b> dans la Baie des Chaleurs."
+    },
+    {
+      "id": 681,
+      "categorie": "As",
+      "question": "Nommez cinq Québécoises d’exception qui ont marqué le Québec depuis le XIX<sup>e</sup> s.<br>",
+      "reponse": "Marie Gérin-Lajoie, Thérèse Casgrain, Simone Monet-Chartrand, Madeleine Parent, Marcelle Ferron, Rose Ouellette, Pauline Julien, Hélène Pedneault et Pauline Marois."
+    },
+    {
+      "id": 682,
+      "categorie": "As",
+      "question": "En quoi se distingue le désert de Nazca, au Pérou ?",
+      "reponse": "On y trouve de grandes figures tracées sur le sol représentant des animaux ou de simples lignes longues"
+    },
+    {
+      "id": 683,
+      "categorie": "As",
+      "question": "Qui a été le premier premier ministre du Canada ?",
+      "reponse": "John A. Macdonald."
+    },
+    {
+      "id": 684,
+      "categorie": "As",
+      "question": "Dans quel pays se trouve le site de la célèbre bataille au terme de laquelle les Spartiates ont résisté aux Perses ?",
+      "reponse": "À Thermopyles, en <b>Grèce</b>"
+    },
+    {
+      "id": 685,
+      "categorie": "As",
+      "question": "Dans quel pays a été découvert le premier squelette de Lucy, une ancêtre de l’humanité ?",
+      "reponse": "Dans la vallée de l’Awash, en <b>Éthiopie</b>."
+    },
+    {
+      "id": 686,
+      "categorie": "As",
+      "question": "Dans quelle ville de France a eu lieu l’une des batailles les plus longues de la Première Guerre mondiale ?",
+      "reponse": "À Verdun."
+    },
+    {
+      "id": 687,
+      "categorie": "As",
+      "question": "De quelle grande ville vient la pratique de la fabrication des mosaïques ?",
+      "reponse": "De <b>Rome</b>, où les mosaïques décoraient les villas et les temples."
+    },
+    {
+      "id": 688,
+      "categorie": "As",
+      "question": "Dans quelle ville a lieu le plus gros festival de musique du monde ?",
+      "reponse": "À <b>Rio de Janeiro</b>. Il s’agit du <i>Rock in Rio</i> qui accueille plus d’un million de participants à chaque édition."
+    },
+    {
+      "id": 689,
+      "categorie": "As",
+      "question": "Qui a été la première femme première ministre du Canada ?",
+      "reponse": "Kim Campbell."
+    },
+    {
+      "id": 690,
+      "categorie": "As",
+      "question": "Quel grand écrivain a fait l’objet d’une <i>fatwa</i> pour son roman <i>Les versets sataniques </i>?",
+      "reponse": "Salman Rushdie."
+    },
+    {
+      "id": 691,
+      "categorie": "As",
+      "question": "Qu’est-ce que le <i>calendrier hég</i><i>i</i><i>rien</i> ?",
+      "reponse": "Il s’agit du calendrier musulman (<i>l’hégire</i> rappelle l’émigration de Mahomet et de ses compagnons de La Mecque vers Médine)."
+    },
+    {
+      "id": 692,
+      "categorie": "As",
+      "question": "En quoi le <i>Home </i><i>Insurance</i><i> Building</i> de Chicago se distingue-t-il ?",
+      "reponse": "C’est le premier gratte-ciel à avoir été construit au monde."
+    },
+    {
+      "id": 693,
+      "categorie": "As",
+      "question": "Dans quel pays se situe la plus vieille bibliothèque au monde <b>encore en activité</b> ?",
+      "reponse": "À Fès au <b>Maroc</b>."
+    },
+    {
+      "id": 694,
+      "categorie": "As",
+      "question": "Quelle région du Québec doit son nom au mot micmac <b><i>Gespeg</i></b>, signifiant « fin des terres » ?",
+      "reponse": "La Gaspésie."
+    },
+    {
+      "id": 695,
+      "categorie": "As",
+      "question": "Quel mont est le point culminant du Québec et de Terre-Neuve-et-Labrador?",
+      "reponse": "Le mont D’Iberville."
+    },
+    {
+      "id": 696,
+      "categorie": "As",
+      "question": "Dans quel pays se trouve le plus grand stade au monde ?",
+      "reponse": "En <b>Inde</b> : le stade Narendra Modi (132 000 places)."
+    },
+    {
+      "id": 697,
+      "categorie": "As",
+      "question": "Quel rappeur québécois a remporté un Juno en 2020 pour son album <i>Tout ça pour ça </i>?",
+      "reponse": "Loud."
+    },
+    {
+      "id": 698,
+      "categorie": "As",
+      "question": "Dans quel pays trouve-t-on le plus grand barrage de castors au monde ?",
+      "reponse": "Au <b>Canada</b> (le parc national Wood Buffalo entre l’Alberta et les Territoires du Nord-Ouest)."
+    },
+    {
+      "id": 699,
+      "categorie": "As",
+      "question": "Qui a peint <i>L’origine du monde</i>, tableau jugé très provocateur en raison de son sujet à caractère sexuel ?",
+      "reponse": "Gustave <b>Courbet</b>."
+    },
+    {
+      "id": 700,
+      "categorie": "As",
+      "question": "Qu’est-ce qui a fait la renommée du chirurgien sud-africain <b>Christiaan Barnard</b> ?",
+      "reponse": "Il a effectué la première greffe du cœur de l’histoire."
+    }
+  ],
+  "bris": [
+    {
+      "id": 1,
+      "affirmation": "L’inventeur de la souffleuse à neige est J.-A. Bombardier.",
+      "reponse": "<b>Faux</b> (Arthur Sicard, fermier de la Mauricie)"
+    },
+    {
+      "id": 2,
+      "affirmation": "Le bazooka est aussi un instrument de musique.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 3,
+      "affirmation": "Le prophète Mahomet est né à Médine et mort à La Mecque.",
+      "reponse": "<b>Faux</b> (l’inverse)"
+    },
+    {
+      "id": 4,
+      "affirmation": "L’épinette est aussi un instrument de musique.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 5,
+      "affirmation": "La tour de la Place Ville-Marie est la plus haute tour du Québec.",
+      "reponse": "<b>Faux</b> (c’est la Tour 1000 De La Gauchetière)"
+    },
+    {
+      "id": 6,
+      "affirmation": "La tour de Pise a commencé à s’incliner dès sa construction.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 7,
+      "affirmation": "La tour <i>Big Ben</i> contient une énorme cloche.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 8,
+      "affirmation": "Elon Musk est le créateur de <i>Twitter</i>.",
+      "reponse": "<b>Faux</b> (Il a acheté l’entreprise 10 ans après sa création.)"
+    },
+    {
+      "id": 9,
+      "affirmation": "Jésus est né à Nazareth.",
+      "reponse": "<b>Faux</b> (à Bethléem)"
+    },
+    {
+      "id": 10,
+      "affirmation": "Marie Laberge est une autrice québécoise.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 11,
+      "affirmation": "La crise d’Octobre 1970 a duré un mois.",
+      "reponse": "<b>Faux</b> (octobre, novembre et décembre)"
+    },
+    {
+      "id": 12,
+      "affirmation": "Le Parti Rhinocéros a déjà proposé de « raser les montagnes Rocheuses pour aplanir les disparités régionales ».",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 13,
+      "affirmation": "Le village de Saint-Louis-du-Ha! Ha! est le seul au monde avec deux points d’exclamation.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 14,
+      "affirmation": "Le lac Saint-Jean est plus grand que le lac Memphrémagog.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 15,
+      "affirmation": "Les insectes ont un vrai cœur.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 16,
+      "affirmation": "Céline Dion a chanté <i>Sous le ciel de Paris</i> aux Jeux Olympiques de Paris.",
+      "reponse": "<b>Faux</b> (L’hymne à l’amour)"
+    },
+    {
+      "id": 17,
+      "affirmation": "Le Alouettes de Montréal ont remporté plusieurs fois la Coupe Grey.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 18,
+      "affirmation": "Marie-Philip Poulin a marqué le but gagnant aux JO de Sotchi et de Pyeongchang.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 19,
+      "affirmation": "Les Cowboys Fringants ont sorti un album posthume après la mort de Karl Tremblay.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 20,
+      "affirmation": "Les humains partagent 50 % de leur ADN avec les bananes.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 21,
+      "affirmation": "Le premier tweet a été envoyé depuis l’espace.",
+      "reponse": "<b>Faux</b> (depuis le bureau du cofondateur de Twitter)"
+    },
+    {
+      "id": 22,
+      "affirmation": "George Orwell a écrit <i>1984</i> sur une machine à écrire sans clavier.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 23,
+      "affirmation": "<i>La Joconde</i> a déjà été volée par un employé du Louvre.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 24,
+      "affirmation": "Un joueur de la NBA a déjà marqué 200 points en un match.",
+      "reponse": "<b>Faux</b> (le record est de 100 points par Wilt Chamberlain)"
+    },
+    {
+      "id": 25,
+      "affirmation": "Le football américain est le sport qui cause le plus de morts aux États-Unis.",
+      "reponse": "<b>Faux</b> (l’escalade, l’apnée sportive, le base jump, le BMX, etc.)"
+    },
+    {
+      "id": 26,
+      "affirmation": "Freddie Mercury est l’auteur de <i>Bohemian</i><i> </i><i>Rhapsody</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 27,
+      "affirmation": "L’album <i>OK Computer</i> a permis au groupe <i>Radiohead</i> d’atteindre des sommets de popularité.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 28,
+      "affirmation": "La devise <i>E </i><i>Pluribus</i><i> Unum</i> apparaît sur le drapeau américain.",
+      "reponse": "<b>Faux</b> (sur le Grand sceau des É.-U.)"
+    },
+    {
+      "id": 29,
+      "affirmation": "Le Groenland est plus chaud que l’Antarctique.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 30,
+      "affirmation": "Le Canada est le pays qui a le plus de lacs au monde.",
+      "reponse": "<b>Vrai</b> (plus de 2 millions)"
+    },
+    {
+      "id": 31,
+      "affirmation": "Le Québec est plus grand que l’Iran.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 32,
+      "affirmation": "Le groupe <i>Arcade Fire</i> a déjà remporté un <i>Grammy</i><i> </i><i>Award</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 33,
+      "affirmation": "Le Rocket Richard a marqué 50 buts en 50 matchs à deux reprises dans sa carrière.",
+      "reponse": "<b>Faux</b> (une fois)"
+    },
+    {
+      "id": 34,
+      "affirmation": "Les Colocs ont sorti leur dernier album après la mort de Dédé Fortin.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 35,
+      "affirmation": "Isabelle Boulay a représenté la Suisse au Concours Eurovision.",
+      "reponse": "<b>Faux</b> (Céline Dion)"
+    },
+    {
+      "id": 36,
+      "affirmation": "Le CF Montréal (Impact) a déjà remporté la Ligue des champions de la CONCACAF.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 37,
+      "affirmation": "Bob Dylan n’est pas allé chercher le prix Nobel de littérature qui lui avait été décerné.",
+      "reponse": "<b>Vrai</b> (c’est sa consœur, la poétesse Patti Smith, qui y est allée)"
+    },
+    {
+      "id": 38,
+      "affirmation": "Le record du monde de saut en longueur masculin est détenu depuis les années 1990.",
+      "reponse": "<b>Vrai</b> (par l’Américain Mike Powell)"
+    },
+    {
+      "id": 39,
+      "affirmation": "Le groupe <i>ABBA</i> a continué à se produire en tournées après la séparation officielle de ses membres.",
+      "reponse": "<b>Faux</b> (seulement des enregistrements et sous forme d’hologrammes)"
+    },
+    {
+      "id": 40,
+      "affirmation": "Un joueur de baseball peut être éliminé pour avoir frappé la balle trop fort.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 41,
+      "affirmation": "Yann Martel a reçu le Prix Goncourt pour son livre <i>L’histoire de Pi</i>.",
+      "reponse": "<b>Faux</b> (le Booker Prize)"
+    },
+    {
+      "id": 42,
+      "affirmation": "Le groupe Loco Locass a fait la promotion de l’indépendance du Québec.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 43,
+      "affirmation": "Le sprinteur Usain Bolt a perdu une finale olympique en courant le 100 m.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 44,
+      "affirmation": "Le groupe <i>Pink Floyd</i> a déjà joué à Montréal.",
+      "reponse": "<b>Vrai</b> (en 1977)"
+    },
+    {
+      "id": 45,
+      "affirmation": "Le Québec produit plus de 90 % du sirop d’érable mondial.",
+      "reponse": "<b>Faux</b> (environ 70 %)"
+    },
+    {
+      "id": 46,
+      "affirmation": "Le premier ministre René Lévesque a créé la Société des alcools du Québec (SAQ)",
+      "reponse": "<b>Faux</b> (Robert Bourassa en 1971)"
+    },
+    {
+      "id": 47,
+      "affirmation": "Le pont Jacques-Cartier relie Montréal à Laval.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 48,
+      "affirmation": "Le film <i>Les Boys</i> est la plus longue série de films québécois.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 49,
+      "affirmation": "Le Bas-Saint-Laurent est une région reconnue pour ses vignobles.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 50,
+      "affirmation": "Le « caribou » est une boisson traditionnelle à base de vin rouge et de whisky.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 51,
+      "affirmation": "Le groupe <i>Harmonium</i> est considéré comme un pionnier du rock progressif québécois.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 52,
+      "affirmation": "La ville de Sherbrooke a déjà été la capitale du Canada-Uni.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 53,
+      "affirmation": "Le terme « magasiner » est un anglicisme accepté en français québécois.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 54,
+      "affirmation": "Le parc des Hautes-Gorges-de-la-Rivière-Malbaie est plus profond que le Grand Canyon.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 55,
+      "affirmation": "La langue basque est une langue isolée, sans lien avec les autres langues européennes.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 56,
+      "affirmation": "Ponce Pilate est considéré comme le disciple qui a trahi Jésus en le faisant arrêter.",
+      "reponse": "<b>Faux</b> (Judas)"
+    },
+    {
+      "id": 57,
+      "affirmation": "Le tableau <i>La Nuit étoilée</i> de Van Gogh représente un paysage imaginaire.",
+      "reponse": "<b>Faux</b> (il représente ce qu’il voyait de sa chambre dans un asile)"
+    },
+    {
+      "id": 58,
+      "affirmation": "Nana Mouskouri a interprété <i>La Marseillaise</i> en direct d’Athènes lors du lancement des festivités liées aux J.O. de Paris en 2024.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 59,
+      "affirmation": "Le résultat du théorème de Pythagore était déjà connu des Babyloniens bien avant Pythagore.",
+      "reponse": "<b>Vrai</b> (plus de 1 000 ans auparavant en Mésopotamie)"
+    },
+    {
+      "id": 60,
+      "affirmation": "La capitale de la Suisse est Zurich.",
+      "reponse": "<b>Faux</b> (Berne)"
+    },
+    {
+      "id": 61,
+      "affirmation": "Le premier satellite artificiel, <i>Spoutnik</i>, a été lancé par les États-Unis.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 62,
+      "affirmation": "L’omble de fontaine s’appelle aussi truite mouchetée.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 63,
+      "affirmation": "Le mercure est l’élément chimique le plus lourd à l’état liquide à température ambiante.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 64,
+      "affirmation": "Le maskinongé est surnommé le requin ou le tigre d’eau douce.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 65,
+      "affirmation": "Le mont Kilimandjaro est un volcan actif.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 66,
+      "affirmation": "Le terme « algorithme » vient du nom d’un mathématicien perse, Al-Khwarizmi.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 67,
+      "affirmation": "La langue officielle du Brésil est l’espagnol.",
+      "reponse": "<b>Faux</b> (le portugais)"
+    },
+    {
+      "id": 68,
+      "affirmation": "Le premier film parlant était <i>Le Chanteur de jazz</i> (1927)",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 69,
+      "affirmation": "Le doré jaune est une espèce « lucifuge », c’est-à-dire qui fuit la lumière et qui donc se pêche souvent le soir, la nuit ou à l’aube.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 70,
+      "affirmation": "Le soleil est une étoile.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 71,
+      "affirmation": "La Grande Muraille de Chine est visible depuis la Lune.",
+      "reponse": "<b>Faux</b> (elle n’est pas assez large)"
+    },
+    {
+      "id": 72,
+      "affirmation": "L’élément chimique « Au » correspond à l’argent.",
+      "reponse": "<b>Faux</b> (à l’or)"
+    },
+    {
+      "id": 73,
+      "affirmation": "Shakespeare a écrit <i>Le Songe d’une nuit d’été</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 74,
+      "affirmation": "La tour Eiffel a été construite pour l’Exposition universelle de Paris.",
+      "reponse": "<b>Vrai</b> (et le centenaire de la Révolution française)"
+    },
+    {
+      "id": 75,
+      "affirmation": "L’équateur traverse l’Afrique.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 76,
+      "affirmation": "Le cerveau humain contient environ 100 milliards de neurones.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 77,
+      "affirmation": "Selon l’UNESCO, 2 464 langues sont menacées de disparition puisqu’en moyenne, une langue disparaît tous les 15 jours.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 78,
+      "affirmation": "Il existe aujourd’hui environ 7 000 langues vivantes.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 79,
+      "affirmation": "L’avocat comestible est un fruit.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 80,
+      "affirmation": "La capitale de l’Australie est Sydney.",
+      "reponse": "<b>Faux</b> (Canberra)"
+    },
+    {
+      "id": 81,
+      "affirmation": "L’Amazone est le plus puissant fleuve du monde.",
+      "reponse": "<b>Vrai</b> (son débit équivaut au volume cumulé des six fleuves qui le suivent dans l’ordre des débits)"
+    },
+    {
+      "id": 82,
+      "affirmation": "La lumière met environ 8 minutes pour nous parvenir du Soleil.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 83,
+      "affirmation": "Victor Hugo a été sénateur de France.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 84,
+      "affirmation": "L’Everest est la plus haute montagne du monde.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 85,
+      "affirmation": "La monnaie officielle du Brésil est le peso.",
+      "reponse": "<b>Faux</b> (le réal)"
+    },
+    {
+      "id": 86,
+      "affirmation": "Le premier homme à marcher sur la Lune était Neil Armstrong.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 87,
+      "affirmation": "La guerre de Cent Ans a duré exactement 100 ans.",
+      "reponse": "<b>Faux</b> (de 1337 à 1453)"
+    },
+    {
+      "id": 88,
+      "affirmation": "Le <i>vuvuzela</i> est un tambour qui était omniprésent à la Coupe du monde de soccer en Afrique du Sud.",
+      "reponse": "<b>Faux</b> (une corne)"
+    },
+    {
+      "id": 89,
+      "affirmation": "Le Québec a déjà eu un premier ministre anglophone.",
+      "reponse": "<b>Vrai</b> (et même deux : John Jones Ross et Edmund James Flynn)"
+    },
+    {
+      "id": 90,
+      "affirmation": "Le Vieux-Port de Montréal a été le principal port canadien jusqu’en 1970.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 91,
+      "affirmation": "La « Saint-Jean » est un jour férié au Québec.",
+      "reponse": "<b>Vrai</b> (depuis 1925)"
+    },
+    {
+      "id": 92,
+      "affirmation": "Le roman <i>Kamouraska</i> d’Anne Hébert s’inspire d’un fait divers réel.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 93,
+      "affirmation": "Le fleurdelisé a été adopté sous Jean Lesage.",
+      "reponse": "<b>Faux</b> (Maurice Duplessis)"
+    },
+    {
+      "id": 94,
+      "affirmation": "Le parc du Mont-Tremblant est plus ancien que celui des Laurentides.",
+      "reponse": "<b>Faux</b> (Le premier chemin carrossable relie Québec au lac Saint-Jean en 1877.)"
+    },
+    {
+      "id": 95,
+      "affirmation": "Charles Aznavour avait pour nom de naissance <i>Carl </i><i>Aznavoursky</i>.",
+      "reponse": "<b>Faux</b> (Charles Aznavourian, d’origine franco-arménienne)"
+    },
+    {
+      "id": 96,
+      "affirmation": "Le territoire du Québec est peuplé depuis environ 10 000 ans.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 97,
+      "affirmation": "Les cégeps ont été créés lors de la Révolution tranquille.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 98,
+      "affirmation": "Le terme « joual » vient de la déformation du mot « cheval ».",
+      "reponse": "<b>Vrai</b> (c’est ainsi que les colons prononçaient ce mot)"
+    },
+    {
+      "id": 99,
+      "affirmation": "Le pont de Québec a la travée la plus longue des ponts cantilevers au monde.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 100,
+      "affirmation": "Le fromage Oka a été inventé par des moines yougoslaves.",
+      "reponse": "<b>Faux</b> (moines trappistes)"
+    },
+    {
+      "id": 101,
+      "affirmation": "Le hockey sur gazon est un sport olympique.",
+      "reponse": "<b>Vrai</b> (hommes seulement jusqu'en 1980)"
+    },
+    {
+      "id": 102,
+      "affirmation": "Le métro de Montréal circule à gauche comme à Londres.",
+      "reponse": "<b>Faux</b> (à droite)"
+    },
+    {
+      "id": 103,
+      "affirmation": "Le Canada a déjà eu un premier ministre né en Écosse.",
+      "reponse": "<b>Vrai</b> (John A. Macdonald)"
+    },
+    {
+      "id": 104,
+      "affirmation": "Le Festival de jazz de Montréal est l’un des plus importants festivals de jazz au monde.",
+      "reponse": "<b>Vrai</b> (selon le Guinness World Records)"
+    },
+    {
+      "id": 105,
+      "affirmation": "Le sirop d'érable était déjà produit par les Autochtones avant l'arrivée des Européens.",
+      "reponse": "<b>Vrai</b> (les colons en ont industrialisé la production)"
+    },
+    {
+      "id": 106,
+      "affirmation": "Le parc du Mont-Royal a été conçu par le même architecte que le Central Park de New York.",
+      "reponse": "<b>Vrai</b> (Frederick Law Olmsted)"
+    },
+    {
+      "id": 107,
+      "affirmation": "La poutine est devenue populaire dans les années 1950.",
+      "reponse": "<b>Vrai</b> (au Centre-du-Québec)"
+    },
+    {
+      "id": 108,
+      "affirmation": "Le français est la langue maternelle de plus de 80 % des Québécois.",
+      "reponse": "<b>Faux</b> (environ 75 % maintenant)"
+    },
+    {
+      "id": 109,
+      "affirmation": "Le Canada a participé à la guerre du Vietnam.",
+      "reponse": "<b>Faux</b> (officiellement non, mais des Canadiens se sont engagés individuellement)"
+    },
+    {
+      "id": 110,
+      "affirmation": "Les Hurons s’appellent dorénavant Hurons-Wendats.",
+      "reponse": "<b>Faux</b> (uniquement Wendats)"
+    },
+    {
+      "id": 111,
+      "affirmation": "Le Carnaval de Québec est le plus grand carnaval d'hiver au monde.",
+      "reponse": "<b>Vrai</b> (depuis 1955)"
+    },
+    {
+      "id": 112,
+      "affirmation": "La Gaspésie est une péninsule.",
+      "reponse": "<b>Vrai</b> (entourée par le fleuve et le golfe)"
+    },
+    {
+      "id": 113,
+      "affirmation": "Le Canada est le deuxième plus grand pays du monde.",
+      "reponse": "<b>Vrai</b> (après la Russie)"
+    },
+    {
+      "id": 114,
+      "affirmation": "Un billet de banque canadien contient l’image d'un astronaute.",
+      "reponse": "<b>Vrai</b> (le billet de 5 $)"
+    },
+    {
+      "id": 115,
+      "affirmation": "Le hockey féminin est un sport olympique.",
+      "reponse": "<b>Vrai</b> (depuis Nagano)"
+    },
+    {
+      "id": 116,
+      "affirmation": "Le Canada a remporté la Coupe du monde de hockey en 1972 contre l’URSS.",
+      "reponse": "<b>Faux</b> (c'était une série, pas un tournoi officiel)"
+    },
+    {
+      "id": 117,
+      "affirmation": "La ville de Québec a déjà organisé les Jeux olympiques.",
+      "reponse": "<b>Faux</b> (Montréal en 1976)"
+    },
+    {
+      "id": 118,
+      "affirmation": "Le Labrador a déjà appartenu au Québec.",
+      "reponse": "<b>Vrai</b> (avant 1927)"
+    },
+    {
+      "id": 119,
+      "affirmation": "Les billets de banque canadiens sont en plastique.",
+      "reponse": "<b>Vrai</b> (depuis 2011)"
+    },
+    {
+      "id": 120,
+      "affirmation": "Un premier ministre canadien a déjà remporté quatre majorités consécutives.",
+      "reponse": "<b>Vrai</b> (Wilfrid Laurier)"
+    },
+    {
+      "id": 121,
+      "affirmation": "Le Québec est la seule province avec un système de garderies subventionnées.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 122,
+      "affirmation": "Le Nouveau-Brunswick est la seule province officiellement bilingue au Canada.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 123,
+      "affirmation": "Le Québec a son propre réseau de télévision publique.",
+      "reponse": "<b>Vrai</b> (Télé-Québec)"
+    },
+    {
+      "id": 124,
+      "affirmation": "Le Canada a déjà eu une équipe dans la NBA.",
+      "reponse": "<b>Vrai</b> (les Raptors de Toronto et les Grizzlies de Vancouver)"
+    },
+    {
+      "id": 125,
+      "affirmation": "Martin Fontaine a présenté son spectacle en l’honneur d’Elvis Presley à Las Vegas.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 126,
+      "affirmation": "Le Québec produit plus d'électricité que la Californie.",
+      "reponse": "<b>Vrai</b> (grâce à Hydro-Québec)"
+    },
+    {
+      "id": 127,
+      "affirmation": "Le Canada a déjà eu un premier ministre qui a remporté le prix Nobel.",
+      "reponse": "<b>Vrai</b> (Lester B. Pearson en 1957)"
+    },
+    {
+      "id": 128,
+      "affirmation": "Le français est la langue maternelle de plus de 20 % des Canadiens.",
+      "reponse": "<b>Vrai</b> (environ 22 %)"
+    },
+    {
+      "id": 129,
+      "affirmation": "Le Canada a plus de kilomètres de côtes que tout autre pays.",
+      "reponse": "<b>Vrai</b> (202 080 km)"
+    },
+    {
+      "id": 130,
+      "affirmation": "Le Canada est le plus grand producteur d'uranium au monde.",
+      "reponse": "<b>Vrai</b> (environ 22 % de la production mondiale)"
+    },
+    {
+      "id": 131,
+      "affirmation": "Le français est la langue officielle du Nunavut.",
+      "reponse": "<b>Faux</b> (inuktitut, anglais et français)"
+    },
+    {
+      "id": 132,
+      "affirmation": "Le Québec a son propre système de justice.",
+      "reponse": "<b>Vrai</b> (le droit civil et non la common law)"
+    },
+    {
+      "id": 133,
+      "affirmation": "Un premier ministre canadien a remporté trois majorités consécutives.",
+      "reponse": "<b>Vrai</b> (Pierre Elliott Trudeau)"
+    },
+    {
+      "id": 134,
+      "affirmation": "Le Canada a plus de réserves de pétrole que l'Irak.",
+      "reponse": "<b>Vrai</b> (3e réserve mondiale)"
+    },
+    {
+      "id": 135,
+      "affirmation": "Le Canada a plus de terres forestières que le Brésil.",
+      "reponse": "<b>Vrai</b> (347 millions d'hectares)"
+    },
+    {
+      "id": 136,
+      "affirmation": "Donald Trump est le 45<sup>e</sup> et 47<sup>e</sup> président des États-Unis.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 137,
+      "affirmation": "Le Québec a son propre système de protection de l'environnement.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 138,
+      "affirmation": "Le Canada a plus de réserves d'eau douce que la Russie.",
+      "reponse": "<b>Vrai</b> (20 % des réserves mondiales)"
+    },
+    {
+      "id": 139,
+      "affirmation": "Le français est la langue maternelle de plus de 10 % des Ontariens.",
+      "reponse": "<b>Faux</b> (environ 4 %)"
+    },
+    {
+      "id": 140,
+      "affirmation": "Le Canada a plus de réserves de gaz naturel que l'Iran.",
+      "reponse": "<b>Faux</b> (moins que la Russie, la Chine et l’Iran)"
+    },
+    {
+      "id": 141,
+      "affirmation": "Les pertes de surfaces arables sont estimées à plus de 100 000 km<sup>2</sup> par année à l’échelle du globe.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 142,
+      "affirmation": "Le Canada est le plus grand producteur de blé au monde.",
+      "reponse": "<b>Faux</b> (5e producteur)"
+    },
+    {
+      "id": 143,
+      "affirmation": "Le Coran se compose de nombreux chapitres appelés « sirates ».",
+      "reponse": "<b>Faux</b> (« sourates »)"
+    },
+    {
+      "id": 144,
+      "affirmation": "Mark Carney est le premier premier ministre non élu au Canada.",
+      "reponse": "<b>Faux</b> (John Turner avant lui)"
+    },
+    {
+      "id": 145,
+      "affirmation": "Jean-Paul Riopelle a été l’un des signataires du <i>Refus global</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 146,
+      "affirmation": "Robert Lepage a été adulé pour son film Les invasions barbares.",
+      "reponse": "<b>Faux</b> (Denys Arcand)"
+    },
+    {
+      "id": 147,
+      "affirmation": "Le Cirque du Soleil a été fondé à Montréal en 1984.",
+      "reponse": "<b>Faux</b> (à Baie-Saint-Paul)"
+    },
+    {
+      "id": 148,
+      "affirmation": "Albertine en cinq temps est une pièce de Michel Tremblay.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 149,
+      "affirmation": "L’expression « les religions du Livre » fait référence aux religions qui suivent les préceptes du Coran.",
+      "reponse": "<b>Faux</b> (ce sont les religions basées sur la Bible : le judaïsme, le christianisme et l’islam)"
+    },
+    {
+      "id": 150,
+      "affirmation": "La Jeune Fille à la perle a été peinte par Vincent van Gogh.",
+      "reponse": "<b>Faux</b> (Johannes Vermeer)"
+    },
+    {
+      "id": 151,
+      "affirmation": "Andy Warhol était une figure majeure du mouvement <i>pop art</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 152,
+      "affirmation": "Guernica est une œuvre de Salvador Dalí.",
+      "reponse": "<b>Faux</b> (Pablo Picasso)"
+    },
+    {
+      "id": 153,
+      "affirmation": "Les Canadiens de Montréal ont remporté 24 fois la Coupe Stanley.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 154,
+      "affirmation": "Jonathan Drouin a déjà été le premier choix au repêchage de la NHL.",
+      "reponse": "<b>Faux</b> (troisième choix en 2013)"
+    },
+    {
+      "id": 155,
+      "affirmation": "Eugenie Bouchard a déjà remporté le tournoi de Wimbledon.",
+      "reponse": "<b>Faux</b> (finaliste)"
+    },
+    {
+      "id": 156,
+      "affirmation": "Usain Bolt détient le record du monde du 100 mètres en 2024.",
+      "reponse": "<b>Vrai</b> (9,58 s)"
+    },
+    {
+      "id": 157,
+      "affirmation": "Michael Jordan a pris sa retraite du basket-ball et est passé au baseball.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 158,
+      "affirmation": "Le Brésil a remporté la Coupe du Monde de la FIFA en 2018.",
+      "reponse": "<b>Faux</b> (la France)"
+    },
+    {
+      "id": 159,
+      "affirmation": "Serena Williams a plus de titres du Grand Chelem que Venus Williams.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 160,
+      "affirmation": "Tiger Woods a remporté le Masters en 2019 après une longue pause.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 161,
+      "affirmation": "Bon Cop, Bad Cop est le plus grand succès commercial de l’histoire du cinéma québécois.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 162,
+      "affirmation": "La Grande Séduction est un remake d’un film islandais.",
+      "reponse": "<b>Faux</b>"
+    },
+    {
+      "id": 163,
+      "affirmation": "Xavier Dolan a remporté le Prix du Jury au Festival de Cannes pour <i>Mommy</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 164,
+      "affirmation": "Les Boys est une série de quatre films sur le hockey.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 165,
+      "affirmation": "Incendies de Denis Villeneuve est une adaptation d’une pièce de Wajdi Mouawad.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 166,
+      "affirmation": "Titanic a remporté 11 Oscars en 1998.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 167,
+      "affirmation": "Inception a été réalisé par Christopher Nolan.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 168,
+      "affirmation": "Avatar est le film le plus rentable de l’histoire.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 169,
+      "affirmation": "Meryl Streep détient le record de nominations aux Oscars.",
+      "reponse": "<b>Vrai</b> (21 nominations)"
+    },
+    {
+      "id": 170,
+      "affirmation": "Céline Dion a remporté l’Eurovision pour la Suisse en 1988.",
+      "reponse": "<b>Vrai</b> (avec la chanson Ne partez pas sans moi)"
+    },
+    {
+      "id": 171,
+      "affirmation": "Les Cowboys Fringants ont composé un album intitulé <i>Sur mon canapé.</i><i>",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 172,
+      "affirmation": "Garou a participé à Notre-Dame de Paris.",
+      "reponse": "<b>Vrai</b> (dans le rôle de Quasimodo)"
+    },
+    {
+      "id": 173,
+      "affirmation": "Dégénération est une chanson de <i>Mes Aïeux</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 174,
+      "affirmation": "Leonard Cohen était un auteur-compositeur né à Montréal.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 175,
+      "affirmation": "Michael Jackson a vendu plus de 350 millions d’albums.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 176,
+      "affirmation": "<i>We will rock you</i> est une chanson des Rolling Stones.",
+      "reponse": "<b>Faux</b> (de Queen)"
+    },
+    {
+      "id": 177,
+      "affirmation": "Beyoncé a commencé sa carrière avec <i>Destiny’s</i><i> Child</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 178,
+      "affirmation": "Thriller est l’album le plus vendu de tous les temps.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 179,
+      "affirmation": "Taylor Swift a remporté plusieurs <i>Grammy</i><i> Awards</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 180,
+      "affirmation": "Le Québec produit plus de 90 % de l’hydroélectricité canadienne.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 181,
+      "affirmation": "Le premier satellite canadien s’appelait Alouette 1.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 182,
+      "affirmation": "Montréal abrite le siège de l’Agence spatiale canadienne.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 183,
+      "affirmation": "Un vaccin contre la COVID-19 a été développé au Québec.",
+      "reponse": "<b>Vrai</b> (Medicago)"
+    },
+    {
+      "id": 184,
+      "affirmation": "L’Université de Montréal a découvert la première exoplanète.",
+      "reponse": "<b>Faux</b> (Michel Mayor en Suisse)"
+    },
+    {
+      "id": 185,
+      "affirmation": "Le boson de Higgs a été confirmé en 2012.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 186,
+      "affirmation": "Stephen Hawking a travaillé sur les trous noirs.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 187,
+      "affirmation": "La première photo d’un trou noir a été publiée en 2019.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 188,
+      "affirmation": "Le premier clonage réussi d’un mammifère était une souris.",
+      "reponse": "<b>Faux</b> (le mouton Dolly en 1996)"
+    },
+    {
+      "id": 189,
+      "affirmation": "Elon Musk a fondé <i>SpaceX</i>.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 190,
+      "affirmation": "Starmania est une comédie musicale créée par Luc Plamondon et Michel Berger.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 191,
+      "affirmation": "Deux hommes en or est une émission de télévision québécoise sur l’actualité.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 192,
+      "affirmation": "La Petite Vie est une série québécoise des années 2000.",
+      "reponse": "<b>Faux</b> (années 1990)"
+    },
+    {
+      "id": 193,
+      "affirmation": "Le Violon rouge est un film québécois qui a remporté un Oscar.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 194,
+      "affirmation": "Ginette Reno a chanté à la cérémonie d’investiture de Justin Trudeau.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 195,
+      "affirmation": "Les filles de Caleb est une série basée sur un roman d’Arlette Cousture.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 196,
+      "affirmation": "L’auberge du chien noir est une série télévisée adaptée de l’anglais.",
+      "reponse": "<b>Faux</b> (originale québécoise)"
+    },
+    {
+      "id": 197,
+      "affirmation": "Pierre Lapointe a déjà chanté avec l’Orchestre métropolitain.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 198,
+      "affirmation": "Le déclin de l’empire américain et Les invasions barbares forment une suite.",
+      "reponse": "<b>Vrai</b>"
+    },
+    {
+      "id": 199,
+      "affirmation": "Fred Pellerin est un humoriste et conteur originaire de Saint-Étienne-des-Grès.",
+      "reponse": "<b>Faux</b> (Saint-Élie-de-Caxton)"
+    },
+    {
+      "id": 200,
+      "affirmation": "Vladimir Guerrero a signé un contrat de 14 ans, 500 millions $ avec les Blue Jays.",
+      "reponse": "<b>Vrai</b>"
+    }
+  ]
+}

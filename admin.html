@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Administration — Tennis pour les « Bollés »</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:#f5f6fa;margin:0}
+  .wrap{max-width:1100px;margin:0 auto;padding:20px}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+  h1{font-size:1.25rem;margin:0}
+  .panel{background:#fff;border:1px solid #e8ebf0;border-radius:12px;padding:14px 16px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+  .row{display:flex;gap:8px;align-items:center;margin:10px 0}
+  .tabs button{padding:6px 12px;border:1px solid #dcdfe6;background:#fff;border-radius:999px;cursor:pointer}
+  .tabs .active{background:#111;color:#fff;border-color:#111}
+  input[type="search"]{flex:1;padding:10px 12px;border:1px solid #cfd3dc;border-radius:10px}
+  table{width:100%;border-collapse:collapse;margin-top:10px}
+  th,td{border-bottom:1px solid #eef1f5;padding:8px;vertical-align:top}
+  th{font-weight:600;text-align:left;color:#444}
+  td .cell{min-height:34px;padding:6px 8px;border:1px solid #e7ebf0;border-radius:8px;background:#fff}
+  td .cell[contenteditable="true"]:focus{outline:2px solid #2684ff26;border-color:#2684ff}
+  .toolbar button{margin-right:6px}
+  .danger{color:#b00020}
+  .muted{color:#666}
+  .right{margin-left:auto}
+  .btn{padding:8px 12px;border:1px solid #cfd3dc;border-radius:10px;background:#fff;cursor:pointer}
+  .btn.primary{background:#111;color:#fff;border-color:#111}
+
+  /* surbrillance de la ligne ajoutée */
+  tr.flash { animation: flash-bg 1s ease-in-out 0s 2; }
+  @keyframes flash-bg {
+    0% { background:#fffbd1; }
+    100% { background:#fff; }
+  }
+
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  #scrollTopBtn:hover { background-color: #333; }
+
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  @media (max-width: 900px) {
+    .row { flex-wrap: wrap; gap: 10px; }
+    .tabs { width: 100%; }
+    #search { flex: 1 1 100%; }
+    #add { width: 100%; }
+    .toolbar .btn { margin-bottom: 6px; }
+  }
+
+  @media (max-width: 720px) {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+
+    #grid tr {
+      background: #fff;
+      border: 1px solid #eef1f5;
+      border-radius: 12px;
+      margin: 10px 0;
+      padding: 8px 10px;
+    }
+
+    #grid td {
+      border: 0;
+      border-bottom: 1px solid #f3f5f8;
+      padding: 10px 6px;
+    }
+    #grid td:last-child { border-bottom: 0; }
+
+    #grid td[data-label]::before {
+      content: attr(data-label) " :";
+      display: block;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    #grid td .cell {
+      width: 100%;
+      min-height: 38px;
+    }
+  }
+/* Boîte de connexion réduite */
+.login-box {
+  max-width: 420px;
+  margin: 40px auto;
+}
+/* ---- Fenêtre modale pour changement de mot de passe ---- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: none;              /* caché par défaut */
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.modal h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.modal label {
+  display: block;
+  margin-top: 8px;
+  font-size: .9rem;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 2px;
+  border-radius: 8px;
+  border: 1px solid #cfd3dc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Administration — Cartes</h1>
+    <div id="headerActions" style="display:none; gap:8px;">
+      <button id="btnChangePwd" class="btn">Changer le mot de passe</button>
+      <button id="logout" class="btn" style="display:none">Déconnexion</button>
+    </div>
+  </header>
+
+  <!-- Panneau de login -->
+  <div id="login" class="panel login-box">
+    <div class="row">
+      <div class="muted">Accès réservé</div>
+    </div>
+    <div class="row">
+      <input id="pass" type="password" placeholder="Mot de passe administrateur" style="flex:1;padding:10px 12px;border:1px solid #cfd3dc;border-radius:10px">
+      <button id="enter" class="btn primary">Entrer</button>
+    </div>
+    <div id="loginMsg" class="muted"></div>
+  </div>
+
+  <!-- Application -->
+  <div id="app" style="display:none">
+    <div class="panel">
+
+      <!-- Ligne onglets / recherche / ajouter -->
+      <div class="row">
+        <div class="tabs">
+          <button data-kind="categories" class="active">Catégories</button>
+          <button data-kind="bris">Bris d’égalité</button>
+        </div>
+        <input id="search" type="search" placeholder="Rechercher (mot-clé ou n° exact)">
+        <button id="add" class="btn">+ Ajouter une carte</button>
+      </div>
+
+      <!-- Bloc changement de mot de passe (en haut, sous les onglets) -->
+      <!--<div class="row" id="pwdRow" style="align-items:center">
+        <div class="muted">Changer le mot de passe administrateur :</div>
+        <input id="oldPwd" type="password" placeholder="Ancien mot de passe" style="padding:6px 8px;border:1px solid #cfd3dc;border-radius:8px">
+        <input id="newPwd" type="password" placeholder="Nouveau mot de passe" style="padding:6px 8px;border:1px solid #cfd3dc;border-radius:8px">
+        <button id="pwdUpdate" class="btn">Mettre à jour</button>
+        <span id="pwdMsg" class="muted"></span>
+      </div> -->
+
+      <!-- barre de mise en forme -->
+      <div class="toolbar row">
+        <button data-cmd="bold" class="btn"><b>Gras</b></button>
+        <button data-cmd="italic" class="btn"><i>Italique</i></button>
+        <button id="sup" class="btn">Exposant</button>
+        <div class="right muted" id="status">Aucune modification</div>
+      </div>
+
+      <!-- tableau -->
+      <div class="table-wrap">
+        <table id="grid">
+          <thead>
+            <tr id="headRow"></tr>
+          </thead>
+          <tbody id="bodyRows"></tbody>
+        </table>
+      </div>
+
+      <div class="row" style="justify-content:flex-end">
+        <button id="discard" class="btn">Annuler les changements</button>
+        <button id="save" class="btn primary">Enregistrer</button>
+      </div>
+      <div class="muted" id="msg"></div>
+    </div>
+  </div>
+</div>
+<!-- Fenêtre modale de changement de mot de passe -->
+<div id="pwdModal" class="modal-backdrop">
+  <div class="modal">
+    <h2>Changer le mot de passe</h2>
+
+    <label for="oldPwd">Ancien mot de passe</label>
+    <input type="password" id="oldPwd">
+
+    <label for="newPwd">Nouveau mot de passe</label>
+    <input type="password" id="newPwd">
+
+    <div class="modal-actions">
+      <button id="pwdCancel" class="btn">Annuler</button>
+      <button id="pwdSave" class="btn primary">Mettre à jour</button>
+    </div>
+
+    <div id="pwdMsg" class="muted"></div>
+  </div>
+</div>
+
+<button id="scrollTopBtn" title="Revenir en haut">↑</button>
+
+<script>
+/* ========= CONFIG ========= */
+const ADMIN_SECRET = 'change-me-please'; // juste indicatif ici
+const API_BASE = ''; // même origine
+
+/* ========= ÉTAT ========= */
+const state = {
+  authed: false,
+  kind: 'categories',
+  original: { categories: [], bris: [] },
+  working:  { categories: [], bris: [] },
+  dirty: false
+};
+const headerActions = document.getElementById('headerActions');
+const pwdModal     = document.getElementById('pwdModal');
+const btnChangePwd = document.getElementById('btnChangePwd');
+const pwdCancel    = document.getElementById('pwdCancel');
+const pwdSave      = document.getElementById('pwdSave');
+const pwdMsg       = document.getElementById('pwdMsg');
+
+let lastAddedId = null;
+
+function normalize(s){
+  return (s||'').toString().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+}
+function stripHtml(s){ return String(s||'').replace(/<[^>]*>/g,' ').trim(); }
+function setDirty(v){
+  state.dirty = v;
+  document.getElementById('status').textContent =
+    v ? 'Modifications non enregistrées' : 'Aucune modification';
+}
+
+/* ========= LOGIN ========= */
+document.getElementById('enter').onclick = async () => {
+  const pw = document.getElementById('pass').value;
+  const ok = await fetch(API_BASE + '/api/ping', {
+    headers: { 'X-Admin-Key': pw || '' }
+  }).then(r=>r.ok).catch(()=>false);
+
+  if(ok){
+    state.authed = true;
+    document.getElementById('logout').style.display = '';
+    sessionStorage.setItem('admin_key', pw);
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('app').style.display = '';
+    headerActions.style.display = 'flex';
+    await loadData();
+  } else {
+    document.getElementById('loginMsg').textContent = 'Mot de passe invalide.';
+  }
+
+};
+
+document.getElementById('logout').onclick = () => {
+  state.authed = false;
+  sessionStorage.removeItem('admin_key');
+  location.reload();
+  headerActions.style.display = 'none';
+  document.getElementById('logout').style.display = 'none';
+};
+// Ouvrir la fenêtre modale
+btnChangePwd.addEventListener('click', () => {
+  document.getElementById('oldPwd').value = '';
+  document.getElementById('newPwd').value = '';
+  pwdMsg.textContent = '';
+  pwdModal.style.display = 'flex';
+});
+
+// Fermer la fenêtre modale
+pwdCancel.addEventListener('click', () => {
+  pwdModal.style.display = 'none';
+});
+
+
+/* ========= DATA ========= */
+async function loadData(){
+  const key = sessionStorage.getItem('admin_key') || '';
+  const res = await fetch(API_BASE + '/api/data', {
+    headers: { 'X-Admin-Key': key }
+  });
+  if(!res.ok){
+    document.getElementById('msg').textContent='Chargement impossible.';
+    return;
+  }
+  const data = await res.json();
+  state.original = JSON.parse(JSON.stringify(data));
+  state.working  = JSON.parse(JSON.stringify(data));
+  setDirty(false);
+  render();
+}
+
+async function saveData(){
+  const key = sessionStorage.getItem('admin_key') || '';
+  const payload = JSON.stringify(state.working);
+  const res = await fetch(API_BASE + '/api/data', {
+    method: 'PUT',
+    headers: {
+      'Content-Type':'application/json',
+      'X-Admin-Key': key
+    },
+    body: payload
+  });
+  if(res.ok){
+    document.getElementById('msg').textContent='✅ Enregistré.';
+    setDirty(false);
+  } else {
+    document.getElementById('msg').textContent='❌ Échec de l’enregistrement.';
+  }
+}
+
+/* ========= RENDER ========= */
+function render(){
+  document.querySelectorAll('.tabs button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.kind===state.kind);
+  });
+
+  const head = document.getElementById('headRow');
+  head.innerHTML = state.kind==='categories'
+    ? '<th>#ID</th><th>Catégorie</th><th>Question</th><th>Réponse</th><th></th>'
+    : '<th>#ID</th><th>Affirmation</th><th>Réponse</th><th></th>';
+
+  const raw = document.getElementById('search').value.trim();
+  const qnum = /^\d+$/.test(raw) ? parseInt(raw,10) : null;
+  const nq = normalize(raw);
+
+  const list = state.working[state.kind];
+  const filtered = list.filter(it=>{
+    if(!raw) return true;
+    if(qnum!=null) return it.id===qnum;
+    if(state.kind==='categories'){
+      const txt = `${it.categorie||''} ${stripHtml(it.question)} ${stripHtml(it.reponse)}`;
+      return normalize(txt).includes(nq);
+    } else {
+      const txt = `${stripHtml(it.affirmation)} ${stripHtml(it.reponse)}`;
+      return normalize(txt).includes(nq);
+    }
+  });
+
+  const tbody = document.getElementById('bodyRows');
+  tbody.innerHTML = '';
+  for(const it of filtered){
+    const tr = document.createElement('tr');
+    tr.dataset.id = String(it.id);
+
+    if(state.kind==='categories'){
+      tr.innerHTML = `
+        <td>${it.id}</td>
+        <td>${it.categorie}</td>
+        <td><div class="cell rich" contenteditable="true" data-field="question"></div></td>
+        <td><div class="cell rich" contenteditable="true" data-field="reponse"></div></td>
+        <td><button class="btn danger" data-action="del">Supprimer</button></td>
+      `;
+      tr.querySelector('[data-field="question"]').innerHTML = it.question || '';
+      tr.querySelector('[data-field="reponse"]').innerHTML  = it.reponse || '';
+    } else {
+      tr.innerHTML = `
+        <td>${it.id}</td>
+        <td><div class="cell rich" contenteditable="true" data-field="affirmation"></div></td>
+        <td><div class="cell rich" contenteditable="true" data-field="reponse"></div></td>
+        <td><button class="btn danger" data-action="del">Supprimer</button></td>
+      `;
+      tr.querySelector('[data-field="affirmation"]').innerHTML = it.affirmation || '';
+      tr.querySelector('[data-field="reponse"]').innerHTML     = it.reponse || '';
+    }
+
+    const tds = tr.querySelectorAll('td');
+    if (state.kind === 'categories') {
+      if (tds[0]) tds[0].setAttribute('data-label', '#ID');
+      if (tds[1]) tds[1].setAttribute('data-label', 'Catégorie');
+      if (tds[2]) tds[2].setAttribute('data-label', 'Question');
+      if (tds[3]) tds[3].setAttribute('data-label', 'Réponse');
+    } else {
+      if (tds[0]) tds[0].setAttribute('data-label', '#ID');
+      if (tds[1]) tds[1].setAttribute('data-label', 'Affirmation');
+      if (tds[2]) tds[2].setAttribute('data-label', 'Réponse');
+    }
+
+    tr.querySelectorAll('.cell[contenteditable]').forEach(el=>{
+      el.addEventListener('input', ()=>{
+        const field = el.dataset.field;
+        it[field] = el.innerHTML;
+        setDirty(true);
+      });
+    });
+
+    tr.querySelector('[data-action="del"]').onclick = ()=>{
+      const idx = state.working[state.kind].findIndex(x=>x.id===it.id);
+      if(idx>=0){
+        state.working[state.kind].splice(idx,1);
+        setDirty(true);
+        render();
+      }
+    };
+
+    tbody.appendChild(tr);
+  }
+
+  if (lastAddedId != null) {
+    const row = document.querySelector(`tr[data-id="${lastAddedId}"]`);
+    if (row) {
+      row.classList.add('flash');
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => row.classList.remove('flash'), 1500);
+    }
+    lastAddedId = null;
+  }
+}
+
+/* ========= INTERACTIONS ========= */
+document.querySelectorAll('.tabs button').forEach(b=>{
+  b.onclick = ()=>{ state.kind=b.dataset.kind; render(); };
+});
+document.getElementById('search').addEventListener('input', render);
+
+document.getElementById('add').onclick = () => {
+  const btn = document.getElementById('add');
+  btn.disabled = true;
+
+  const list = state.working[state.kind];
+  const nextId = list.length ? Math.max(...list.map(x => x.id)) + 1 : 1;
+
+  if (state.kind === 'categories') {
+    list.push({ id: nextId, categorie: '', question: '', reponse: '' });
+  } else {
+    list.push({ id: nextId, affirmation: '', reponse: '' });
+  }
+
+  lastAddedId = nextId;
+  setDirty(true);
+  document.getElementById('msg').textContent = `➕ Carte #${nextId} ajoutée`;
+  render();
+
+  setTimeout(() => { btn.disabled = false; }, 400);
+};
+
+document.getElementById('save').onclick = saveData;
+document.getElementById('discard').onclick = ()=>{
+  state.working = JSON.parse(JSON.stringify(state.original));
+  setDirty(false);
+  render();
+};
+
+document.querySelectorAll('.toolbar [data-cmd]').forEach(btn=>{
+  btn.onclick = ()=>document.execCommand(btn.dataset.cmd,false,null);
+});
+
+document.getElementById('sup').onclick = ()=>{
+  const sel = window.getSelection();
+  if(!sel.rangeCount) return;
+  const range = sel.getRangeAt(0);
+  const span = document.createElement('sup');
+  span.appendChild(range.extractContents());
+  range.insertNode(span);
+  setDirty(true);
+};
+
+/* ========= BOUTON HAUT DE PAGE ========= */
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+window.addEventListener("scroll", () => {
+  scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+pwdSave.addEventListener('click', async () => {
+  const oldPwd = document.getElementById('oldPwd').value.trim();
+  const newPwd = document.getElementById('newPwd').value.trim();
+
+  if (!oldPwd || !newPwd) {
+    pwdMsg.textContent = 'Veuillez remplir les deux champs.';
+    return;
+  }
+
+  try {
+    const res = await fetch(API_BASE + '/api/change-password', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Admin-Key': oldPwd       // ancien mot de passe
+      },
+      body: JSON.stringify({ new_password: newPwd })
+    });
+
+    if (res.ok) {
+      pwdMsg.textContent = '✅ Mot de passe mis à jour.';
+      sessionStorage.setItem('admin_key', newPwd);
+      setTimeout(() => { pwdModal.style.display = 'none'; }, 700);
+    } else if (res.status === 401) {
+      pwdMsg.textContent = 'Ancien mot de passe incorrect.';
+    } else {
+      pwdMsg.textContent = '❌ Échec du changement de mot de passe.';
+    }
+  } catch (e) {
+    pwdMsg.textContent = 'Erreur réseau.';
+  }
+});
+
+</script>
+
+</body>
+</html>
