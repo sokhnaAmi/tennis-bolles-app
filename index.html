@@ -60,6 +60,14 @@
       return String(s||"").replace(/<[^>]*>/g," ");
     }
 
+    function displayCategory(cat) {
+      if (!cat) return "";
+      const c = cat.trim().toLowerCase();
+      if (c === "ou") return "Où";   // juste ici on corrige l’accent
+      return cat;                    // tout le reste reste tel quel
+    }
+
+
     function render(){
       const wrap = document.getElementById("cards");
       wrap.innerHTML = "";
@@ -91,7 +99,7 @@
         div.className = "card";
         if (state.kind === "categories") {
           div.innerHTML = `
-            <div class="title">Carte no ${it.id} ${it.categorie ? `<span class="muted">(${it.categorie})</span>`:""}</div>
+            <div class="title">Carte no ${it.id} ${it.categorie ? `<span class="muted">(${displayCategory(it.categorie)})</span>`:""}</div>
             <div class="q"><strong>Question :</strong> <span class="rich qtxt"></span></div>
             <div class="r"><strong>Réponse :</strong> <span class="rich rtxt"></span></div>
           `;
