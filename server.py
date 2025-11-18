@@ -167,7 +167,7 @@ def get_data():
         categories = []
         for r in rows_cat:
             categories.append({
-                "id": r["identifiant"],
+                "id": r["id"],
                 "categorie": r["categorie"],
                 "question": r["question"],
                 "reponse": r["reponse"],
