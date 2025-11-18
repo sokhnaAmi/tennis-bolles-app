@@ -36,6 +36,30 @@
     margin-top: 8px;
 
   }
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-tools {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .right-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .small-discard {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
+
   .editor-sticky{
     position: sticky;
     top: 0;
@@ -45,6 +69,27 @@
     padding-bottom: 4px;
   }
 
+  #msg{
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    background: #e6ffed;           /* vert pâle */
+    border: 1px solid #34a853;     /* vert */
+    color: #137333;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    z-index: 2000;
+    display: none;                 /* caché par défaut */
+  }
+
+  #msg.error{
+    background: #ffecec;           /* rouge pâle */
+    border-color: #d93025;
+    color: #a50e0e;
+  }
 
 
   /* surbrillance de la ligne ajoutée */
@@ -216,11 +261,17 @@
 
         <!-- barre de mise en forme -->
         <div class="toolbar row">
-          <button data-cmd="bold" class="btn"><b>Gras</b></button>
-          <button data-cmd="italic" class="btn"><i>Italique</i></button>
-          <button id="sup" class="btn">Exposant</button>
-          <button id="save" class="btn primary" style="margin-left: 10px;">Enregistrer</button>
-          <div class="right muted" id="status">Aucune modification</div>
+          <div class="left-tools"> 
+            <button data-cmd="bold" class="btn"><b>Gras</b></button>
+            <button data-cmd="italic" class="btn"><i>Italique</i></button>
+            <button id="sup" class="btn">Exposant</button>
+            <button id="save" class="btn primary" style="margin-left: 10px;">Enregistrer</button>
+          </div>
+          <div class="right-tools"> 
+            <div class="right muted" id="status">Aucune modification</div>
+            <button id="discard" class="btn danger small-discard">Annuler les changements</button>
+
+          </div>
         </div>
       </div>
 
@@ -234,9 +285,9 @@
         </table>
       </div>
 
-      <div class="row" style="justify-content:flex-end">
+      <!--<div class="row" style="justify-content:flex-end">
         <button id="discard" class="btn">Annuler les changements</button>
-      </div>
+      </div> -->
       <div class="muted" id="msg"></div>
     </div>
   </div>
@@ -367,12 +418,29 @@ async function saveData(){
     body: payload
   });
   if(res.ok){
-    document.getElementById('msg').textContent='✅ Enregistré.';
+    showMsg('✅ Enregistré.');
     setDirty(false);
   } else {
-    document.getElementById('msg').textContent='❌ Échec de l’enregistrement.';
+    showMsg('❌ Échec de l’enregistrement.', true);
   }
 }
+
+let msgTimer = null;
+
+function showMsg(text, isError = false){
+  const box = document.getElementById('msg');
+  if(!box) return;
+  box.textContent = text;
+  box.classList.toggle('error', !!isError);
+  box.style.display = 'inline-block';
+
+  if (msgTimer) clearTimeout(msgTimer);
+  msgTimer = setTimeout(() => {
+    box.style.display = 'none';
+  }, 2500); // 2,5 secondes
+}
+
+
 
 /* ========= RENDER ========= */
 function render(){
