@@ -161,28 +161,28 @@ def get_data():
         cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
         # Catégories
-        cur.execute('SELECT "identifiant", "catégorie", "question", "réponse" '
-                    'FROM "catégories" ORDER BY "identifiant";')
+        cur.execute('SELECT "id", "categorie", "question", "reponse" '
+                    'FROM "categories" ORDER BY "id";')
         rows_cat = cur.fetchall()
         categories = []
         for r in rows_cat:
             categories.append({
                 "id": r["identifiant"],
-                "categorie": r["catégorie"],
+                "categorie": r["categorie"],
                 "question": r["question"],
-                "reponse": r["réponse"],
+                "reponse": r["reponse"],
             })
 
         # Bris d'égalité
-        cur.execute('SELECT "identifiant", "affirmation", "réponse" '
-                    'FROM bris ORDER BY "identifiant";')
+        cur.execute('SELECT "id", "affirmation", "reponse" '
+                    'FROM bris ORDER BY "id";')
         rows_bris = cur.fetchall()
         bris_list = []
         for r in rows_bris:
             bris_list.append({
-                "id": r["identifiant"],
+                "id": r["id"],
                 "affirmation": r["affirmation"],
-                "reponse": r["réponse"],
+                "reponse": r["reponse"],
             })
 
         payload = {"categories": categories, "bris": bris_list}
@@ -213,12 +213,12 @@ def put_data():
         cur = conn.cursor()
 
         # On efface tout, puis on ré-insère
-        cur.execute('DELETE FROM "catégories";')
+        cur.execute('DELETE FROM "categories";')
         cur.execute('DELETE FROM bris;')
 
         for c in cats:
             cur.execute(
-                'INSERT INTO "catégories" ("identifiant", "catégorie", "question", "réponse") '
+                'INSERT INTO "categories" ("id", "categorie", "question", "reponse") '
                 'VALUES (%s, %s, %s, %s);',
                 (
                     c.get("id"),
@@ -230,7 +230,7 @@ def put_data():
 
         for b in bris_list:
             cur.execute(
-                'INSERT INTO bris ("identifiant", "affirmation", "réponse") '
+                'INSERT INTO bris ("id", "affirmation", "reponse") '
                 'VALUES (%s, %s, %s);',
                 (
                     b.get("id"),
