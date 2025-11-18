@@ -1,13 +1,13 @@
-# server.py - version avec Supabase (PostgreSQL)
+# server.py — version avec Supabase (PostgreSQL)
+
 from flask import Flask, request, jsonify, send_from_directory
 from pathlib import Path
-import json
-import os
+import json, os
 
 import psycopg2
 import psycopg2.extras
 
-DATA = Path("data.json")          # on s'en sert encore une fois pour l'initialisation
+DATA = Path("data.json")          # on s'en sert encore une fois pour le bootstrap + backup
 SECRET_FILE = Path("admin_secret.txt")
 
 # ---------- Connexion base Supabase ----------
@@ -16,6 +16,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")  # doit être défini dans Render
 
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL n'est pas défini dans les variables d'environnement")
+
 
 def get_conn():
     # Render/Supabase : SSL obligatoire
@@ -53,95 +54,70 @@ def check_auth(req) -> bool:
     return req.headers.get("X-Admin-Key", "") == ADMIN_SECRET
 
 
-# ---------- Fonctions utilitaires DB ----------
+# ---------- Bootstrap : remplir Supabase depuis data.json (une seule fois) ----------
 
-def load_from_db():
+def bootstrap_from_json_if_needed():
     """
-    Récupère toutes les cartes depuis Supabase et les renvoie
-    dans le même format que data.json :
-    {
-      "categories": [{id, categorie, question, reponse}, ...],
-      "bris": [{id, affirmation, reponse}, ...]
-    }
+    Si les tables 'catégories' et 'bris' sont vides ET que data.json existe,
+    on importe toutes les cartes dans la base.
     """
-    data = {"categories": [], "bris": []}
+    if not DATA.exists():
+        return
 
-    with get_conn() as conn:
-        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-            # catégories
-            cur.execute("""
-                SELECT identifiant, categorie, question, reponse
-                FROM categories
-                ORDER BY identifiant
-            """)
-            for row in cur.fetchall():
-                data["categories"].append({
-                    "id": row["identifiant"],
-                    "categorie": row["categorie"],
-                    "question": row["question"],
-                    "reponse": row["reponse"],
-                })
+    conn = get_conn()
+    try:
+        cur = conn.cursor()
 
-            # bris d'égalité
-            cur.execute("""
-                SELECT identifiant, affirmation, reponse
-                FROM bris
-                ORDER BY identifiant
-            """)
-            for row in cur.fetchall():
-                data["bris"].append({
-                    "id": row["identifiant"],
-                    "affirmation": row["affirmation"],
-                    "reponse": row["reponse"],
-                })
+        # Combien de lignes dans chaque table ?
+        cur.execute('SELECT COUNT(*) FROM "catégories";')
+        nb_cat = cur.fetchone()[0]
 
-    return data
+        cur.execute('SELECT COUNT(*) FROM bris;')
+        nb_bris = cur.fetchone()[0]
 
+        # Si déjà des données, on ne fait rien
+        if nb_cat > 0 or nb_bris > 0:
+            conn.close()
+            return
 
-def save_to_db(payload: dict):
-    """
-    Remplace le contenu des tables par les données envoyées par l'admin.
-    On supprime tout puis on réinsère (plus simple / 700 lignes seulement).
-    """
-    categories = payload.get("categories", []) or []
-    bris = payload.get("bris", []) or []
+        # Sinon, on lit data.json
+        raw = json.loads(DATA.read_text(encoding="utf-8"))
+        cats = raw.get("categories", [])
+        bris_list = raw.get("bris", [])
 
-    with get_conn() as conn:
-        with conn.cursor() as cur:
-            # on vide les tables
-            cur.execute("DELETE FROM categories;")
-            cur.execute("DELETE FROM bris;")
+        # Insertion dans "catégories"
+        for c in cats:
+            cur.execute(
+                'INSERT INTO "catégories" ("identifiant", "catégorie", "question", "réponse") '
+                'VALUES (%s, %s, %s, %s);',
+                (
+                    c.get("id"),
+                    c.get("categorie"),
+                    c.get("question"),
+                    c.get("reponse"),
+                ),
+            )
 
-            # on remet les catégories
-            for c in categories:
-                cur.execute(
-                    """
-                    INSERT INTO categories(identifiant, categorie, question, reponse)
-                    VALUES (%s, %s, %s, %s)
-                    """,
-                    (
-                        int(c.get("id")),
-                        c.get("categorie") or "",
-                        c.get("question") or "",
-                        c.get("reponse") or "",
-                    ),
-                )
-
-            # on remet les bris d'égalité
-            for b in bris:
-                cur.execute(
-                    """
-                    INSERT INTO bris(identifiant, affirmation, reponse)
-                    VALUES (%s, %s, %s)
-                    """,
-                    (
-                        int(b.get("id")),
-                        b.get("affirmation") or "",
-                        b.get("reponse") or "",
-                    ),
-                )
+        # Insertion dans bris
+        for b in bris_list:
+            cur.execute(
+                'INSERT INTO bris ("identifiant", "affirmation", "réponse") '
+                'VALUES (%s, %s, %s);',
+                (
+                    b.get("id"),
+                    b.get("affirmation"),
+                    b.get("reponse"),
+                ),
+            )
 
         conn.commit()
+        print("✅ Bootstrap Supabase effectué depuis data.json")
+    finally:
+        conn.close()
+
+
+# Appel du bootstrap au démarrage du serveur
+bootstrap_from_json_if_needed()
 
 
 # ---------- Endpoints API ----------
@@ -155,54 +131,105 @@ def ping():
 
 @APP.get("/api/data")
 def get_data():
+    """
+    Renvoie toutes les cartes depuis Supabase
+    sous forme de JSON : { "categories": [...], "bris": [...] }
+    compatible avec l'interface admin existante.
+    """
     if not check_auth(request):
         return ("", 401)
 
-    # 1. si data.json existe et que les tables sont vides, on peut initialiser
-    #    une seule fois depuis le fichier (premier déploiement).
+    conn = get_conn()
     try:
-        with get_conn() as conn:
-            with conn.cursor() as cur:
-                cur.execute("SELECT COUNT(*) FROM categories;")
-                nb_cat = cur.fetchone()[0]
-                cur.execute("SELECT COUNT(*) FROM bris;")
-                nb_bris = cur.fetchone()[0]
-    except Exception:
-        nb_cat = nb_bris = 0
+        cur = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
-    if (nb_cat == 0 and nb_bris == 0) and DATA.exists():
-        try:
-            raw = json.loads(DATA.read_text(encoding="utf-8"))
-            save_to_db(raw)
-        except Exception:
-            # en cas de souci, on ignore et on continue
-            pass
+        # Catégories
+        cur.execute('SELECT "identifiant", "catégorie", "question", "réponse" '
+                    'FROM "catégories" ORDER BY "identifiant";')
+        rows_cat = cur.fetchall()
+        categories = []
+        for r in rows_cat:
+            categories.append({
+                "id": r["identifiant"],
+                "categorie": r["catégorie"],
+                "question": r["question"],
+                "reponse": r["réponse"],
+            })
 
-    # 2. on renvoie toujours ce qui est dans la base Supabase
-    data = load_from_db()
-    return jsonify(data)
+        # Bris d'égalité
+        cur.execute('SELECT "identifiant", "affirmation", "réponse" '
+                    'FROM bris ORDER BY "identifiant";')
+        rows_bris = cur.fetchall()
+        bris_list = []
+        for r in rows_bris:
+            bris_list.append({
+                "id": r["identifiant"],
+                "affirmation": r["affirmation"],
+                "reponse": r["réponse"],
+            })
+
+        payload = {"categories": categories, "bris": bris_list}
+
+        # on garde aussi une copie locale dans data.json (backup)
+        DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        return jsonify(payload)
+    finally:
+        conn.close()
 
 
 @APP.put("/api/data")
 def put_data():
+    """
+    Remplace toutes les cartes dans Supabase
+    en fonction du JSON envoyé par l'interface admin.
+    """
     if not check_auth(request):
         return ("", 401)
 
-    payload = request.get_json(force=True)
+    payload = request.get_json(force=True) or {}
+    cats = payload.get("categories", [])
+    bris_list = payload.get("bris", [])
 
-    # sauvegarde dans Supabase
-    save_to_db(payload)
-
-    # on peut aussi garder une copie locale dans data.json (facultatif)
+    conn = get_conn()
     try:
-        DATA.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2),
-            encoding="utf-8"
-        )
-    except Exception:
-        pass
+        cur = conn.cursor()
 
-    return jsonify({"ok": True})
+        # On efface tout, puis on ré-insère
+        cur.execute('DELETE FROM "catégories";')
+        cur.execute('DELETE FROM bris;')
+
+        for c in cats:
+            cur.execute(
+                'INSERT INTO "catégories" ("identifiant", "catégorie", "question", "réponse") '
+                'VALUES (%s, %s, %s, %s);',
+                (
+                    c.get("id"),
+                    c.get("categorie"),
+                    c.get("question"),
+                    c.get("reponse"),
+                ),
+            )
+
+        for b in bris_list:
+            cur.execute(
+                'INSERT INTO bris ("identifiant", "affirmation", "réponse") '
+                'VALUES (%s, %s, %s);',
+                (
+                    b.get("id"),
+                    b.get("affirmation"),
+                    b.get("reponse"),
+                ),
+            )
+
+        conn.commit()
+
+        # copie locale (backup)
+        DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        return jsonify({"ok": True})
+    finally:
+        conn.close()
 
 
 @APP.post("/api/change-password")
@@ -226,7 +253,7 @@ def change_password():
     return jsonify({"ok": True})
 
 
-# ---------- Routes pour les pages ----------
+# ---------- Routes front ----------
 
 @APP.route("/")
 def serve_index():
@@ -239,8 +266,6 @@ def serve_admin():
     # interface d'administration
     return send_from_directory(".", "admin.html")
 
-
-# ---------- Lancement ----------
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "8000"))
