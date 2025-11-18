@@ -196,12 +196,51 @@ def get_data():
 
 @APP.get("/public-data")
 def public_data():
+    """
+    Endpoint public pour l’interface joueurs.
+    Lit directement dans la base Neon (sans mot de passe admin).
+    """
     try:
-        data = get_data()
-        return jsonify(data)
+        conn = get_conn()
+        with conn:
+            with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+                # --- Catégories ---
+                cur.execute(
+                    'SELECT "id", "categorie", "question", "reponse" '
+                    'FROM categories ORDER BY "id";'
+                )
+                rows_cat = cur.fetchall()
+                categories = [
+                    {
+                        "id": r["id"],
+                        "categorie": r["categorie"],
+                        "question": r["question"],
+                        "reponse": r["reponse"],
+                    }
+                    for r in rows_cat
+                ]
+
+                # --- Bris d’égalité ---
+                cur.execute(
+                    'SELECT "id", "affirmation", "reponse" '
+                    'FROM bris ORDER BY "id";'
+                )
+                rows_bris = cur.fetchall()
+                bris_list = [
+                    {
+                        "id": r["id"],
+                        "affirmation": r["affirmation"],
+                        "reponse": r["reponse"],
+                    }
+                    for r in rows_bris
+                ]
+
+        return jsonify({"categories": categories, "bris": bris_list})
+
     except Exception as e:
-        print ("Error /public-data:", e, flush=True)
-        return jsonify({"error": "db error"}), 500
+        print("ERREUR /public-data:", e, flush=True)
+        return jsonify({"erreur": "erreur de base de données"}), 500
+
 
 @APP.put("/api/data")
 def put_data():
