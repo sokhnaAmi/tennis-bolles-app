@@ -10,17 +10,97 @@ import psycopg2.extras
 DATA = Path("data.json")          # on s'en sert encore une fois pour le bootstrap + backup
 SECRET_FILE = Path("admin_secret.txt")
 
-# ---------- Connexion base Supabase ----------
+DATA = Path("data.json")
+SECRET_FILE = Path("admin_secret.txt")
 
-DATABASE_URL = os.getenv("DATABASE_URL")  # doit être défini dans Render
+# ---------- Connexion base Neon (PostgreSQL) ----------
+
+DATABASE_URL = os.getenv("DATABASE_URL")  # définie dans Render
 
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL n'est pas défini dans les variables d'environnement")
 
-
 def get_conn():
-    # Render/Supabase : SSL obligatoire
+    # Neon / Render : SSL obligatoire
     return psycopg2.connect(DATABASE_URL, sslmode="require")
+
+
+def bootstrap_from_json_if_needed():
+    """
+    - Crée les tables 'categories' et 'bris' si elles n'existent pas.
+    - Si elles sont vides, importe toutes les cartes depuis data.json.
+    """
+    conn = get_conn()
+    cur = conn.cursor()
+
+    # 1) Créer les tables si besoin
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS categories (
+            id        INTEGER PRIMARY KEY,
+            categorie TEXT    NOT NULL,
+            question  TEXT    NOT NULL,
+            reponse   TEXT    NOT NULL
+        );
+    """)
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS bris (
+            id         INTEGER PRIMARY KEY,
+            affirmation TEXT   NOT NULL,
+            reponse     TEXT   NOT NULL
+        );
+    """)
+    conn.commit()
+
+    # 2) Vérifier si elles sont déjà remplies
+    cur.execute("SELECT COUNT(*) FROM categories;")
+    nb_cat = cur.fetchone()[0]
+
+    cur.execute("SELECT COUNT(*) FROM bris;")
+    nb_bris = cur.fetchone()[0]
+
+    if nb_cat > 0 or nb_bris > 0:
+        # On a déjà importé les données, on ne refait rien
+        conn.close()
+        return
+
+    # 3) Charger data.json
+    with DATA.open(encoding="utf-8") as f:
+        raw = json.load(f)
+
+    # data.json a la forme :
+    # { "categories": [...], "bris": [...] }
+
+    cats = [
+        (c["id"], c["categorie"], c["question"], c["reponse"])
+        for c in raw.get("categories", [])
+    ]
+    bris = [
+        (b["id"], b["affirmation"], b["reponse"])
+        for b in raw.get("bris", [])
+    ]
+
+    # 4) Insert en bulk
+    if cats:
+        psycopg2.extras.execute_values(
+            cur,
+            "INSERT INTO categories (id, categorie, question, reponse) VALUES %s",
+            cats,
+        )
+
+    if bris:
+        psycopg2.extras.execute_values(
+            cur,
+            "INSERT INTO bris (id, affirmation, reponse) VALUES %s",
+            bris,
+        )
+
+    conn.commit()
+    conn.close()
+
+
+# On lance le bootstrap au démarrage du serveur
+bootstrap_from_json_if_needed()
+
 
 
 # ---------- Gestion du mot de passe admin ----------
@@ -54,70 +134,7 @@ def check_auth(req) -> bool:
     return req.headers.get("X-Admin-Key", "") == ADMIN_SECRET
 
 
-# ---------- Bootstrap : remplir Supabase depuis data.json (une seule fois) ----------
 
-def bootstrap_from_json_if_needed():
-    """
-    Si les tables 'catégories' et 'bris' sont vides ET que data.json existe,
-    on importe toutes les cartes dans la base.
-    """
-    if not DATA.exists():
-        return
-
-    conn = get_conn()
-    try:
-        cur = conn.cursor()
-
-        # Combien de lignes dans chaque table ?
-        cur.execute('SELECT COUNT(*) FROM "catégories";')
-        nb_cat = cur.fetchone()[0]
-
-        cur.execute('SELECT COUNT(*) FROM bris;')
-        nb_bris = cur.fetchone()[0]
-
-        # Si déjà des données, on ne fait rien
-        if nb_cat > 0 or nb_bris > 0:
-            conn.close()
-            return
-
-        # Sinon, on lit data.json
-        raw = json.loads(DATA.read_text(encoding="utf-8"))
-        cats = raw.get("categories", [])
-        bris_list = raw.get("bris", [])
-
-        # Insertion dans "catégories"
-        for c in cats:
-            cur.execute(
-                'INSERT INTO "catégories" ("identifiant", "catégorie", "question", "réponse") '
-                'VALUES (%s, %s, %s, %s);',
-                (
-                    c.get("id"),
-                    c.get("categorie"),
-                    c.get("question"),
-                    c.get("reponse"),
-                ),
-            )
-
-        # Insertion dans bris
-        for b in bris_list:
-            cur.execute(
-                'INSERT INTO bris ("identifiant", "affirmation", "réponse") '
-                'VALUES (%s, %s, %s);',
-                (
-                    b.get("id"),
-                    b.get("affirmation"),
-                    b.get("reponse"),
-                ),
-            )
-
-        conn.commit()
-        print("✅ Bootstrap Supabase effectué depuis data.json")
-    finally:
-        conn.close()
-
-
-# Appel du bootstrap au démarrage du serveur
-bootstrap_from_json_if_needed()
 
 
 # ---------- Endpoints API ----------
