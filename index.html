@@ -47,7 +47,7 @@
 
     async function load(){
       try {
-        const res = await fetch("data.json");
+        const res = await fetch("/public-data");
         const data = await res.json();
         state.data = data;
         render();

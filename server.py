@@ -194,6 +194,51 @@ def get_data():
     finally:
         conn.close()
 
+@APP.get("/public-data")
+def public_data():
+    """
+    Endpoint public (sans mot de passe) pour l'interface joueur.
+    Lit directement dans Neon.
+    """
+    conn = get_conn()
+    cur = conn.cursor()
+
+    # Catégories
+    cur.execute("""
+        SELECT id, categorie, question, reponse
+        FROM categories
+        ORDER BY id;
+    """)
+    rows_cat = cur.fetchall()
+    categories = [
+        {
+            "id": r["id"],
+            "categorie": r["categorie"],
+            "question": r["question"],
+            "reponse": r["reponse"],
+        }
+        for r in rows_cat
+    ]
+
+    # Bris d’égalité
+    cur.execute("""
+        SELECT id, affirmation, reponse
+        FROM bris
+        ORDER BY id;
+    """)
+    rows_bris = cur.fetchall()
+    bris_list = [
+        {
+            "id": r["id"],
+            "affirmation": r["affirmation"],
+            "reponse": r["reponse"],
+        }
+        for r in rows_bris
+    ]
+
+    conn.close()
+    return jsonify({"categories": categories, "bris": bris_list})
+
 
 @APP.put("/api/data")
 def put_data():
