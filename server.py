@@ -1,108 +1,25 @@
-# server.py
+# server.py - version avec Supabase (PostgreSQL)
 from flask import Flask, request, jsonify, send_from_directory
 from pathlib import Path
-import json, os
+import json
+import os
 
 import psycopg2
-from psycopg2.extras import RealDictCursor
+import psycopg2.extras
 
-DATA = Path("data.json")
+DATA = Path("data.json")          # on s'en sert encore une fois pour l'initialisation
 SECRET_FILE = Path("admin_secret.txt")
 
-# ---------- Configuration base de données ----------
+# ---------- Connexion base Supabase ----------
 
-DATABASE_URL = os.getenv("DATABASE_URL")
-USE_DB = bool(DATABASE_URL)  # True sur Render (avec Supabase), False en local
+DATABASE_URL = os.getenv("DATABASE_URL")  # doit être défini dans Render
+
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL n'est pas défini dans les variables d'environnement")
 
 def get_conn():
-    """Ouvre une connexion PostgreSQL si DATABASE_URL est défini."""
-    if not DATABASE_URL:
-        raise RuntimeError("DATABASE_URL n'est pas défini")
-    return psycopg2.connect(DATABASE_URL)
-
-def load_all_data():
-    """
-    Charge toutes les cartes.
-    - Si USE_DB = True : depuis la base (Supabase)
-    - Sinon : depuis data.json (mode local)
-    """
-    if not USE_DB:
-        # lecture depuis le fichier JSON (comportement actuel)
-        if not DATA.exists():
-            return {"categories": [], "bris": []}
-        return json.loads(DATA.read_text(encoding="utf-8"))
-
-    # --- Lecture depuis la base Postgres ---
-    with get_conn() as conn:
-        with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute(
-                "SELECT id, categorie, question, reponse "
-                "FROM categories ORDER BY id;"
-            )
-            categories = [dict(row) for row in cur.fetchall()]
-
-            cur.execute(
-                "SELECT id, affirmation, reponse "
-                "FROM bris ORDER BY id;"
-            )
-            bris = [dict(row) for row in cur.fetchall()]
-
-    return {"categories": categories, "bris": bris}
-
-
-def save_all_data(payload: dict):
-    """
-    Enregistre toutes les cartes.
-    - Si USE_DB = True : écrase le contenu des tables dans la base
-    - Sinon : réécrit data.json
-    """
-    if not USE_DB:
-        # écriture dans le fichier JSON (comportement actuel)
-        DATA.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-        return
-
-    cats = payload.get("categories", []) or []
-    bris = payload.get("bris", []) or []
-
-    with get_conn() as conn:
-        with conn.cursor() as cur:
-            # On vide les tables et on réinsère tout
-            cur.execute("TRUNCATE TABLE categories RESTART IDENTITY;")
-            cur.execute("TRUNCATE TABLE bris RESTART IDENTITY;")
-
-            # Catégories
-            for c in cats:
-                cur.execute(
-                    """
-                    INSERT INTO categories (id, categorie, question, reponse)
-                    VALUES (%s, %s, %s, %s)
-                    """,
-                    (
-                        c.get("id"),
-                        c.get("categorie"),
-                        c.get("question"),
-                        c.get("reponse"),
-                    ),
-                )
-
-            # Bris d’égalité
-            for b in bris:
-                cur.execute(
-                    """
-                    INSERT INTO bris (id, affirmation, reponse)
-                    VALUES (%s, %s, %s)
-                    """,
-                    (
-                        b.get("id"),
-                        b.get("affirmation"),
-                        b.get("reponse"),
-                    ),
-                )
-
-        conn.commit()
+    # Render/Supabase : SSL obligatoire
+    return psycopg2.connect(DATABASE_URL, sslmode="require")
 
 
 # ---------- Gestion du mot de passe admin ----------
@@ -136,6 +53,97 @@ def check_auth(req) -> bool:
     return req.headers.get("X-Admin-Key", "") == ADMIN_SECRET
 
 
+# ---------- Fonctions utilitaires DB ----------
+
+def load_from_db():
+    """
+    Récupère toutes les cartes depuis Supabase et les renvoie
+    dans le même format que data.json :
+    {
+      "categories": [{id, categorie, question, reponse}, ...],
+      "bris": [{id, affirmation, reponse}, ...]
+    }
+    """
+    data = {"categories": [], "bris": []}
+
+    with get_conn() as conn:
+        with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
+            # catégories
+            cur.execute("""
+                SELECT identifiant, categorie, question, reponse
+                FROM categories
+                ORDER BY identifiant
+            """)
+            for row in cur.fetchall():
+                data["categories"].append({
+                    "id": row["identifiant"],
+                    "categorie": row["categorie"],
+                    "question": row["question"],
+                    "reponse": row["reponse"],
+                })
+
+            # bris d'égalité
+            cur.execute("""
+                SELECT identifiant, affirmation, reponse
+                FROM bris
+                ORDER BY identifiant
+            """)
+            for row in cur.fetchall():
+                data["bris"].append({
+                    "id": row["identifiant"],
+                    "affirmation": row["affirmation"],
+                    "reponse": row["reponse"],
+                })
+
+    return data
+
+
+def save_to_db(payload: dict):
+    """
+    Remplace le contenu des tables par les données envoyées par l'admin.
+    On supprime tout puis on réinsère (plus simple / 700 lignes seulement).
+    """
+    categories = payload.get("categories", []) or []
+    bris = payload.get("bris", []) or []
+
+    with get_conn() as conn:
+        with conn.cursor() as cur:
+            # on vide les tables
+            cur.execute("DELETE FROM categories;")
+            cur.execute("DELETE FROM bris;")
+
+            # on remet les catégories
+            for c in categories:
+                cur.execute(
+                    """
+                    INSERT INTO categories(identifiant, categorie, question, reponse)
+                    VALUES (%s, %s, %s, %s)
+                    """,
+                    (
+                        int(c.get("id")),
+                        c.get("categorie") or "",
+                        c.get("question") or "",
+                        c.get("reponse") or "",
+                    ),
+                )
+
+            # on remet les bris d'égalité
+            for b in bris:
+                cur.execute(
+                    """
+                    INSERT INTO bris(identifiant, affirmation, reponse)
+                    VALUES (%s, %s, %s)
+                    """,
+                    (
+                        int(b.get("id")),
+                        b.get("affirmation") or "",
+                        b.get("reponse") or "",
+                    ),
+                )
+
+        conn.commit()
+
+
 # ---------- Endpoints API ----------
 
 @APP.get("/api/ping")
@@ -149,7 +157,29 @@ def ping():
 def get_data():
     if not check_auth(request):
         return ("", 401)
-    data = load_all_data()
+
+    # 1. si data.json existe et que les tables sont vides, on peut initialiser
+    #    une seule fois depuis le fichier (premier déploiement).
+    try:
+        with get_conn() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT COUNT(*) FROM categories;")
+                nb_cat = cur.fetchone()[0]
+                cur.execute("SELECT COUNT(*) FROM bris;")
+                nb_bris = cur.fetchone()[0]
+    except Exception:
+        nb_cat = nb_bris = 0
+
+    if (nb_cat == 0 and nb_bris == 0) and DATA.exists():
+        try:
+            raw = json.loads(DATA.read_text(encoding="utf-8"))
+            save_to_db(raw)
+        except Exception:
+            # en cas de souci, on ignore et on continue
+            pass
+
+    # 2. on renvoie toujours ce qui est dans la base Supabase
+    data = load_from_db()
     return jsonify(data)
 
 
@@ -157,8 +187,21 @@ def get_data():
 def put_data():
     if not check_auth(request):
         return ("", 401)
+
     payload = request.get_json(force=True)
-    save_all_data(payload)
+
+    # sauvegarde dans Supabase
+    save_to_db(payload)
+
+    # on peut aussi garder une copie locale dans data.json (facultatif)
+    try:
+        DATA.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2),
+            encoding="utf-8"
+        )
+    except Exception:
+        pass
+
     return jsonify({"ok": True})
 
 
@@ -170,7 +213,6 @@ def change_password():
     - Authentification avec l'ancien mdp dans X-Admin-Key
     - Corps JSON : { "new_password": "..." }
     """
-    # Vérifie d'abord l'ancien mot de passe
     if not check_auth(request):
         return ("", 401)
 
@@ -184,7 +226,7 @@ def change_password():
     return jsonify({"ok": True})
 
 
-# ---------- Lancement / routes HTML ----------
+# ---------- Routes pour les pages ----------
 
 @APP.route("/")
 def serve_index():
@@ -197,6 +239,8 @@ def serve_admin():
     # interface d'administration
     return send_from_directory(".", "admin.html")
 
+
+# ---------- Lancement ----------
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "8000"))
