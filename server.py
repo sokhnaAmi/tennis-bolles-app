@@ -103,28 +103,101 @@ bootstrap_from_json_if_needed()
 
 
 
-# ---------- Gestion du mot de passe admin ----------
+# ---------- Gestion du mot de passe admin (stocké dans Neon) ----------
+
+def ensure_admin_secret():
+    """
+    S'assure qu'il existe une table admin_settings et une ligne (id=1)
+    avec un mot de passe. Utilise ADMIN_SECRET (env) ou "change-me-please"
+    comme valeur par défaut la première fois.
+    """
+    default_pwd = os.getenv("ADMIN_SECRET", "change-me-please").strip()
+
+    conn = get_conn()
+    with conn:
+        with conn.cursor() as cur:
+            # Table pour le mot de passe admin
+            cur.execute(
+                """
+                CREATE TABLE IF NOT EXISTS admin_settings (
+                    id integer PRIMARY KEY,
+                    admin_secret text NOT NULL
+                );
+                """
+            )
+            # Si aucune ligne, on insère le mot de passe par défaut
+            cur.execute("SELECT admin_secret FROM admin_settings WHERE id = 1;")
+            row = cur.fetchone()
+            if not row:
+                cur.execute(
+                    "INSERT INTO admin_settings (id, admin_secret) VALUES (1, %s);",
+                    (default_pwd,),
+                )
+
 
 def load_secret():
-    """Charge le mot de passe admin depuis un fichier ou la variable d'env."""
+    """
+    Charge le mot de passe admin depuis la base Neon.
+    En cas de gros problème de BD, on retombe sur fichier/env.
+    """
+    try:
+        ensure_admin_secret()
+        conn = get_conn()
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT admin_secret FROM admin_settings WHERE id = 1;"
+                )
+                row = cur.fetchone()
+                if row and row[0]:
+                    return row[0].strip()
+    except Exception as e:
+        print("ERREUR load_secret (DB):", e, flush=True)
+
+    # Fallback si vraiment la BD est KO
     if SECRET_FILE.exists():
         return SECRET_FILE.read_text(encoding="utf-8").strip()
     env = os.getenv("ADMIN_SECRET")
     if env:
         return env.strip()
-    # mot de passe par défaut si rien n'existe encore
     return "change-me-please"
 
 
 def save_secret(new_secret: str):
-    """Enregistre le mot de passe admin dans le fichier et en mémoire."""
+    """
+    Sauvegarde le mot de passe dans Neon (et met à jour la variable globale).
+    """
     global ADMIN_SECRET
     new_secret = new_secret.strip()
-    SECRET_FILE.write_text(new_secret, encoding="utf-8")
+
+    try:
+        conn = get_conn()
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    INSERT INTO admin_settings (id, admin_secret)
+                    VALUES (1, %s)
+                    ON CONFLICT (id) DO UPDATE
+                    SET admin_secret = EXCLUDED.admin_secret;
+                    """,
+                    (new_secret,),
+                )
+    except Exception as e:
+        print("ERREUR save_secret (DB):", e, flush=True)
+
+    # Copie locale facultative (si jamais un jour tu veux regarder le fichier)
+    try:
+        SECRET_FILE.write_text(new_secret, encoding="utf-8")
+    except Exception:
+        pass
+
     ADMIN_SECRET = new_secret
 
 
+# Mot de passe actuellement en vigueur en mémoire
 ADMIN_SECRET = load_secret()
+
 
 APP = Flask(__name__, static_url_path="", static_folder=".")
 
