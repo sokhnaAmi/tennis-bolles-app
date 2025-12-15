@@ -340,27 +340,28 @@ def put_data():
         cur.execute('DELETE FROM "categories";')
         cur.execute('DELETE FROM bris;')
 
-        for c in cats:
-            cur.execute(
-                'INSERT INTO "categories" ("id", "categorie", "question", "reponse") '
-                'VALUES (%s, %s, %s, %s);',
-                (
-                    c.get("id"),
-                    c.get("categorie"),
-                    c.get("question"),
-                    c.get("reponse"),
-                ),
+        # Insertion en batch pour les catégories (beaucoup plus rapide)
+        if cats:
+            cats_data = [
+                (c.get("id"), c.get("categorie"), c.get("question"), c.get("reponse"))
+                for c in cats
+            ]
+            psycopg2.extras.execute_values(
+                cur,
+                'INSERT INTO "categories" ("id", "categorie", "question", "reponse") VALUES %s',
+                cats_data,
             )
 
-        for b in bris_list:
-            cur.execute(
-                'INSERT INTO bris ("id", "affirmation", "reponse") '
-                'VALUES (%s, %s, %s);',
-                (
-                    b.get("id"),
-                    b.get("affirmation"),
-                    b.get("reponse"),
-                ),
+        # Insertion en batch pour les bris (beaucoup plus rapide)
+        if bris_list:
+            bris_data = [
+                (b.get("id"), b.get("affirmation"), b.get("reponse"))
+                for b in bris_list
+            ]
+            psycopg2.extras.execute_values(
+                cur,
+                'INSERT INTO bris ("id", "affirmation", "reponse") VALUES %s',
+                bris_data,
             )
 
         conn.commit()
