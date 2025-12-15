@@ -3,9 +3,13 @@
 from flask import Flask, request, jsonify, send_from_directory
 from pathlib import Path
 import json, os
+from dotenv import load_dotenv
 
 import psycopg2
 import psycopg2.extras
+
+# Charger les variables d'environnement depuis .env
+load_dotenv()
 
 DATA = Path("data.json")          # on s'en sert encore une fois pour le bootstrap + backup
 SECRET_FILE = Path("admin_secret.txt")
@@ -15,7 +19,7 @@ SECRET_FILE = Path("admin_secret.txt")
 
 # ---------- Connexion base Neon (PostgreSQL) ----------
 
-DATABASE_URL = os.getenv("DATABASE_URL")  # définie dans Render
+DATABASE_URL = os.getenv("DATABASE_URL")  # définie dans Render ou .env
 
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL n'est pas défini dans les variables d'environnement")

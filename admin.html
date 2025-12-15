@@ -19,6 +19,12 @@
   th{font-weight:600;text-align:left;color:#444}
   td .cell{min-height:34px;padding:6px 8px;border:1px solid #e7ebf0;border-radius:8px;background:#fff}
   td .cell[contenteditable="true"]:focus{outline:2px solid #2684ff26;border-color:#2684ff}
+  /* Forcer la police de l'interface sur tous les éléments dans les cellules */
+  td .cell[contenteditable="true"] * {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Helvetica, Arial, sans-serif !important;
+    font-size: inherit !important;
+    color: inherit !important;
+  }
   .toolbar button{margin-right:6px}
   .danger{color:#b00020}
   .muted{color:#666}
@@ -361,25 +367,60 @@ function setDirty(v){
 }
 
 /* ========= LOGIN ========= */
-document.getElementById('enter').onclick = async () => {
-  const pw = document.getElementById('pass').value;
-  const ok = await fetch(API_BASE + '/api/ping', {
-    headers: { 'X-Admin-Key': pw || '' }
-  }).then(r=>r.ok).catch(()=>false);
-
-  if(ok){
-    state.authed = true;
-    document.getElementById('logout').style.display = '';
-    sessionStorage.setItem('admin_key', pw);
-    document.getElementById('login').style.display = 'none';
-    document.getElementById('app').style.display = '';
-    headerActions.style.display = 'flex';
-    await loadData();
-  } else {
-    document.getElementById('loginMsg').textContent = 'Mot de passe invalide.';
+async function handleLogin() {
+  const pw = document.getElementById('pass').value.trim();
+  const loginMsg = document.getElementById('loginMsg');
+  const enterBtn = document.getElementById('enter');
+  
+  if (!pw) {
+    loginMsg.textContent = 'Veuillez entrer un mot de passe.';
+    loginMsg.style.color = '#d93025';
+    return;
   }
+  
+  // Afficher un message de chargement
+  enterBtn.disabled = true;
+  enterBtn.textContent = 'Connexion...';
+  loginMsg.textContent = 'Connexion en cours...';
+  loginMsg.style.color = '#666';
+  
+  try {
+    const response = await fetch(API_BASE + '/api/ping', {
+      headers: { 'X-Admin-Key': pw }
+    });
+    
+    console.log('Réponse du serveur:', response.status, response.statusText);
+    
+    if (response.ok) {
+      state.authed = true;
+      document.getElementById('logout').style.display = '';
+      sessionStorage.setItem('admin_key', pw);
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('app').style.display = '';
+      headerActions.style.display = 'flex';
+      await loadData();
+    } else {
+      loginMsg.textContent = 'Mot de passe invalide.';
+      loginMsg.style.color = '#d93025';
+    }
+  } catch (error) {
+    console.error('Erreur de connexion:', error);
+    loginMsg.textContent = 'Erreur de connexion au serveur. Vérifiez que le serveur est lancé.';
+    loginMsg.style.color = '#d93025';
+  } finally {
+    enterBtn.disabled = false;
+    enterBtn.textContent = 'Entrer';
+  }
+}
 
-};
+document.getElementById('enter').onclick = handleLogin;
+
+// Permettre de se connecter en appuyant sur Entrée dans le champ de mot de passe
+document.getElementById('pass').addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    handleLogin();
+  }
+});
 
 document.getElementById('logout').onclick = () => {
   state.authed = false;
@@ -420,21 +461,38 @@ async function loadData(){
 }
 
 async function saveData(){
-  const key = sessionStorage.getItem('admin_key') || '';
-  const payload = JSON.stringify(state.working);
-  const res = await fetch(API_BASE + '/api/data', {
-    method: 'PUT',
-    headers: {
-      'Content-Type':'application/json',
-      'X-Admin-Key': key
-    },
-    body: payload
-  });
-  if(res.ok){
-    showMsg('✅ Enregistré.');
-    setDirty(false);
-  } else {
-    showMsg('❌ Échec de l’enregistrement.', true);
+  const saveBtn = document.getElementById('save');
+  const originalText = saveBtn.textContent;
+  
+  // Désactiver le bouton et afficher "Enregistrement en cours..."
+  saveBtn.disabled = true;
+  saveBtn.textContent = 'Enregistrement...';
+  showMsg('⏳ Enregistrement en cours...', false);
+  
+  try {
+    const key = sessionStorage.getItem('admin_key') || '';
+    const payload = JSON.stringify(state.working);
+    const res = await fetch(API_BASE + '/api/data', {
+      method: 'PUT',
+      headers: {
+        'Content-Type':'application/json',
+        'X-Admin-Key': key
+      },
+      body: payload
+    });
+    
+    if(res.ok){
+      showMsg('✅ Enregistré avec succès !', false);
+      setDirty(false);
+    } else {
+      showMsg('❌ Échec de l\'enregistrement.', true);
+    }
+  } catch (error) {
+    showMsg('❌ Erreur réseau lors de l\'enregistrement.', true);
+  } finally {
+    // Réactiver le bouton
+    saveBtn.disabled = false;
+    saveBtn.textContent = originalText;
   }
 }
 
@@ -523,6 +581,156 @@ function render(){
     }
 
     tr.querySelectorAll('.cell[contenteditable]').forEach(el=>{
+      // Fonction pour nettoyer le formatage lors du collage
+      el.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+        const html = (e.clipboardData || window.clipboardData).getData('text/html');
+        
+        // Fonction pour reconstruire le HTML en ne gardant que b, i, sup et le texte
+        const rebuildCleanHTML = (node) => {
+          let result = '';
+          
+          if (node.nodeType === Node.TEXT_NODE) {
+            return node.textContent;
+          }
+          
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const tagName = node.tagName ? node.tagName.toUpperCase() : '';
+            
+            // Parser les styles inline
+            let styleStr = '';
+            if (node.hasAttribute('style')) {
+              styleStr = node.getAttribute('style') || '';
+            } else if (node.style && node.style.cssText) {
+              styleStr = node.style.cssText;
+            }
+            
+            // Détecter le formatage (gras, italique, exposant)
+            const isBold = tagName === 'B' || tagName === 'STRONG' || 
+                          (styleStr && (styleStr.includes('font-weight:bold') || 
+                           styleStr.includes('font-weight:700') || 
+                           styleStr.includes('font-weight: 700') ||
+                           styleStr.match(/font-weight:\s*[67-9]\d{2,}/) ||
+                           (node.style && (node.style.fontWeight === 'bold' || 
+                            node.style.fontWeight === '700' || 
+                            parseInt(node.style.fontWeight) >= 700))));
+            const isItalic = tagName === 'I' || tagName === 'EM' || 
+                            (styleStr && styleStr.includes('font-style:italic')) ||
+                            (node.style && node.style.fontStyle === 'italic');
+            const isSup = tagName === 'SUP' || 
+                         (styleStr && styleStr.includes('vertical-align:super')) ||
+                         (node.style && node.style.verticalAlign === 'super');
+            
+            // Extraire le contenu des enfants
+            let content = '';
+            for (let child of node.childNodes) {
+              content += rebuildCleanHTML(child);
+            }
+            
+            // Ignorer les balises BR, P, DIV qui ne portent pas de formatage
+            if (tagName === 'BR') {
+              return '<br>';
+            }
+            
+            // Reconstruire avec les bonnes balises
+            if (isSup) {
+              result = '<sup>' + content + '</sup>';
+            } else if (isBold && isItalic) {
+              result = '<b><i>' + content + '</i></b>';
+            } else if (isBold) {
+              result = '<b>' + content + '</b>';
+            } else if (isItalic) {
+              result = '<i>' + content + '</i>';
+            } else {
+              result = content;
+            }
+            
+            return result;
+          }
+          
+          return '';
+        };
+        
+        // Si on a du HTML, on le nettoie complètement
+        if (html) {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = html;
+          
+          // Reconstruire le HTML proprement
+          const cleanedHTML = rebuildCleanHTML(tempDiv);
+          
+          // Fonction pour supprimer tous les styles après insertion
+          const removeAllStyles = (element) => {
+            if (element.nodeType === Node.ELEMENT_NODE) {
+              // Supprimer tous les attributs de style
+              element.removeAttribute('style');
+              element.removeAttribute('class');
+              element.removeAttribute('font-family');
+              element.removeAttribute('font-size');
+              element.removeAttribute('color');
+              element.removeAttribute('face');
+              element.removeAttribute('lang');
+              element.removeAttribute('dir');
+              
+              // Supprimer les styles inline
+              if (element.style) {
+                element.style.cssText = '';
+              }
+              
+              // Traiter récursivement les enfants
+              Array.from(element.childNodes).forEach(removeAllStyles);
+            }
+          };
+          
+          // Insérer le contenu nettoyé
+          const selection = window.getSelection();
+          if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            range.deleteContents();
+            
+            // Créer un conteneur temporaire pour parser le HTML nettoyé
+            const container = document.createElement('div');
+            container.innerHTML = cleanedHTML;
+            
+            // Nettoyer une dernière fois avant insertion
+            removeAllStyles(container);
+            
+            const fragment = document.createDocumentFragment();
+            while (container.firstChild) {
+              fragment.appendChild(container.firstChild);
+            }
+            
+            range.insertNode(fragment);
+            
+            // Nettoyer après insertion en parcourant tous les éléments dans el
+            setTimeout(() => {
+              const allElements = el.querySelectorAll('*');
+              allElements.forEach(removeAllStyles);
+            }, 0);
+            
+            range.collapse(false);
+            selection.removeAllRanges();
+            selection.addRange(range);
+          } else {
+            const container = document.createElement('div');
+            container.innerHTML = cleanedHTML;
+            removeAllStyles(container);
+            el.innerHTML = container.innerHTML;
+            
+            // Nettoyer une dernière fois après insertion
+            const allElements = el.querySelectorAll('*');
+            allElements.forEach(removeAllStyles);
+          }
+        } else {
+          // Texte brut : l'insérer normalement
+          document.execCommand('insertText', false, text);
+        }
+        
+        // Déclencher l'événement input pour sauvegarder
+        el.dispatchEvent(new Event('input'));
+      });
+      
       el.addEventListener('input', ()=>{
         const field = el.dataset.field;
         it[field] = el.innerHTML;

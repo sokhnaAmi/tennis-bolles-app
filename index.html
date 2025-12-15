@@ -8,7 +8,8 @@
   <style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:#f5f6fa;margin:0;padding:20px}
     .container{max-width:960px;margin:0 auto}
-    h1{font-size:1.5rem;margin:0 0 10px}
+    h1{font-size:1.5rem;margin:0 0 10px;display:flex;align-items:center;gap:12px}
+    .title-logo{height:1.8em;width:auto;vertical-align:middle;object-fit:contain}
     .tabs{display:flex;gap:8px;margin:10px 0 14px}
     .tab{padding:6px 12px;border:1px solid #dcdfe6;background:#fff;border-radius:999px;cursor:pointer}
     .tab.active{background:#111;color:#fff;border-color:#111}
@@ -23,7 +24,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Tennis pour les « Bollés »</h1>
+    <h1><img src="logo.png" alt="Logo TPB" class="title-logo"> Tennis pour les « Bollés »</h1>
     <div class="tabs">
       <button class="tab active" data-kind="categories">Catégories</button>
       <button class="tab" data-kind="bris">Bris d’égalité</button>
