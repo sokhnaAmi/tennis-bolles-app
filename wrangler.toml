@@ -1,4 +1,4 @@
-name = "tennis-bolles"
+name = "tennis-bolles-app"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
 
