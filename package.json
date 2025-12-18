@@ -1,0 +1,22 @@
+{
+  "name": "tennis-bolles-cloudflare",
+  "version": "1.0.0",
+  "description": "Tennis pour les Bollés - Backend Cloudflare Workers",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --assets .",
+    "deploy": "wrangler deploy",
+    "bootstrap": "node scripts/bootstrap.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
+

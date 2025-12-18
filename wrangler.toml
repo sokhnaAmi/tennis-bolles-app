@@ -1,0 +1,12 @@
+name = "tennis-bolles"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "tennis-bolles-prod"
+
+[env.production.vars]
+# Les variables d'environnement seront définies via:
+# wrangler secret put DATABASE_URL
+# wrangler secret put ADMIN_SECRET
+

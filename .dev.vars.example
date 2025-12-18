@@ -1,0 +1,9 @@
+# Variables d'environnement pour le développement local
+# Copiez ce fichier en .dev.vars et remplissez les valeurs
+
+# URL de connexion PostgreSQL Neon
+DATABASE_URL=postgresql://user:password@host/database?sslmode=require
+
+# Mot de passe admin par défaut (optionnel)
+ADMIN_SECRET=change-me-please
+
