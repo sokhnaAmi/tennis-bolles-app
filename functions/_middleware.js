@@ -1,5 +1,10 @@
 /**
  * Middleware Cloudflare Pages pour rediriger les routes API vers le Worker
+ * 
+ * Note: Pour que cela fonctionne, vous devez :
+ * 1. Déployer le Worker avec: npm run deploy
+ * 2. Configurer les secrets: wrangler secret put DATABASE_URL
+ * 3. Vérifier que le Worker est accessible directement
  */
 
 export async function onRequest(context) {
@@ -12,29 +17,50 @@ export async function onRequest(context) {
   );
   
   if (shouldProxyToWorker) {
-    // Construire l'URL du Worker
-    // Utilisez le nom de votre Worker depuis wrangler.toml
-    const workerUrl = `https://tennis-bolles-app.workers.dev${url.pathname}${url.search}`;
+    // Option 1: Utiliser l'intégration Worker directe (si configurée dans Pages)
+    // Si vous avez lié le Worker dans les paramètres Pages, utilisez:
+    if (context.env && context.env.WORKER) {
+      return context.env.WORKER.fetch(context.request);
+    }
     
-    // Créer une nouvelle requête vers le Worker
-    const workerRequest = new Request(workerUrl, {
-      method: context.request.method,
-      headers: context.request.headers,
-      body: context.request.body,
-    });
+    // Option 2: Faire un fetch vers le Worker déployé
+    // URL exacte de votre Worker déployé
+    const workerUrl = `https://tennis-boLles-app.aminattadiop.workers.dev${url.pathname}${url.search}`;
     
     try {
-      // Faire la requête au Worker et retourner la réponse
+      // Créer une nouvelle requête vers le Worker
+      const workerRequest = new Request(workerUrl, {
+        method: context.request.method,
+        headers: context.request.headers,
+        body: context.request.body ? await context.request.clone().body : null,
+      });
+      
+      // Faire la requête au Worker
       const response = await fetch(workerRequest);
-      return response;
+      
+      // Retourner la réponse avec les bons headers CORS si nécessaire
+      return new Response(response.body, {
+        status: response.status,
+        statusText: response.statusText,
+        headers: {
+          ...Object.fromEntries(response.headers),
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, X-Admin-Key',
+        }
+      });
     } catch (error) {
       console.error('Erreur lors de la redirection vers le Worker:', error);
       return new Response(JSON.stringify({ 
         error: 'Erreur de connexion au Worker',
-        message: error.message 
+        message: error.message,
+        hint: 'Vérifiez que le Worker est déployé et accessible à: https://tennis-boLles-app.aminattadiop.workers.dev'
       }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }
+        status: 503,
+        headers: { 
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }
       });
     }
   }
