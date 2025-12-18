@@ -114,8 +114,10 @@ export async function handlePublicData(request, env) {
 
 /**
  * PUT /api/data - Enregistre toutes les données (admin)
- * Version sécurisée : utilise UPDATE/INSERT au lieu de DELETE/INSERT
- * Cela évite la perte de données en cas d'erreur
+ * Version sécurisée et optimisée :
+ * - INSERT/UPDATE d'abord (en batch) pour éviter la perte de données
+ * - DELETE ensuite seulement si l'insertion réussit
+ * - Batch pour éviter "Too many subrequests"
  */
 export async function handlePutData(request, env) {
   const { getSQL } = await import('../db.js');
@@ -132,7 +134,7 @@ export async function handlePutData(request, env) {
     
     const sql = await getSQL(env.DATABASE_URL);
     
-    // Récupérer les IDs existants pour savoir quoi supprimer
+    // Récupérer les IDs existants pour savoir quoi supprimer APRÈS l'insertion
     const existingCats = await sql`SELECT id FROM categories;`;
     const existingBris = await sql`SELECT id FROM bris;`;
     const existingCatIds = new Set(existingCats.map(r => r.id));
@@ -141,12 +143,58 @@ export async function handlePutData(request, env) {
     const newCatIds = new Set(cats.map(c => c.id));
     const newBrisIds = new Set(bris.map(b => b.id));
     
-    // Supprimer seulement les entrées qui ne sont plus dans les nouvelles données
+    // Identifier ce qui doit être supprimé (mais on le fera APRÈS l'insertion)
     const catsToDelete = [...existingCatIds].filter(id => !newCatIds.has(id));
     const brisToDelete = [...existingBrisIds].filter(id => !newBrisIds.has(id));
     
+    // D'ABORD : Insérer ou mettre à jour en batch (UPSERT)
+    // Si cela échoue, les données existantes ne sont PAS supprimées
+    
+    // Catégories en batch
+    // Exécuter séquentiellement par petits groupes pour éviter "Too many subrequests"
+    // Cloudflare Workers limite à ~50 subrequests par requête
+    if (cats.length > 0) {
+      const batchSize = 20; // Petits groupes pour rester sous la limite
+      
+      for (let i = 0; i < cats.length; i += batchSize) {
+        const batch = cats.slice(i, i + batchSize);
+        
+        // Exécuter ce batch en parallèle (max 20 requêtes)
+        await Promise.all(batch.map(c => 
+          sql`
+            INSERT INTO categories (id, categorie, question, reponse)
+            VALUES (${c.id}, ${c.categorie}, ${c.question}, ${c.reponse})
+            ON CONFLICT (id) DO UPDATE
+            SET categorie = EXCLUDED.categorie,
+                question = EXCLUDED.question,
+                reponse = EXCLUDED.reponse;
+          `
+        ));
+      }
+    }
+    
+    // Bris en batch
+    if (bris.length > 0) {
+      const batchSize = 20;
+      
+      for (let i = 0; i < bris.length; i += batchSize) {
+        const batch = bris.slice(i, i + batchSize);
+        
+        await Promise.all(batch.map(b => 
+          sql`
+            INSERT INTO bris (id, affirmation, reponse)
+            VALUES (${b.id}, ${b.affirmation}, ${b.reponse})
+            ON CONFLICT (id) DO UPDATE
+            SET affirmation = EXCLUDED.affirmation,
+                reponse = EXCLUDED.reponse;
+          `
+        ));
+      }
+    }
+    
+    // ENSUITE : Supprimer seulement ce qui n'est plus nécessaire
+    // On le fait après l'insertion pour plus de sécurité
     if (catsToDelete.length > 0) {
-      // Supprimer par lots pour éviter les problèmes avec de grandes listes
       const deleteBatchSize = 100;
       for (let i = 0; i < catsToDelete.length; i += deleteBatchSize) {
         const batch = catsToDelete.slice(i, i + deleteBatchSize);
@@ -162,30 +210,6 @@ export async function handlePutData(request, env) {
       }
     }
     
-    // Insérer ou mettre à jour les catégories (UPSERT)
-    // Utiliser ON CONFLICT pour éviter les doublons
-    for (const c of cats) {
-      await sql`
-        INSERT INTO categories (id, categorie, question, reponse)
-        VALUES (${c.id}, ${c.categorie}, ${c.question}, ${c.reponse})
-        ON CONFLICT (id) DO UPDATE
-        SET categorie = EXCLUDED.categorie,
-            question = EXCLUDED.question,
-            reponse = EXCLUDED.reponse;
-      `;
-    }
-    
-    // Insérer ou mettre à jour les bris (UPSERT)
-    for (const b of bris) {
-      await sql`
-        INSERT INTO bris (id, affirmation, reponse)
-        VALUES (${b.id}, ${b.affirmation}, ${b.reponse})
-        ON CONFLICT (id) DO UPDATE
-        SET affirmation = EXCLUDED.affirmation,
-            reponse = EXCLUDED.reponse;
-      `;
-    }
-    
     return new Response(JSON.stringify({ ok: true }), {
       headers: { 'Content-Type': 'application/json' }
     });
@@ -194,7 +218,7 @@ export async function handlePutData(request, env) {
     console.error('Message:', error.message);
     console.error('Stack:', error.stack);
     // En cas d'erreur, les données existantes ne sont PAS supprimées
-    // Seules les nouvelles/modifiées sont affectées
+    // car on fait INSERT/UPDATE avant DELETE
     return new Response(JSON.stringify({ 
       error: 'Erreur lors de l\'enregistrement',
       message: error.message
