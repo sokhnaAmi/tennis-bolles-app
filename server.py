@@ -324,6 +324,8 @@ def put_data():
     """
     Remplace toutes les cartes dans Supabase
     en fonction du JSON envoyé par l'interface admin.
+    Version sécurisée : utilise UPDATE/INSERT au lieu de DELETE/INSERT
+    Cela évite la perte de données en cas d'erreur
     """
     if not check_auth(request):
         return ("", 401)
@@ -335,34 +337,62 @@ def put_data():
     conn = get_conn()
     try:
         cur = conn.cursor()
-
-        # On efface tout, puis on ré-insère
-        cur.execute('DELETE FROM "categories";')
-        cur.execute('DELETE FROM bris;')
-
-        # Insertion en batch pour les catégories (beaucoup plus rapide)
+        
+        # Récupérer les IDs existants
+        cur.execute('SELECT id FROM "categories";')
+        existing_cat_ids = set(row[0] for row in cur.fetchall())
+        
+        cur.execute('SELECT id FROM bris;')
+        existing_bris_ids = set(row[0] for row in cur.fetchall())
+        
+        # IDs dans les nouvelles données
+        new_cat_ids = set(c.get("id") for c in cats)
+        new_bris_ids = set(b.get("id") for b in bris_list)
+        
+        # Supprimer seulement les entrées qui ne sont plus dans les nouvelles données
+        cats_to_delete = existing_cat_ids - new_cat_ids
+        bris_to_delete = existing_bris_ids - new_bris_ids
+        
+        if cats_to_delete:
+            cur.execute(
+                'DELETE FROM "categories" WHERE id = ANY(%s);',
+                (list(cats_to_delete),)
+            )
+        
+        if bris_to_delete:
+            cur.execute(
+                'DELETE FROM bris WHERE id = ANY(%s);',
+                (list(bris_to_delete),)
+            )
+        
+        # Insérer ou mettre à jour les catégories (UPSERT)
         if cats:
-            cats_data = [
-                (c.get("id"), c.get("categorie"), c.get("question"), c.get("reponse"))
-                for c in cats
-            ]
-            psycopg2.extras.execute_values(
-                cur,
-                'INSERT INTO "categories" ("id", "categorie", "question", "reponse") VALUES %s',
-                cats_data,
-            )
-
-        # Insertion en batch pour les bris (beaucoup plus rapide)
+            for c in cats:
+                cur.execute(
+                    '''
+                    INSERT INTO "categories" ("id", "categorie", "question", "reponse")
+                    VALUES (%s, %s, %s, %s)
+                    ON CONFLICT (id) DO UPDATE
+                    SET categorie = EXCLUDED.categorie,
+                        question = EXCLUDED.question,
+                        reponse = EXCLUDED.reponse;
+                    ''',
+                    (c.get("id"), c.get("categorie"), c.get("question"), c.get("reponse"))
+                )
+        
+        # Insérer ou mettre à jour les bris (UPSERT)
         if bris_list:
-            bris_data = [
-                (b.get("id"), b.get("affirmation"), b.get("reponse"))
-                for b in bris_list
-            ]
-            psycopg2.extras.execute_values(
-                cur,
-                'INSERT INTO bris ("id", "affirmation", "reponse") VALUES %s',
-                bris_data,
-            )
+            for b in bris_list:
+                cur.execute(
+                    '''
+                    INSERT INTO bris ("id", "affirmation", "reponse")
+                    VALUES (%s, %s, %s)
+                    ON CONFLICT (id) DO UPDATE
+                    SET affirmation = EXCLUDED.affirmation,
+                        reponse = EXCLUDED.reponse;
+                    ''',
+                    (b.get("id"), b.get("affirmation"), b.get("reponse"))
+                )
 
         conn.commit()
 
@@ -370,6 +400,10 @@ def put_data():
         DATA.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
         return jsonify({"ok": True})
+    except Exception as e:
+        conn.rollback()  # Annuler la transaction en cas d'erreur
+        print(f"ERREUR /api/data PUT: {e}", flush=True)
+        return jsonify({"error": "Erreur lors de l'enregistrement", "message": str(e)}), 500
     finally:
         conn.close()
 
