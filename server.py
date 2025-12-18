@@ -349,10 +349,49 @@ def put_data():
         new_cat_ids = set(c.get("id") for c in cats)
         new_bris_ids = set(b.get("id") for b in bris_list)
         
-        # Supprimer seulement les entrées qui ne sont plus dans les nouvelles données
+        # Identifier ce qui doit être supprimé (mais on le fera APRÈS l'insertion)
         cats_to_delete = existing_cat_ids - new_cat_ids
         bris_to_delete = existing_bris_ids - new_bris_ids
         
+        # D'ABORD : Insérer ou mettre à jour en batch (UPSERT)
+        # Si cela échoue, les données existantes ne sont PAS supprimées
+        
+        # Catégories : UPSERT en batch (beaucoup plus rapide)
+        if cats:
+            cats_data = [
+                (c.get("id"), c.get("categorie"), c.get("question"), c.get("reponse"))
+                for c in cats
+            ]
+            # Utiliser ON CONFLICT pour UPSERT en batch
+            psycopg2.extras.execute_values(
+                cur,
+                '''INSERT INTO "categories" ("id", "categorie", "question", "reponse") 
+                   VALUES %s
+                   ON CONFLICT (id) DO UPDATE
+                   SET categorie = EXCLUDED.categorie,
+                       question = EXCLUDED.question,
+                       reponse = EXCLUDED.reponse''',
+                cats_data,
+            )
+        
+        # Bris : UPSERT en batch (beaucoup plus rapide)
+        if bris_list:
+            bris_data = [
+                (b.get("id"), b.get("affirmation"), b.get("reponse"))
+                for b in bris_list
+            ]
+            psycopg2.extras.execute_values(
+                cur,
+                '''INSERT INTO bris ("id", "affirmation", "reponse") 
+                   VALUES %s
+                   ON CONFLICT (id) DO UPDATE
+                   SET affirmation = EXCLUDED.affirmation,
+                       reponse = EXCLUDED.reponse''',
+                bris_data,
+            )
+        
+        # ENSUITE : Supprimer seulement ce qui n'est plus nécessaire
+        # On le fait après l'insertion pour plus de sécurité
         if cats_to_delete:
             cur.execute(
                 'DELETE FROM "categories" WHERE id = ANY(%s);',
@@ -364,35 +403,6 @@ def put_data():
                 'DELETE FROM bris WHERE id = ANY(%s);',
                 (list(bris_to_delete),)
             )
-        
-        # Insérer ou mettre à jour les catégories (UPSERT)
-        if cats:
-            for c in cats:
-                cur.execute(
-                    '''
-                    INSERT INTO "categories" ("id", "categorie", "question", "reponse")
-                    VALUES (%s, %s, %s, %s)
-                    ON CONFLICT (id) DO UPDATE
-                    SET categorie = EXCLUDED.categorie,
-                        question = EXCLUDED.question,
-                        reponse = EXCLUDED.reponse;
-                    ''',
-                    (c.get("id"), c.get("categorie"), c.get("question"), c.get("reponse"))
-                )
-        
-        # Insérer ou mettre à jour les bris (UPSERT)
-        if bris_list:
-            for b in bris_list:
-                cur.execute(
-                    '''
-                    INSERT INTO bris ("id", "affirmation", "reponse")
-                    VALUES (%s, %s, %s)
-                    ON CONFLICT (id) DO UPDATE
-                    SET affirmation = EXCLUDED.affirmation,
-                        reponse = EXCLUDED.reponse;
-                    ''',
-                    (b.get("id"), b.get("affirmation"), b.get("reponse"))
-                )
 
         conn.commit()
 
