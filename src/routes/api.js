@@ -114,6 +114,8 @@ export async function handlePublicData(request, env) {
 
 /**
  * PUT /api/data - Enregistre toutes les données (admin)
+ * Version sécurisée : utilise UPDATE/INSERT au lieu de DELETE/INSERT
+ * Cela évite la perte de données en cas d'erreur
  */
 export async function handlePutData(request, env) {
   const { getSQL } = await import('../db.js');
@@ -130,28 +132,58 @@ export async function handlePutData(request, env) {
     
     const sql = await getSQL(env.DATABASE_URL);
     
-    // Supprimer toutes les données existantes
-    await sql`DELETE FROM categories;`;
-    await sql`DELETE FROM bris;`;
+    // Récupérer les IDs existants pour savoir quoi supprimer
+    const existingCats = await sql`SELECT id FROM categories;`;
+    const existingBris = await sql`SELECT id FROM bris;`;
+    const existingCatIds = new Set(existingCats.map(r => r.id));
+    const existingBrisIds = new Set(existingBris.map(r => r.id));
     
-    // Insérer les catégories en batch (une par une pour compatibilité)
-    if (cats.length > 0) {
-      for (const c of cats) {
-        await sql`
-          INSERT INTO categories (id, categorie, question, reponse)
-          VALUES (${c.id}, ${c.categorie}, ${c.question}, ${c.reponse});
-        `;
+    const newCatIds = new Set(cats.map(c => c.id));
+    const newBrisIds = new Set(bris.map(b => b.id));
+    
+    // Supprimer seulement les entrées qui ne sont plus dans les nouvelles données
+    const catsToDelete = [...existingCatIds].filter(id => !newCatIds.has(id));
+    const brisToDelete = [...existingBrisIds].filter(id => !newBrisIds.has(id));
+    
+    if (catsToDelete.length > 0) {
+      // Supprimer par lots pour éviter les problèmes avec de grandes listes
+      const deleteBatchSize = 100;
+      for (let i = 0; i < catsToDelete.length; i += deleteBatchSize) {
+        const batch = catsToDelete.slice(i, i + deleteBatchSize);
+        await sql`DELETE FROM categories WHERE id = ANY(${batch});`;
       }
     }
     
-    // Insérer les bris en batch (une par une pour compatibilité)
-    if (bris.length > 0) {
-      for (const b of bris) {
-        await sql`
-          INSERT INTO bris (id, affirmation, reponse)
-          VALUES (${b.id}, ${b.affirmation}, ${b.reponse});
-        `;
+    if (brisToDelete.length > 0) {
+      const deleteBatchSize = 100;
+      for (let i = 0; i < brisToDelete.length; i += deleteBatchSize) {
+        const batch = brisToDelete.slice(i, i + deleteBatchSize);
+        await sql`DELETE FROM bris WHERE id = ANY(${batch});`;
       }
+    }
+    
+    // Insérer ou mettre à jour les catégories (UPSERT)
+    // Utiliser ON CONFLICT pour éviter les doublons
+    for (const c of cats) {
+      await sql`
+        INSERT INTO categories (id, categorie, question, reponse)
+        VALUES (${c.id}, ${c.categorie}, ${c.question}, ${c.reponse})
+        ON CONFLICT (id) DO UPDATE
+        SET categorie = EXCLUDED.categorie,
+            question = EXCLUDED.question,
+            reponse = EXCLUDED.reponse;
+      `;
+    }
+    
+    // Insérer ou mettre à jour les bris (UPSERT)
+    for (const b of bris) {
+      await sql`
+        INSERT INTO bris (id, affirmation, reponse)
+        VALUES (${b.id}, ${b.affirmation}, ${b.reponse})
+        ON CONFLICT (id) DO UPDATE
+        SET affirmation = EXCLUDED.affirmation,
+            reponse = EXCLUDED.reponse;
+      `;
     }
     
     return new Response(JSON.stringify({ ok: true }), {
@@ -159,11 +191,13 @@ export async function handlePutData(request, env) {
     });
   } catch (error) {
     console.error('Erreur /api/data PUT:', error);
+    console.error('Message:', error.message);
     console.error('Stack:', error.stack);
+    // En cas d'erreur, les données existantes ne sont PAS supprimées
+    // Seules les nouvelles/modifiées sont affectées
     return new Response(JSON.stringify({ 
       error: 'Erreur lors de l\'enregistrement',
-      message: error.message,
-      details: process.env.NODE_ENV === 'development' ? error.stack : undefined
+      message: error.message
     }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
