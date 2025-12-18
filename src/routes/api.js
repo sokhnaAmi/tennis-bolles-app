@@ -150,45 +150,60 @@ export async function handlePutData(request, env) {
     // D'ABORD : Insérer ou mettre à jour en batch (UPSERT)
     // Si cela échoue, les données existantes ne sont PAS supprimées
     
-    // Catégories en batch
-    // Exécuter séquentiellement par petits groupes pour éviter "Too many subrequests"
-    // Cloudflare Workers limite à ~50 subrequests par requête
+    // Catégories : batch insert avec UNNEST et arrays PostgreSQL
+    // Cela permet d'insérer plusieurs lignes en une seule requête SQL
+    // Évite complètement "Too many subrequests"
     if (cats.length > 0) {
-      const batchSize = 20; // Petits groupes pour rester sous la limite
+      const batchSize = 500; // Grands batches car une seule requête par batch
       
       for (let i = 0; i < cats.length; i += batchSize) {
         const batch = cats.slice(i, i + batchSize);
         
-        // Exécuter ce batch en parallèle (max 20 requêtes)
-        await Promise.all(batch.map(c => 
-          sql`
-            INSERT INTO categories (id, categorie, question, reponse)
-            VALUES (${c.id}, ${c.categorie}, ${c.question}, ${c.reponse})
-            ON CONFLICT (id) DO UPDATE
-            SET categorie = EXCLUDED.categorie,
-                question = EXCLUDED.question,
-                reponse = EXCLUDED.reponse;
-          `
-        ));
+        // Extraire les valeurs en arrays
+        const ids = batch.map(c => c.id);
+        const categories = batch.map(c => c.categorie);
+        const questions = batch.map(c => c.question);
+        const reponses = batch.map(c => c.reponse);
+        
+        // Utiliser UNNEST pour insérer plusieurs lignes en une seule requête
+        await sql`
+          INSERT INTO categories (id, categorie, question, reponse)
+          SELECT * FROM UNNEST(
+            ${ids}::int[],
+            ${categories}::text[],
+            ${questions}::text[],
+            ${reponses}::text[]
+          )
+          ON CONFLICT (id) DO UPDATE
+          SET categorie = EXCLUDED.categorie,
+              question = EXCLUDED.question,
+              reponse = EXCLUDED.reponse;
+        `;
       }
     }
     
-    // Bris en batch
+    // Bris : batch insert avec UNNEST
     if (bris.length > 0) {
-      const batchSize = 20;
+      const batchSize = 500;
       
       for (let i = 0; i < bris.length; i += batchSize) {
         const batch = bris.slice(i, i + batchSize);
         
-        await Promise.all(batch.map(b => 
-          sql`
-            INSERT INTO bris (id, affirmation, reponse)
-            VALUES (${b.id}, ${b.affirmation}, ${b.reponse})
-            ON CONFLICT (id) DO UPDATE
-            SET affirmation = EXCLUDED.affirmation,
-                reponse = EXCLUDED.reponse;
-          `
-        ));
+        const ids = batch.map(b => b.id);
+        const affirmations = batch.map(b => b.affirmation);
+        const reponses = batch.map(b => b.reponse);
+        
+        await sql`
+          INSERT INTO bris (id, affirmation, reponse)
+          SELECT * FROM UNNEST(
+            ${ids}::int[],
+            ${affirmations}::text[],
+            ${reponses}::text[]
+          )
+          ON CONFLICT (id) DO UPDATE
+          SET affirmation = EXCLUDED.affirmation,
+              reponse = EXCLUDED.reponse;
+        `;
       }
     }
     
